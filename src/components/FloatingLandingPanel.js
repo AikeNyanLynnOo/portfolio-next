@@ -30,6 +30,8 @@ export const FloatingLandingPanel = ({
       "min-w-60": true,
       "py-6": true,
       "px-3": true,
+      hidden: true,
+      "lg:block": true,
       relative: true,
       ...customClasses,
     });
@@ -51,13 +53,13 @@ export const FloatingLandingPanel = ({
         animation: "float 10s ease-in-out infinite",
       }}
     >
-      <Image
+      {/* <Image
         src={"/images/icons/pin2.png"}
         height={1000}
         width={1000}
         className="absolute -right-5 -top-10 h-14 w-14"
         alt="pin-icon"
-      />
+      /> */}
       <Image
         src={"/images/anlo.jpg"}
         height={1000}
@@ -74,7 +76,7 @@ export const FloatingLandingPanel = ({
           "text-center": true,
         }}
         customStyles={{
-          fontFamily: '"Source Code Pro", monospace',
+          fontFamily: '"Varela Round", sans-serif',
         }}
       />
       <Typography
@@ -86,7 +88,7 @@ export const FloatingLandingPanel = ({
           "text-center": true,
         }}
         customStyles={{
-          fontFamily: '"Source Code Pro", monospace',
+          fontFamily: '"Varela Round", sans-serif',
         }}
       />
       <div className="my-5">
@@ -122,7 +124,7 @@ export const FloatingLandingPanel = ({
                   "text-center": true,
                 }}
                 customStyles={{
-                  fontFamily: '"Source Code Pro", monospace',
+                  fontFamily: '"Varela Round", sans-serif',
                 }}
               />
             </TextWithIcon>
@@ -152,7 +154,7 @@ export const FloatingLandingPanel = ({
               color: lightTheme.textColor[100],
               mr: 1,
               textTransform: "uppercase",
-              fontFamily: '"Source Code Pro", monospace',
+              fontFamily: '"Varela Round", sans-serif',
             }}
           />
         ))}

@@ -15,6 +15,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Ubuntu&family=Varela+Round&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          />
         </Head>
         <body>
           <Main />
