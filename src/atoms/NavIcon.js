@@ -16,8 +16,6 @@ export const NavIcon = ({
   const { isLight } = useSelector((state) => state.theme);
   const textIconClasses = useMemo(() => {
     return clsx({
-      "w-full": true,
-      "h-full": true,
       "p-1": true,
       "cursor-pointer": true,
       "select-none": true,
@@ -43,6 +41,10 @@ export const NavIcon = ({
       className={textIconClasses}
       onClick={() => {
         handleClick(index);
+      }}
+      sx={{
+        width: "fit-content",
+        height: "fit-content",
       }}
       // style={{
       //   "&::before": {

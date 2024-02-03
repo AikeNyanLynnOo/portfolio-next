@@ -35,8 +35,6 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
 
   const menuIconClasses = useMemo(() => {
     return clsx({
-      "md:hidden": true,
-      block: false,
       "text-3xl": true,
       "text-ownBlack-100": true,
       "dark:text-ownMint-200": true,
@@ -108,9 +106,11 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
         </div>
         <div className="flex gap-x-5 items-center">
           <SwitchBtn />
-          <Icon className={menuIconClasses} onClick={handleMenuBar}>
-            {isDrawerOpen ? "close" : "menu"}
-          </Icon>
+          <span className="md:hidden  flex items-center">
+            <Icon className={menuIconClasses} onClick={handleMenuBar}>
+              {isDrawerOpen ? "close" : "menu"}
+            </Icon>
+          </span>
         </div>
       </nav>
     </ResponsiveContainer>

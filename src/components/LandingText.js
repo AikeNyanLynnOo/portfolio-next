@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { CodeText } from "../atoms/CodeText";
 import { Typography } from "../atoms/Typography";
 import { Button, Chip, Icon } from "@mui/material";
+import { Fragment } from "react";
 
 export const LandingText = ({ children, customClasses, customStyles }) => {
   const { isLight } = useSelector((state) => state.theme);
@@ -93,20 +94,21 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
             "text-ownBlack-200": true,
             "dark:text-white": true,
             "text-3xl": true,
+            flex: true,
+            "items-center": true,
           }}
           customStyles={{
             fontFamily: '"Source Code Pro", monospace',
           }}
         >
-          <Chip
-            component={"span"}
-            label="4+ years of dev exp"
-            variant="outlined"
-            className="dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 rounded-xxl w-fit xl:hidden sm:inline-flex hidden"
-            sx={{
+          <span
+            className="dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 rounded-full w-fit xl:hidden sm:inline-flex hidden text-sm px-4 py-3 ml-2"
+            style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
-          />
+          >
+            4+ years of dev exp
+          </span>
         </Typography>
       </CodeText>
       <CodeText
@@ -152,36 +154,33 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         />
       </CodeText>
       <div className="pt-12">
-        <Button
-          variant="outlined"
-          className="bg-white hidden sm:inline-flex dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-5 py-3 mr-3 mt-2"
-          sx={{
+        <button
+          className="bg-white hidden sm:inline-flex dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 py-1 mr-3 mt-2"
+          style={{
             fontFamily: '"Varela Round", sans-serif',
           }}
         >
           Download CV
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
-        </Button>
-        <Button
-          variant="outlined"
+        </button>
+        <button
           className="bg-white inline-flex sm:hidden dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 py-1 mr-3 mt-2"
-          sx={{
+          style={{
             fontFamily: '"Varela Round", sans-serif',
           }}
         >
           CV
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
-        </Button>
-        <Button
-          variant="text"
-          className="bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-purple-700 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 sm:py-3 mt-2"
-          sx={{
+        </button>
+        <button
+          className="bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 rounded-full text-purple-700 text-base font-semibold hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 py-1 mt-2 inline-flex items-center"
+          style={{
             fontFamily: '"Varela Round", sans-serif',
           }}
         >
           Let&apos; talk
           <Icon className="text-xl ml-2">forward_to_inbox</Icon>
-        </Button>
+        </button>
       </div>
     </div>
   );

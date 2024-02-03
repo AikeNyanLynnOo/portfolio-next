@@ -24,8 +24,6 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
       "lg:left-3": true,
       "top-1/2": true,
       "-translate-y-1/2": true,
-      "md:flex": true,
-      hidden: true,
       ...customClasses,
     });
   }, [customClasses]);
@@ -38,64 +36,66 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
   const topPercents = ["0.9%", "18%", "34.5%", "51.5%", "68.5%", "85%"];
 
   return (
-    <Stack
-      direction="column"
-      justifyContent="flex-start"
-      alignItems="center"
-      spacing={1}
-      className={floatingNavClasses}
-      sx={{
-        ...customStyles,
-        "&::before": {
-          content: '""',
-          display: "block",
-          position: "absolute",
-          // top: "5",
-          // top: "18%",
-          // top: "34.5%",
-          // top: "51.5%",
-          // top: "68.5%",
-          // bottom : 2,
-          top: topPercents[activeNav],
-          height: "14%",
-          width: "90%",
-          borderRadius: "50%",
-          zIndex: -1,
-          backgroundColor: isLight ? "#1A1E23" : "#FFFFFF",
-          // backgroundColor: "red",
-          transition: "0.2s",
-        },
-      }}
-    >
-      {/* {activeLink} */}
-      {[
-        {
-          icon: "home_max",
-        },
-        {
-          icon: "perm_identity",
-        },
-        {
-          icon: "code",
-        },
-        {
-          icon: "dvr",
-        },
-        {
-          icon: "edit_note",
-        },
-        {
-          icon: "mail_outline",
-        },
-      ].map((item, key) => (
-        <NavIcon
-          key={key}
-          isActive={key === activeNav ? true : false}
-          index={key}
-          icon={item && item.icon}
-          handleClick={handleClick}
-        />
-      ))}
-    </Stack>
+    <div className="hidden md:flex">
+      <Stack
+        direction="column"
+        justifyContent="flex-start"
+        alignItems="center"
+        spacing={1}
+        className={floatingNavClasses}
+        sx={{
+          ...customStyles,
+          "&::before": {
+            content: '""',
+            display: "block",
+            position: "absolute",
+            // top: "5",
+            // top: "18%",
+            // top: "34.5%",
+            // top: "51.5%",
+            // top: "68.5%",
+            // bottom : 2,
+            top: topPercents[activeNav],
+            height: "14%",
+            width: "90%",
+            borderRadius: "50%",
+            zIndex: -1,
+            backgroundColor: isLight ? "#1A1E23" : "#FFFFFF",
+            // backgroundColor: "red",
+            transition: "0.2s",
+          },
+        }}
+      >
+        {/* {activeLink} */}
+        {[
+          {
+            icon: "home_max",
+          },
+          {
+            icon: "perm_identity",
+          },
+          {
+            icon: "code",
+          },
+          {
+            icon: "dvr",
+          },
+          {
+            icon: "edit_note",
+          },
+          {
+            icon: "mail_outline",
+          },
+        ].map((item, key) => (
+          <NavIcon
+            key={key}
+            isActive={key === activeNav ? true : false}
+            index={key}
+            icon={item && item.icon}
+            handleClick={handleClick}
+          />
+        ))}
+      </Stack>
+    </div>
   );
 };

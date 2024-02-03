@@ -50,16 +50,16 @@ export const DrawerNavItem = ({
   }, [isActive]);
 
   return (
-    <ListItemButton
+    <div
       className={drawerNavItemClasses}
       onClick={() => {
         handleClick(index);
       }}
     >
-      <ListItemIcon className={navItemIconClasses}>
+      <span className={navItemIconClasses}>
         <Icon>{item.icon}</Icon>
-      </ListItemIcon>
-      <ListItemText primary={item.text} />
-    </ListItemButton>
+      </span>
+      <span>{item.text}</span>
+    </div>
   );
 };

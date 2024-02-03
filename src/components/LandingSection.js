@@ -47,40 +47,36 @@ export const LandingSection = ({
         <div className="block items-center justify-between h-5/6 lg:flex">
           <FloatingLandingPanel />
           <LandingText />
-          <Chip
-            // variant="outlined"
-            className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-11 rounded-xxl w-fit hidden xl:flex"
-            label={
-              <div className="flex items-center content-center">
-                <Typography
-                  text={"4+"}
-                  customClasses={{
-                    "text-ownBlack-200": true,
-                    "w-1/2": true,
-                    "dark:text-ownMint-100": true,
-                    "text-4xl": true,
-                  }}
-                  customStyles={{
-                    fontFamily: '"Varela Round", sans-serif',
-                  }}
-                />
-                <Typography
-                  text={"Years of Dev Exp"}
-                  customClasses={{
-                    "text-ownBlack-100": true,
-                    "dark:text-white": true,
-                    "text-wrap": true,
-                    // "text-right": true,
-                    "w-fit": true,
-                    "text-sm": true,
-                  }}
-                  customStyles={{
-                    fontFamily: '"Varela Round", sans-serif',
-                  }}
-                />
-              </div>
-            }
-          />
+          <div className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-8 px-5 rounded-xl w-fit  hidden xl:flex">
+            <div className="flex items-center content-center">
+              <Typography
+                text={"4+"}
+                customClasses={{
+                  "text-ownBlack-200": true,
+                  "w-1/2": true,
+                  "dark:text-ownMint-100": true,
+                  "text-4xl": true,
+                }}
+                customStyles={{
+                  fontFamily: '"Varela Round", sans-serif',
+                }}
+              />
+              <Typography
+                text={"Years of Dev Exp"}
+                customClasses={{
+                  "text-ownBlack-100": true,
+                  "dark:text-white": true,
+                  "text-wrap": true,
+                  // "text-right": true,
+                  "w-fit": true,
+                  "text-sm": true,
+                }}
+                customStyles={{
+                  fontFamily: '"Varela Round", sans-serif',
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </ResponsiveContainer>

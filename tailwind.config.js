@@ -60,4 +60,8 @@ module.exports = {
     },
   },
   plugins: [],
+  // important: '#root',
+  // corePlugins: {
+  // preflight: false,
+  // },
 };
