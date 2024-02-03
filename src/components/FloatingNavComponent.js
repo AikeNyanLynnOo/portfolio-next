@@ -11,7 +11,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
   const { isLight } = useSelector((state) => state.theme);
   const floatingNavClasses = useMemo(() => {
     return clsx({
-      "w-fit": true,
+      // "w-10": true,
       "p-0.5": true,
       "rounded-full": true,
       "bg-white": true,
