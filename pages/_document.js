@@ -10,7 +10,11 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/images/logo.png" />
           <meta name="emotion-insertion-point" content="" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Ubuntu&family=Varela+Round&display=swap"
             rel="stylesheet"

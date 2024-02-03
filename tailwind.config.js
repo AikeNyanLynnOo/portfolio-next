@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,6 +21,7 @@ module.exports = {
     },
     fontSize: {
       sm: "0.8rem",
+      md: "0.95rem",
       base: "1rem",
       xl: "1.25rem",
       "2xl": "1.563rem",

@@ -35,7 +35,6 @@ export const NavBar = () => {
       customClasses={{
         "border-b": true,
         // "border-solid" : true,
-
         "border-b-ownGray-100": true,
         "dark:border-b-ownGray-200": true,
         "sticky top-0": true,

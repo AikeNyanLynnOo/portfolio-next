@@ -48,9 +48,12 @@ export const FloatingLandingPanel = ({
   return (
     <div
       className={floatingPanelClasses}
+      // className={
+      //   "bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-100"
+      // }
       style={{
         boxShadow: `-5px -5px ${isLight ? lightTheme.borderColor[100] : darkTheme.borderColor[100]}`,
-        animation: "float 10s ease-in-out infinite",
+        // animation: "float 10s ease-in-out infinite",
       }}
     >
       {/* <Image

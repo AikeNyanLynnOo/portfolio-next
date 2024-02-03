@@ -13,6 +13,7 @@ import { all } from "redux-saga/effects";
 // generator functions
 // slices
 import { themeSlice } from "./slices/themeSlice";
+import { generalSlice } from "./slices/generalSlice";
 
 const devMode = process.env.NODE_ENV === "development";
 
@@ -33,6 +34,7 @@ export const makeStore = () => {
   const store = configureStore({
     reducer: {
       [themeSlice.name]: themeSlice.reducer,
+      [generalSlice.name]: generalSlice.reducer,
     },
     middleware: (getDefaultMiddleware) => {
       // WARNING: this means that _none_ of the default middleware are added!

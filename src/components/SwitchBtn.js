@@ -89,14 +89,14 @@ export const SwitchBtn = () => {
 
   return (
     <button
-      class={btnClasses}
+      className={btnClasses}
       onClick={toggleTheme}
       style={{
         boxShadow:
           "inset rgba(0, 0, 0, 0.2) 0px 0px 4px 0px, rgba(0, 0, 0, .3) 0px 3px 1px -2px",
       }}
     >
-      <div ref={switchRef} class={divInsideBtnClasses}>
+      <div ref={switchRef} className={divInsideBtnClasses}>
         {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <path
             stroke-linecap="round"

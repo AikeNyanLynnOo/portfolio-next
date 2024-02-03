@@ -6,6 +6,7 @@ export const ResponsiveContainer = ({
   children,
   customClasses,
   bottomBottom,
+  scrollRef,
 }) => {
   //   const { isLight } = useSelector((state) => state.theme);
   const containerCLasses = useMemo(() => {
@@ -22,5 +23,5 @@ export const ResponsiveContainer = ({
       ...customClasses,
     });
   }, [customClasses]);
-  return <div className={`${containerCLasses}`}>{children}</div>;
+  return <div className={`${containerCLasses}`} ref={scrollRef}>{children}</div>;
 };

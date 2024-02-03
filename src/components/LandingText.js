@@ -38,7 +38,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
                 "text-purple-600": true,
                 "dark:text-pink-400": true,
                 "font-semibold": true,
-                // "text-2xl": true,
+                "text-base": true,
               }}
             />
           ),
@@ -49,7 +49,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
                 "text-purple-600": true,
                 "dark:text-pink-400": true,
                 "font-semibold": true,
-                // "text-2xl": true,
+                "text-base": true,
               }}
             />
           ),
@@ -118,7 +118,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
                 "text-ownBlue-100": true,
                 "dark:text-fuchsia-600": true,
                 "font-semibold": true,
-                // "text-2xl": true,
+                "text-base": true,
               }}
             />
           ),
@@ -129,7 +129,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
                 "text-ownBlue-100": true,
                 "dark:text-fuchsia-600": true,
                 "font-semibold": true,
-                // "text-2xl": true,
+                "text-base": true,
               }}
             />
           ),
@@ -143,6 +143,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
             "text-ownBlack-200": true,
             "dark:text-white": true,
             "text-md": true,
+            "leading-7": true,
           }}
           customStyles={{
             fontFamily: '"Varela Round", sans-serif',

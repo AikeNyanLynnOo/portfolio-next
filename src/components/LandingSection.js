@@ -7,7 +7,12 @@ import { FloatingLandingPanel } from "./FloatingLandingPanel";
 import { LandingText } from "./LandingText";
 import { Chip } from "@mui/material";
 
-export const LandingSection = ({ children, customClasses, customStyles }) => {
+export const LandingSection = ({
+  children,
+  scrollRef,
+  customClasses,
+  customStyles,
+}) => {
   const { isLight } = useSelector((state) => state.theme);
   const landingSectionClasses = useMemo(() => {
     return clsx({
@@ -24,7 +29,7 @@ export const LandingSection = ({ children, customClasses, customStyles }) => {
 
   return (
     <ResponsiveContainer>
-      <div className={landingSectionClasses}>
+      <div className={landingSectionClasses} ref={scrollRef}>
         <Typography
           text={"Welcome!"}
           customClasses={{
@@ -43,14 +48,14 @@ export const LandingSection = ({ children, customClasses, customStyles }) => {
           <FloatingLandingPanel />
           <LandingText />
           <Chip
-            variant="outlined"
+            // variant="outlined"
             className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-11 rounded-xxl w-fit hidden xl:flex"
             label={
               <div className="flex items-center content-center">
                 <Typography
                   text={"4+"}
                   customClasses={{
-                    "text-violet-800": true,
+                    "text-ownBlack-200": true,
                     "w-1/2": true,
                     "dark:text-ownMint-100": true,
                     "text-4xl": true,
