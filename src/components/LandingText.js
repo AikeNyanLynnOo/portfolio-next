@@ -11,7 +11,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
     return clsx({
       "h-3/4": true,
       "lg:w-4/6": true,
-      "xl:w-3/6": true,
+      "xl:w-5/12": true,
       "w-full": true,
       ...customClasses,
     });
@@ -144,6 +144,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
             "dark:text-white": true,
             "text-md": true,
             "leading-7": true,
+            "text-justify": true,
           }}
           customStyles={{
             fontFamily: '"Varela Round", sans-serif',

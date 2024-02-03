@@ -1,15 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { switchThemeRequest } from "../store/slices/themeSlice";
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import { clsx } from "clsx";
 import { SwitchBtn } from "./SwitchBtn";
 import { ResponsiveContainer } from "./ResponsiveContainer";
 import { TextIcon } from "../atoms/TextIcon";
 import { NavItem } from "./NavItemComponent";
+import { Icon } from "@mui/material";
+import { changeDrawerState } from "../store/slices/generalSlice";
 
-export const NavBar = () => {
+export const NavBar = ({ children, customMenuIconClasses }) => {
   const dispatch = useDispatch();
   const { isLight } = useSelector((state) => state.theme);
+  const { isDrawerOpen } = useSelector((state) => state.general);
 
   useEffect(() => {
     if (!isLight) {
@@ -25,6 +28,21 @@ export const NavBar = () => {
       }),
     );
   };
+
+  const handleMenuBar = useCallback(() => {
+    dispatch(changeDrawerState());
+  }, [dispatch]);
+
+  const menuIconClasses = useMemo(() => {
+    return clsx({
+      "md:hidden": true,
+      block: false,
+      "text-3xl": true,
+      "text-ownBlack-100": true,
+      "dark:text-ownMint-200": true,
+      ...customMenuIconClasses,
+    });
+  }, [customMenuIconClasses]);
 
   // const navCLasses = useMemo(() => {
   //   return clsx(["flex", "justify-between", "bg-white", "dark:bg-black",]);
@@ -82,9 +100,18 @@ export const NavBar = () => {
               href: "/blogs",
               text: "Blogs",
             }}
+            customClasses={{
+              hidden: true,
+              "sm:flex": true,
+            }}
           />
         </div>
-        <SwitchBtn />
+        <div className="flex gap-x-5 items-center">
+          <SwitchBtn />
+          <Icon className={menuIconClasses} onClick={handleMenuBar}>
+            {isDrawerOpen ? "close" : "menu"}
+          </Icon>
+        </div>
       </nav>
     </ResponsiveContainer>
   );

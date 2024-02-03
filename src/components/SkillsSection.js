@@ -42,12 +42,17 @@ export const SkillsSection = ({
       "text-xl": true,
       "font-thin": true,
       "w-fit": true,
+      "mx-auto": true,
+      "lg:mx-0": true,
     });
   }, []);
 
   const skillsIconContainerClasses = useMemo(() => {
     return clsx({
-      "w-4/6": true,
+      "lg:w-4/6": true,
+      "md:w-5/6": true,
+      "w-full": true,
+      "mx-auto": true,
       "py-4": true,
       flex: true,
       "flex-wrap": true,
@@ -67,7 +72,7 @@ export const SkillsSection = ({
       <div className={skillsSectionClasses}>
         <h2 className={skillTitleClasses}>Skills</h2>
         <p
-          className="py-10 dark:text-ownMint-200 text-ownBlack-200 text-3xl"
+          className="py-10 dark:text-ownMint-200 text-ownBlack-200 text-3xl text-center"
           style={{
             fontFamily: '"Varela Round", sans-serif',
           }}

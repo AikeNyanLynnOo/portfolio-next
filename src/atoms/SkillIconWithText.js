@@ -23,9 +23,11 @@ export const SkillIconWithText = ({
       "cursor-pointer": true,
       "select-none": true,
       "text-center": true,
-      "px-4": true,
+      "md:px-4": true,
+      "px-2" : true,
       "py-5": true,
-      "min-w-28" : true,
+      "md:min-w-28" : true,
+      "min-w-20" : true,
       "hover:shadow-lg": true,
       ...customClasses,
     });

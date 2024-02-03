@@ -1,7 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const initialState = {
   activeNav: 0,
+  isDrawerOpen: false,
 };
 
 export const generalSlice = createSlice({
@@ -15,8 +16,19 @@ export const generalSlice = createSlice({
         activeNav: action.payload,
       };
     },
+    changeDrawerState(state, action) {
+      //  const { isDrawerOpen } = current(state);
+      console.log(
+        "change drawer state request received>>",
+        current(state).isDrawerOpen,
+      );
+      return {
+        ...state,
+        isDrawerOpen: !current(state).isDrawerOpen,
+      };
+    },
   },
 });
 
-export const { changeActiveNav } = generalSlice.actions;
+export const { changeActiveNav, changeDrawerState } = generalSlice.actions;
 export default generalSlice.reducer;

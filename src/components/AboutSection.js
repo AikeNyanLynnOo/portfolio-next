@@ -27,10 +27,12 @@ export const AboutSection = ({
       "h-screen": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
-      "lg:flex": true,
-      "justify-between": true,
+      flex: true,
+      "flex-wrap": true,
+      "lg:justify-between": true,
+      "justify-center": true,
       "items-center": true,
-      block: true,
+      // block: true,
       ...customClasses,
     });
   }, [customClasses]);
@@ -46,6 +48,8 @@ export const AboutSection = ({
       "text-xl": true,
       "font-thin": true,
       "w-fit": true,
+      "mx-auto": true,
+      "lg:mx-0": true,
     });
   }, []);
   const aboutMeTextClasses = useMemo(() => {
@@ -78,7 +82,7 @@ export const AboutSection = ({
       }}
     >
       <div className={aboutSectionClasses}>
-        <div className="w-4/6">
+        <div className="w-full lg:w-4/6 lg:order-first order-last">
           <p className={aboutMeTitleClasses}>About Me</p>
           <div className={aboutMeTextClasses}>
             <CodeText
@@ -115,7 +119,8 @@ export const AboutSection = ({
                   "text-ownBlack-200": true,
                   "dark:text-white": true,
                   "text-md": true,
-                  "leading-7" : true
+                  "leading-7": true,
+                  "text-justify": true,
                 }}
                 customStyles={{
                   fontFamily: '"Varela Round", sans-serif',

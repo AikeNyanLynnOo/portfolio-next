@@ -20,9 +20,12 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
       "border-ownBlack-200": true,
       "dark:border-white": true,
       fixed: true,
-      "left-3": true,
+      "left-0.5": true,
+      "lg:left-3": true,
       "top-1/2": true,
       "-translate-y-1/2": true,
+      "md:flex": true,
+      hidden: true,
       ...customClasses,
     });
   }, [customClasses]);

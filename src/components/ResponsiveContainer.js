@@ -17,7 +17,7 @@ export const ResponsiveContainer = ({
       "px-4": true,
       "dark:text-white": true,
       "sm:px-7": true,
-      "md:px-10": true,
+      "md:px-16": true,
       "lg:px-28": true,
       "xl:px-40": true,
       ...customClasses,

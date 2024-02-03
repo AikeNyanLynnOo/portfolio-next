@@ -2,6 +2,7 @@ import { AboutSection } from "@/src/components/AboutSection";
 import { BlogsSection } from "@/src/components/BlogsSection";
 import { ContactForm } from "@/src/components/ContactFormComponent";
 import { ContactSection } from "@/src/components/ContactSection";
+import { DrawerNav } from "@/src/components/DrawerNavComponent";
 import { FloatingNav } from "@/src/components/FloatingNavComponent";
 import { LandingSection } from "@/src/components/LandingSection";
 import { NavBar } from "@/src/components/NavBarComponent";
@@ -14,29 +15,34 @@ import { useSelector } from "react-redux";
 
 export default function Layout() {
   const scrollRef = useRef();
-  const { activeNav } = useSelector((state) => state.general);
+  const { activeNav, isDrawerOpen } = useSelector((state) => state.general);
 
   useEffect(() => {
-    scrollRef.current?.scrollIntoView({
-      behavior: "smooth",
-      // block: "end",
-      // inline: "nearest",
-    });
-   
-    // const element = scrollRef.current;
-    // const elementPosition = element.getBoundingClientRect().top;
-    // const offsetPosition = elementPosition + window.pageYOffset - 80;
-
-    // window.scrollTo({
-    //   top: offsetPosition,
+    // scrollRef.current?.scrollIntoView({
     //   behavior: "smooth",
+    //   // block: "end",
+    //   // inline: "nearest",
     // });
+
+    const element = scrollRef.current;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - 50;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   }, [activeNav]);
+  useEffect(() => {
+    console.log("is drawer open>>", isDrawerOpen);
+  }, [isDrawerOpen]);
 
   return (
     <Fragment>
       <FloatingNav />
+      <DrawerNav />
       <NavBar />
+
       <LandingSection scrollRef={activeNav === 0 ? scrollRef : null} />
       <AboutSection scrollRef={activeNav === 1 ? scrollRef : null} />
       <SkillsSection scrollRef={activeNav === 2 ? scrollRef : null} />
