@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ResponsiveContainer } from "./ResponsiveContainer";
 import { Typography } from "../atoms/Typography";
 import { FloatingLandingPanel } from "./FloatingLandingPanel";
@@ -14,6 +14,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
+import { putOffsetTop } from "../store/slices/generalSlice";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 export const AboutSection = ({
   children,
@@ -21,6 +24,8 @@ export const AboutSection = ({
   customClasses,
   customStyles,
 }) => {
+  const dispatch = useDispatch();
+  const ownRef = useRef(scrollRef);
   const { isLight } = useSelector((state) => state.theme);
   const aboutSectionClasses = useMemo(() => {
     return clsx({
@@ -72,9 +77,18 @@ export const AboutSection = ({
     });
   }, []);
 
+  useEffect(() => {
+    dispatch(
+      putOffsetTop({
+        property: "aboutSectionOffsetTop",
+        value: ownRef.current.offsetTop,
+      }),
+    );
+  }, [dispatch, ownRef]);
+
   return (
     <ResponsiveContainer
-      scrollRef={scrollRef}
+      scrollRef={ownRef}
       customClasses={{
         "bg-ownBlack-100": true,
         "dark:bg-ownBlack-200": true,

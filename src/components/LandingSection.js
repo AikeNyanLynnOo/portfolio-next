@@ -1,11 +1,14 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ResponsiveContainer } from "./ResponsiveContainer";
 import { Typography } from "../atoms/Typography";
 import { FloatingLandingPanel } from "./FloatingLandingPanel";
 import { LandingText } from "./LandingText";
 import { Chip } from "@mui/material";
+import { useRef } from "react";
+import { useEffect } from "react";
+import { putOffsetTop } from "../store/slices/generalSlice";
 
 export const LandingSection = ({
   children,
@@ -13,7 +16,11 @@ export const LandingSection = ({
   customClasses,
   customStyles,
 }) => {
+  const dispatch = useDispatch();
   const { isLight } = useSelector((state) => state.theme);
+
+  const ownRef = useRef(scrollRef);
+
   const landingSectionClasses = useMemo(() => {
     return clsx({
       "h-screen": true,
@@ -27,9 +34,18 @@ export const LandingSection = ({
     });
   }, [customClasses]);
 
+  useEffect(() => {
+    dispatch(
+      putOffsetTop({
+        property: "landingSectionOffsetTop",
+        value: ownRef.current.offsetTop,
+      }),
+    );
+  }, [dispatch]);
+
   return (
-    <ResponsiveContainer>
-      <div className={landingSectionClasses} ref={scrollRef}>
+    <ResponsiveContainer scrollRef={ownRef}>
+      <div className={landingSectionClasses}>
         <Typography
           text={"Welcome!"}
           customClasses={{

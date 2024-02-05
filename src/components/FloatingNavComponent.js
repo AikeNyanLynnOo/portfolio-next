@@ -3,10 +3,18 @@ import React, { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Icon, Stack } from "@mui/material";
 import { NavIcon } from "../atoms/NavIcon";
-import { changeActiveNav } from "../store/slices/generalSlice";
+import { changeActiveNav, changeScrolling } from "../store/slices/generalSlice";
 
 export const FloatingNav = ({ children, customClasses, customStyles }) => {
-  const { activeNav } = useSelector((state) => state.general);
+  const {
+    activeNav,
+    landingSectionOffsetTop,
+    aboutSectionOffsetTop,
+    skillSectionOffsetTop,
+    projectsSectionOffsetTop,
+    blogsSectionOffsetTop,
+    contactSectionOffsetTop,
+  } = useSelector((state) => state.general);
   const dispatch = useDispatch();
   const { isLight } = useSelector((state) => state.theme);
   const floatingNavClasses = useMemo(() => {
@@ -29,9 +37,48 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
   }, [customClasses]);
 
   const handleClick = (index) => {
-    // console.log("Index is>>", index);
-    // setActiveLink(index);
-    dispatch(changeActiveNav(index));
+    dispatch(changeScrolling({ isScrolling: false }));
+    switch (index) {
+      case 0:
+        window.scrollTo({
+          top: landingSectionOffsetTop - 1,
+          behavior: "smooth",
+        });
+        break;
+      case 1:
+        window.scrollTo({
+          top: aboutSectionOffsetTop - 1,
+          behavior: "smooth",
+        });
+        break;
+      case 2:
+        window.scrollTo({
+          top: skillSectionOffsetTop - 1,
+          behavior: "smooth",
+        });
+        break;
+      case 3:
+        window.scrollTo({
+          top: projectsSectionOffsetTop - 1,
+          behavior: "smooth",
+        });
+        break;
+      case 4:
+        window.scrollTo({
+          top: blogsSectionOffsetTop - 1,
+          behavior: "smooth",
+        });
+        break;
+      case 5:
+        window.scrollTo({
+          top: contactSectionOffsetTop - 1,
+          behavior: "smooth",
+        });
+        break;
+
+      default:
+        break;
+    }
   };
   const topPercents = ["0.9%", "18%", "34.5%", "51.5%", "68.5%", "85%"];
 
@@ -62,7 +109,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
             zIndex: -1,
             backgroundColor: isLight ? "#1A1E23" : "#FFFFFF",
             // backgroundColor: "red",
-            transition: "0.2s",
+            transition: "top 0.1s linear",
           },
         }}
       >

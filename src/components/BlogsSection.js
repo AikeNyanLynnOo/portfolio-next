@@ -1,11 +1,14 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ResponsiveContainer } from "./ResponsiveContainer";
 import { Typography } from "../atoms/Typography";
 import { FloatingLandingPanel } from "./FloatingLandingPanel";
 import { LandingText } from "./LandingText";
 import { Chip } from "@mui/material";
+import { useEffect } from "react";
+import { putOffsetTop } from "../store/slices/generalSlice";
+import { useRef } from "react";
 
 export const BlogsSection = ({
   children,
@@ -13,6 +16,9 @@ export const BlogsSection = ({
   customClasses,
   customStyles,
 }) => {
+  const dispatch = useDispatch();
+  const ownRef = useRef(scrollRef || null);
+
   const { isLight } = useSelector((state) => state.theme);
   const blogsSectionClasses = useMemo(() => {
     return clsx({
@@ -23,6 +29,15 @@ export const BlogsSection = ({
     });
   }, [customClasses]);
 
+  useEffect(() => {
+    dispatch(
+      putOffsetTop({
+        property: "blogsSectionOffsetTop",
+        value: ownRef.current.offsetTop,
+      }),
+    );
+  }, [dispatch]);
+
   return (
     <ResponsiveContainer
       customClasses={{
@@ -30,7 +45,7 @@ export const BlogsSection = ({
         "dark:bg-ownBlack-100": true,
         "py-16": true,
       }}
-      scrollRef={scrollRef}
+      scrollRef={ownRef}
     >
       <div className={blogsSectionClasses}>Blogs Section</div>
     </ResponsiveContainer>

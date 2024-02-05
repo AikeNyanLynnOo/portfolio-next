@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ResponsiveContainer } from "./ResponsiveContainer";
 import { Typography } from "../atoms/Typography";
 import { FloatingLandingPanel } from "./FloatingLandingPanel";
@@ -8,6 +8,9 @@ import { LandingText } from "./LandingText";
 import { Chip } from "@mui/material";
 import { SkillIconWithText } from "../atoms/SkillIconWithText";
 import { Fragment } from "react";
+import { useEffect } from "react";
+import { putOffsetTop } from "../store/slices/generalSlice";
+import { useRef } from "react";
 
 export const SkillsSection = ({
   children,
@@ -15,6 +18,8 @@ export const SkillsSection = ({
   customClasses,
   customStyles,
 }) => {
+  const dispatch = useDispatch();
+  const ownRef = useRef(scrollRef || null);
   const { isLight } = useSelector((state) => state.theme);
   const skillsSectionClasses = useMemo(() => {
     return clsx({
@@ -60,6 +65,15 @@ export const SkillsSection = ({
     });
   }, []);
 
+  useEffect(() => {
+    dispatch(
+      putOffsetTop({
+        property: "skillSectionOffsetTop",
+        value: ownRef.current.offsetTop,
+      }),
+    );
+  }, [dispatch]);
+
   return (
     <ResponsiveContainer
       customClasses={{
@@ -67,7 +81,7 @@ export const SkillsSection = ({
         "dark:bg-ownBlack-100": true,
         "py-16": true,
       }}
-      scrollRef={scrollRef}
+      scrollRef={ownRef}
     >
       <div className={skillsSectionClasses}>
         <h2 className={skillTitleClasses}>Skills</h2>
