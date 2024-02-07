@@ -43,6 +43,7 @@ export const ContactSection = ({
         "bg-ownBlack-100": true,
         "dark:bg-ownBlack-200": true,
         "py-16": true,
+        "box-border": true,
       }}
       scrollRef={ownRef}
     >

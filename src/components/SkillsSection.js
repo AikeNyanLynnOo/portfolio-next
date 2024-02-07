@@ -23,7 +23,8 @@ export const SkillsSection = ({
   const { isLight } = useSelector((state) => state.theme);
   const skillsSectionClasses = useMemo(() => {
     return clsx({
-      "h-screen": true,
+      // "h-screen": true,
+      "h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
       "lg:flex": true,
@@ -80,6 +81,7 @@ export const SkillsSection = ({
         "bg-ownBlack-200": true,
         "dark:bg-ownBlack-100": true,
         "py-16": true,
+        "box-border": true,
       }}
       scrollRef={ownRef}
     >

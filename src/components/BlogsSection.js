@@ -22,7 +22,8 @@ export const BlogsSection = ({
   const { isLight } = useSelector((state) => state.theme);
   const blogsSectionClasses = useMemo(() => {
     return clsx({
-      "h-screen": true,
+      // "h-screen": true,
+      "h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
       ...customClasses,
@@ -44,6 +45,7 @@ export const BlogsSection = ({
         "bg-ownBlack-200": true,
         "dark:bg-ownBlack-100": true,
         "py-16": true,
+        "box-border": true,
       }}
       scrollRef={ownRef}
     >

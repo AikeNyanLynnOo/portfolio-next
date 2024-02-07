@@ -29,7 +29,8 @@ export const AboutSection = ({
   const { isLight } = useSelector((state) => state.theme);
   const aboutSectionClasses = useMemo(() => {
     return clsx({
-      "h-screen": true,
+      // "h-screen": true,
+      "h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
       flex: true,
@@ -93,6 +94,7 @@ export const AboutSection = ({
         "bg-ownBlack-100": true,
         "dark:bg-ownBlack-200": true,
         "py-16": true,
+        "box-border": true,
       }}
     >
       <div className={aboutSectionClasses}>

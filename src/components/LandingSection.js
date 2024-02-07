@@ -23,7 +23,9 @@ export const LandingSection = ({
 
   const landingSectionClasses = useMemo(() => {
     return clsx({
-      "h-screen": true,
+      // "h-screen": true,
+      "h-[calc(100vh-80px)]": true,
+      // "mt-20" : true,
       "py-16": true,
       //   "bg-white": true,
       //   "dark:bg-ownBlack-200": true,
@@ -64,7 +66,7 @@ export const LandingSection = ({
           <FloatingLandingPanel />
           <LandingText />
           <div className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-8 px-5 rounded-xl w-fit  hidden xl:flex">
-            <div className="flex items-center content-center">
+            <div className="flex items-center content-center mb">
               <Typography
                 text={"4+"}
                 customClasses={{

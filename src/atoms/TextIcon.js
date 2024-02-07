@@ -39,6 +39,7 @@ export const TextIcon = ({
     >
       {text}
       {children}
+      <div className="text-red-100 bg-slate"></div>
     </div>
   );
 };

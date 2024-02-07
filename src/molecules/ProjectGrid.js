@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function ProjectGrid() {
-  return (
-    <div>ProjectGrid</div>
-  )
+  return <div className="text-white">ProjectGrid</div>;
 }
 
-export default ProjectGrid
+export default ProjectGrid;

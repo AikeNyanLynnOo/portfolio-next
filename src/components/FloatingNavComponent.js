@@ -41,37 +41,37 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
     switch (index) {
       case 0:
         window.scrollTo({
-          top: landingSectionOffsetTop - 1,
+          top: landingSectionOffsetTop - 80,
           behavior: "smooth",
         });
         break;
       case 1:
         window.scrollTo({
-          top: aboutSectionOffsetTop - 1,
+          top: aboutSectionOffsetTop - 80,
           behavior: "smooth",
         });
         break;
       case 2:
         window.scrollTo({
-          top: skillSectionOffsetTop - 1,
+          top: skillSectionOffsetTop - 80,
           behavior: "smooth",
         });
         break;
       case 3:
         window.scrollTo({
-          top: projectsSectionOffsetTop - 1,
+          top: projectsSectionOffsetTop - 80,
           behavior: "smooth",
         });
         break;
       case 4:
         window.scrollTo({
-          top: blogsSectionOffsetTop - 1,
+          top: blogsSectionOffsetTop - 80,
           behavior: "smooth",
         });
         break;
       case 5:
         window.scrollTo({
-          top: contactSectionOffsetTop - 1,
+          top: contactSectionOffsetTop - 80,
           behavior: "smooth",
         });
         break;

@@ -6,14 +6,23 @@ import { NavIcon } from "../atoms/NavIcon";
 import {
   changeActiveNav,
   changeDrawerState,
+  changeScrolling,
 } from "../store/slices/generalSlice";
 import { DrawerNavItem } from "../atoms/DrawerNavItem";
 
 export const DrawerNav = ({ children, customClasses, customStyles }) => {
-  const { activeNav } = useSelector((state) => state.general);
   const dispatch = useDispatch();
   const { isLight } = useSelector((state) => state.theme);
-  const { isDrawerOpen } = useSelector((state) => state.general);
+  const {
+    activeNav,
+    isDrawerOpen,
+    landingSectionOffsetTop,
+    aboutSectionOffsetTop,
+    skillSectionOffsetTop,
+    projectsSectionOffsetTop,
+    blogsSectionOffsetTop,
+    contactSectionOffsetTop,
+  } = useSelector((state) => state.general);
   const drawerNavClasses = useMemo(() => {
     return clsx({
       "w-full": true,
@@ -43,6 +52,50 @@ export const DrawerNav = ({ children, customClasses, customStyles }) => {
     // setActiveLink(index);
     dispatch(changeActiveNav(index));
     dispatch(changeDrawerState());
+
+    // navigating
+    dispatch(changeScrolling({ isScrolling: false }));
+    switch (index) {
+      case 0:
+        window.scrollTo({
+          top: landingSectionOffsetTop-80,
+          behavior: "smooth",
+        });
+        break;
+      case 1:
+        window.scrollTo({
+          top: aboutSectionOffsetTop - 80,
+          behavior: "smooth",
+        });
+        break;
+      case 2:
+        window.scrollTo({
+          top: skillSectionOffsetTop - 80,
+          behavior: "smooth",
+        });
+        break;
+      case 3:
+        window.scrollTo({
+          top: projectsSectionOffsetTop - 80,
+          behavior: "smooth",
+        });
+        break;
+      case 4:
+        window.scrollTo({
+          top: blogsSectionOffsetTop - 80,
+          behavior: "smooth",
+        });
+        break;
+      case 5:
+        window.scrollTo({
+          top: contactSectionOffsetTop - 80,
+          behavior: "smooth",
+        });
+        break;
+
+      default:
+        break;
+    }
   };
   const topPercents = ["0.9%", "18%", "34.5%", "51.5%", "68.5%", "85%"];
 

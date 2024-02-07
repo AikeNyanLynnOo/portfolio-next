@@ -5,7 +5,7 @@ import { ResponsiveContainer } from "./ResponsiveContainer";
 import { Typography } from "../atoms/Typography";
 import { FloatingLandingPanel } from "./FloatingLandingPanel";
 import { LandingText } from "./LandingText";
-import { Box, Chip } from "@mui/material";
+import { Box, Chip, useMediaQuery, useTheme } from "@mui/material";
 import { CommonTab } from "../molecules/CommonTab";
 import { useState } from "react";
 import { useCallback } from "react";
@@ -17,6 +17,73 @@ import { useEffect } from "react";
 import { putOffsetTop } from "../store/slices/generalSlice";
 import { useRef } from "react";
 
+const allProjects = [
+  {
+    title: "Project 1",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 2",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 3",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 4",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 5",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 6",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 8",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+  {
+    title: "Project 9",
+    description:
+      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+    techs: ["HTML", "CSS"],
+    liveLink: "live.com",
+    githubLink: "github.com",
+  },
+];
+
 export const ProjectsSection = ({
   children,
   scrollRef,
@@ -27,11 +94,41 @@ export const ProjectsSection = ({
   const ownRef = useRef(scrollRef || null);
   const { isLight } = useSelector((state) => state.theme);
 
-  const slides = useMemo(() => {}, []);
+  const theme = useTheme();
+  const xl = useMediaQuery(theme.breakpoints.up("xl"));
+  const lg = useMediaQuery(theme.breakpoints.up("lg"));
+  const md = useMediaQuery(theme.breakpoints.up("md"));
+  const sm = useMediaQuery(theme.breakpoints.up("sm"));
+
+  const slides = useMemo(() => {
+    return [
+      {
+        projects: [
+          {
+            title: "Project 1",
+            description:
+              "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+            techs: ["HTML", "CSS"],
+            liveLink: "live.com",
+            githubLink: "github.com",
+          },
+          {
+            title: "Project 2",
+            description:
+              "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
+            techs: ["HTML", "CSS"],
+            liveLink: "live.com",
+            githubLink: "github.com",
+          },
+        ],
+      },
+    ];
+  }, []);
 
   const projectsSectionClasses = useMemo(() => {
     return clsx({
-      "h-screen": true,
+      // "h-screen": true,
+      "h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
       "lg:flex": true,
@@ -82,7 +179,7 @@ export const ProjectsSection = ({
     {
       id: 1,
       title: "Projects",
-      renderTablItem: () => (
+      renderTabItem: () => (
         <ProjectGridSlider
           customStyles={{
             // flex: "75%",
@@ -100,6 +197,7 @@ export const ProjectsSection = ({
     {
       id: 2,
       title: "Experience",
+      renderTabItem: () => <>Experiences</>,
     },
   ];
 
@@ -118,17 +216,13 @@ export const ProjectsSection = ({
         "bg-ownBlack-100": true,
         "dark:bg-ownBlack-200": true,
         "py-16": true,
+        "box-border": true,
       }}
       scrollRef={ownRef}
     >
       <div className={projectsSectionClasses}>
         <h2 className={projectTitleClasses}>Projects & Experience</h2>
-        {/* <p
-          className="py-10 dark:text-ownMint-200 text-ownBlack-200 text-3xl text-center"
-          style={{
-            fontFamily: '"Varela Round", sans-serif',
-          }}
-        > */}
+
         <CommonTab
           active={active}
           handleChange={handleChange}
@@ -184,7 +278,6 @@ export const ProjectsSection = ({
             },
           }}
         />
-        {/* </p> */}
         <div></div>
       </div>
     </ResponsiveContainer>

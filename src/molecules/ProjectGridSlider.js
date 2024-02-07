@@ -27,6 +27,7 @@ export const ProjectGridSlider = ({
         my: 5,
         color: "#494949",
         height: "100%",
+        width : "100%",
         ...customStyles,
       }}
     >
@@ -41,6 +42,7 @@ export const ProjectGridSlider = ({
         // }}
         sx={{
           height: "100%",
+          border : "1px solid red",
           position: "relative",
         }}
         indicatorIconButtonProps={{
@@ -53,8 +55,8 @@ export const ProjectGridSlider = ({
         }}
         activeIndicatorIconButtonProps={{
           style: {
-            color: orange[500], // 2
-            backgroundColor: orange[500], // 2
+            color: "red", // 2
+            backgroundColor: "red", // 2
           },
         }}
         indicatorContainerProps={{
