@@ -27,7 +27,7 @@ export const ProjectGridSlider = ({
         my: 5,
         color: "#494949",
         height: "100%",
-        width: "100%",
+        width : "100%",
         ...customStyles,
       }}
     >
@@ -41,8 +41,8 @@ export const ProjectGridSlider = ({
         //   console.log("Previous>>", previous);
         // }}
         sx={{
-          height: "100px",
-          border: "1px solid red",
+          height: "100%",
+          border : "1px solid red",
           position: "relative",
         }}
         indicatorIconButtonProps={{
@@ -71,7 +71,7 @@ export const ProjectGridSlider = ({
         }}
       >
         {items.map((item, index) => {
-          return <ProjectSlide key={index}>{item.renderItem()}</ProjectSlide>; // each slide contains project cards (1, 2, 3, 4)
+          return <ProjectSlide key={index}>{item.renderItem()}</ProjectSlide>;
         })}
       </Carousel>
     </Box>

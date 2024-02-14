@@ -106,7 +106,6 @@ export const ProjectsSection = ({
         projects: [
           {
             title: "Project 1",
-            introText: "Project 1 intro text",
             description:
               "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
             techs: ["HTML", "CSS"],
@@ -115,7 +114,6 @@ export const ProjectsSection = ({
           },
           {
             title: "Project 2",
-            introText: "Project 2 intro text",
             description:
               "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
             techs: ["HTML", "CSS"],

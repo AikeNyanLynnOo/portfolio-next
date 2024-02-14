@@ -34,7 +34,7 @@ export const ProjectCard = ({
   }, [customClasses, href]);
   return (
     <div>
-      <Card sx={{ maxWidth: 345, background: "blue", border : "1px solid red" }}>
+      <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{
             height: 300,
