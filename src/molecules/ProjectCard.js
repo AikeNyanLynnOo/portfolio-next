@@ -89,7 +89,7 @@ export const ProjectCard = ({
             text={title || ""}
             customClasses={{
               "mb-2": true,
-              "text-ownBlack-100": true,
+              "text-ownBlack-200": true,
               "dark:text-white": true,
               "overflow-hidden": true,
               truncate: true,
@@ -108,6 +108,7 @@ export const ProjectCard = ({
                     "dark:text-white": true,
                     "p-3": true,
                     "text-justify": true,
+                    "leading-6": true,
                   }}
                   customStyles={{
                     fontFamily: '"Varela Round", sans-serif',
@@ -130,6 +131,7 @@ export const ProjectCard = ({
                   "max-h-16": true,
                   "line-clamp-3": true,
                   "text-justify": true,
+                  "leading-6": true,
                 }}
               />
             </div>
@@ -140,7 +142,9 @@ export const ProjectCard = ({
               techs.length > 0 &&
               techs.map((tech, idx) => (
                 <span key={idx}>
-                  <CustomChip label={tech} />
+                  <CustomChip label={tech} customStyles={{
+                    fontSize : "11px"
+                  }}/>
                 </span>
               ))}
           </div>

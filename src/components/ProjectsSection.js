@@ -134,7 +134,7 @@ export const ProjectsSection = ({
       {
         title: "JKT Myanmar International",
         introText:
-          "A professional business website equipped with job application functionality. Utilizing Bootstrap, jQuery, and PHP technologies for seamless operation and user interaction",
+          "A professional business website equipped with job application functionality. Utilizing Bootstrap, jQuery, and PHP technologies for seamless operation and user interaction.",
         projectMedia: "/images/projects/jkt_ss.png",
         description: "",
         techs: ["Bootstrap", "VanillaJS", "JQuery", "PHP"],

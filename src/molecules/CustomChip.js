@@ -17,7 +17,7 @@ export const CustomChip = ({
       "select-none": true,
       "text-white": true,
       "dark:text-gray-50": true,
-      "bg-gray-500": true,
+      "bg-teal-950": true,
       "dark:bg-ownBlack-100": true,
       "dark:border": true,
       "border-ownMint-100": true,
@@ -29,7 +29,12 @@ export const CustomChip = ({
     });
   }, [customClasses, href]);
   return (
-    <span className={chipClasses}>
+    <span
+      className={chipClasses}
+      style={{
+        ...customStyles,
+      }}
+    >
       {label}
       {children}
     </span>

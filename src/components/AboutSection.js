@@ -177,15 +177,15 @@ export const AboutSection = ({
               {[
                 {
                   Icon: ({ classes }) => <FacebookIcon className={classes} />,
-                  link: "/",
+                  link: "https://www.facebook.com/aikenyan.lynnoo.1",
                 },
                 {
                   Icon: ({ classes }) => <LinkedInIcon className={classes} />,
-                  link: "/",
+                  link: "https://www.linkedin.com/in/aike-nyan-lynn-oo-7b57b1169/",
                 },
                 {
                   Icon: ({ classes }) => <GitHubIcon className={classes} />,
-                  link: "/",
+                  link: "https://github.com/AikeNyanLynnOo",
                 },
               ].map(({ Icon, link }, index) => (
                 <Link href={link} key={index}>

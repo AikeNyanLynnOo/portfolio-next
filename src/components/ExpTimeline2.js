@@ -33,7 +33,9 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
         "bg-gray-100": isLight && idx === hoveredExp,
         "dark:bg-ownBlack-100": !isLight && idx === hoveredExp,
         "rounded-xl": true,
-        "p-5": true,
+        "px-2": true,
+        "md:px-5": true,
+        "py-5": true,
       }),
     [isLight, hoveredExp],
   );
@@ -48,7 +50,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
             onMouseEnter={() => dispatch(changeHoveredExp(idx))}
             onMouseLeave={() => dispatch(changeHoveredExp(null))}
           >
-            <div className="w-16 text-end">
+            <div className="w-10 md:w-16 text-end mr-4">
               <span className="text-xs text-ownBlack-200 dark:text-white">
                 {exp.fromYear}-{exp.toYear}
               </span>
@@ -89,7 +91,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                 {exp.description}
               </p>
-              <div className="my-5">
+              <div className="my-5 flex flex-wrap">
                 {exp.techs &&
                   exp.techs.length > 0 &&
                   exp.techs.map((tech, idx) => (
@@ -101,8 +103,9 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                         }}
                         customClasses={{
                           "leading-6": true,
-                          "py-0.5": true,
+                          "py-0": true,
                           "px-1": true,
+                          "my-1": true,
                         }}
                       />
                     </Fragment>
@@ -130,7 +133,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                       "text-sm": true,
                       "text-center": true,
                       "ml-1": true,
-                      "underline" : true
+                      underline: true,
                     }}
                     customStyles={{
                       fontFamily: '"Varela Round", sans-serif',
