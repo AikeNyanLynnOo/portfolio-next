@@ -15,6 +15,7 @@ export const CommonTab = ({
   return (
     <Box
       sx={{
+        
         ...customStyles,
       }}
     >
@@ -28,10 +29,12 @@ export const CommonTab = ({
           children: <span className="MuiTabs-indicatorSpan" />,
         }}
         sx={{
+          // display : "flex",
+          // justifyContent : "center",
           //   [`& .${tabsClasses.scrollButtons}`]: {
           //     "&.Mui-disabled": { opacity: 0.5 },
           //   },
-          //   // backgroundColor : "blue"
+          // backgroundColor : "blue",
           //   ".MuiTabs-indicator": {
           //     display: "none",
           //   },

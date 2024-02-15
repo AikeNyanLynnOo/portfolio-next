@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
+const lineClamp = require("@tailwindcss/line-clamp");
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -59,7 +60,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [lineClamp],
   // important: '#root',
   // corePlugins: {
   // preflight: false,

@@ -60,3 +60,12 @@ body {
     transform: translatey(0px);
   }
 }
+
+@keyframes circle-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}

@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import Link from "next/link";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 
@@ -23,5 +24,13 @@ export const TextWithIcon = ({
       ...customClasses,
     });
   }, [customClasses, href]);
-  return <div className={textWithIconClasses}>{children}</div>;
+  if (href) {
+    return (
+      <Link href={href} className={textWithIconClasses} target="_blank">
+        {children}
+      </Link>
+    );
+  } else {
+    return <div className={textWithIconClasses}>{children}</div>;
+  }
 };

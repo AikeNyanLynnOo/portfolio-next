@@ -10,6 +10,7 @@ const initialState = {
   projectsSectionOffsetTop: 0,
   blogsSectionOffsetTop: 0,
   contactSectionOffsetTop: 0,
+  hoveredExp: null,
 };
 
 export const generalSlice = createSlice({
@@ -21,6 +22,12 @@ export const generalSlice = createSlice({
       return {
         ...state,
         activeNav: action.payload,
+      };
+    },
+    changeHoveredExp(state, action) {
+      return {
+        ...state,
+        hoveredExp: action.payload,
       };
     },
     changeDrawerState(state, action) {
@@ -58,5 +65,6 @@ export const {
   changeDrawerState,
   putOffsetTop,
   changeScrolling,
+  changeHoveredExp,
 } = generalSlice.actions;
 export default generalSlice.reducer;
