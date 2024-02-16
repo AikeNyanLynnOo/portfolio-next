@@ -24,14 +24,15 @@ export const LandingSection = ({
   const landingSectionClasses = useMemo(() => {
     return clsx({
       // "h-screen": true,
-      "h-[calc(100vh-80px)]": true,
+      "min-h-[calc(100vh-80px)]": true,
       // "mt-20" : true,
       "py-16": true,
       //   "bg-white": true,
       //   "dark:bg-ownBlack-200": true,
-      //   flex: true,
-      //   "justify-between": true,
-      //   "items-center": true,
+      flex: true,
+      "flex-col": true,
+      "justify-center": true,
+      "items-center": true,
       ...customClasses,
     });
   }, [customClasses]);
@@ -66,12 +67,13 @@ export const LandingSection = ({
           <FloatingLandingPanel />
           <LandingText />
           <div className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-8 px-5 rounded-xl w-fit  hidden xl:flex">
-            <div className="flex items-center content-center mb">
+            <div className="flex items-center gap-x-1 mb">
               <Typography
-                text={"4+"}
+                text={"5"}
                 customClasses={{
                   "text-ownBlack-200": true,
-                  "w-1/2": true,
+                  "w-3/12": true,
+                  
                   "dark:text-ownMint-100": true,
                   "text-4xl": true,
                 }}

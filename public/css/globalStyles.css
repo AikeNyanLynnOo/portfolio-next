@@ -6,9 +6,9 @@
 @import "tailwindcss/utilities"; */
 
 body {
-  /* font-family: "Varela Round", sans-serif; */
+  font-family: "Varela Round", sans-serif;
   /* font-family: 'Source Code Pro', monospace; */
-  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
   font-size: 16px;
 }
 
@@ -66,6 +66,6 @@ body {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.8);
   }
 }

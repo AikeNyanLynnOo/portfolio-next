@@ -5,14 +5,18 @@ import { darkTheme } from "../Theme/styles";
 export const CustomTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))(({ theme }) => {
-    const {isLight} = useSelector(state=>state.theme);
+  const { isLight } = useSelector((state) => state.theme);
 
   return {
     [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: isLight ? "#FFFFFF" : "#1A1E23",
-      color: "#292F35",
-      boxShadow: theme.shadows[1],
-      fontSize: 11,
+      backgroundColor: isLight ? "#DFCCFB" : "#DFCCFB",
+      // boxShadow: theme.shadows[1],
+      padding: 16,
+      fontSize: 12,
+      borderRadius : "20px"
+    },
+    "& .MuiTooltip-arrow": {
+      color: isLight ? "#DFCCFB" : "#DFCCFB",
     },
   };
 });

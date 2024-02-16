@@ -186,7 +186,15 @@ export const ProjectsSection = ({
           "Developing content management system using NextJS, Material UI & Redux Saga, integration with Rest API, handling handy & various API requests for better UX, User Authentication Management, Developing highly-reusable UI components",
         companyName: "ONOW Myanmar",
         companyLink: "https://www.onow.com/",
-        techs: ["NextJS", "MUI", "Redux toolkit+saga", "REST API"],
+        techs: [
+          "Figma",
+          "Super Nova",
+          "Design Tokens",
+          "NextJS",
+          "MUI",
+          "Redux toolkit + Saga",
+          "REST API",
+        ],
       },
       {
         fromYear: "2019",
@@ -363,7 +371,7 @@ export const ProjectsSection = ({
                   "mb-2": true,
                 }}
                 customStyles={{
-                  fontFamily: "'Source Code Pro', monospace",
+                  fontFamily: '"Varela Round", sans-serif',
                 }}
               />
             </Box>

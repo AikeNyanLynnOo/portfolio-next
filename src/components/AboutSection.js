@@ -30,7 +30,7 @@ export const AboutSection = ({
   const aboutSectionClasses = useMemo(() => {
     return clsx({
       // "h-screen": true,
-      "h-[calc(100vh-80px)]": true,
+      // "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
       flex: true,
@@ -38,7 +38,6 @@ export const AboutSection = ({
       "lg:justify-between": true,
       "justify-center": true,
       "items-center": true,
-      // block: true,
       ...customClasses,
     });
   }, [customClasses]);
@@ -72,9 +71,10 @@ export const AboutSection = ({
       "backdrop-filter": true,
       "backdrop-blur-3xl": true,
       // "bg-opacity-40": true,
+      "bg-gray-100": true,
       "dark:bg-ownBlack-100": true,
-      border: true,
-      "border-gray-60": true,
+      // border: true,
+      // "border-gray-60": true,
     });
   }, []);
 
@@ -98,7 +98,7 @@ export const AboutSection = ({
       }}
     >
       <div className={aboutSectionClasses}>
-        <div className="w-full lg:w-4/6 lg:order-first order-last">
+        <div className="w-full h-ful lg:w-4/6 lg:order-first order-last">
           <p className={aboutMeTitleClasses}>About Me</p>
           <div className={aboutMeTextClasses}>
             <CodeText
@@ -129,7 +129,7 @@ export const AboutSection = ({
             >
               <Typography
                 text={
-                  "With a wealth of professional experience, I am a seasoned frontend developer specializing in the adept utilization of Material-UI, React, Next.js, Tailwind, and REST API integration to meticulously design and develop cutting-edge web applications that prioritize both functionality and user experience."
+                  "Armed with a distinguished Bachelor's degree from the University of Information Technology (UIT) Yangon and backed by over five years of professional experience, I am a seasoned frontend developer. Proficient in leveraging Material-UI, React, Next.js, Tailwind, and REST API integration, I am committed to crafting cutting-edge web applications that seamlessly blend functionality with exceptional user experience. My track record speaks volumes, setting me apart as a driving force in the dynamic realm of web development."
                 }
                 customClasses={{
                   "text-ownBlack-200": true,
@@ -200,7 +200,7 @@ export const AboutSection = ({
           alt="dev_img"
           height={1000}
           width={1000}
-          className="h-64 w-64 rounded-full"
+          className="h-48 w-48 lg:h-64 lg:w-64 rounded-full p-0 mb-10 lg:my-0 ring-1 ring-ownMint-200"
         />
       </div>
     </ResponsiveContainer>

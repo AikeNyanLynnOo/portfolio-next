@@ -55,6 +55,27 @@ export const BlogsSection = ({
     });
   }, []);
 
+  const blogs = useMemo(() => {
+    return [
+      {
+        title:
+          "State Management Journey In React Apps (Redux, Redux Toolkit, Redux Thunk, Redux Sagas)",
+        isNew: true,
+        techs: ["Redux", "Redux Toolkit", " Redux Thunk", "Redux Sagas"],
+        introText:
+          "အရင်ဆုံး Redux ကို ဘာကြောင့်သုံးရတာလဲဆိုတာကို အရင်သိဖို့လိုပါတယ်။ အရင် က React မှာ state management လုပ်မယ်ဆိုရင် useState လို hooks တွေသုံးပြီးလုပ်ကြပါတယ်။ component level မှာ parent-to-child ပုံစံနဲ့ state တွေကိုပို့ပါတယ်။",
+        blogDate: "Jan 11, 2024",
+        link: "",
+        blogMedia: "/images/blogs/sm_ss.png",
+        externalLink:
+          "https://medium.com/@aikenyanlynnoo.dev/state-management-journey-in-react-apps-redux-redux-toolkit-redux-thunk-redux-sagas-4d0cb82d8b34",
+      },
+      {},
+      {},
+      {},
+    ];
+  }, []);
+
   useEffect(() => {
     dispatch(
       putOffsetTop({
@@ -78,9 +99,18 @@ export const BlogsSection = ({
         <h2 className={blogTitleClasses}>Blogs</h2>
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div class="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
-            {[1, 2, 3, 4].map((blog, idx) => (
+            {blogs.map((blog, idx) => (
               <Fragment key={idx}>
-                <BlogCard isNew techs={["HTML", "Javascript"]} />
+                <BlogCard
+                  title={blog.title}
+                  blogMedia={blog.blogMedia}
+                  isNew={blog.isNew}
+                  techs={blog.techs}
+                  introText={blog.introText}
+                  blogDate={blog.blogDate}
+                  link={blog.link}
+                  externalLink={blog.externalLink}
+                />
               </Fragment>
             ))}
           </div>

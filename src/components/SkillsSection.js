@@ -24,7 +24,7 @@ export const SkillsSection = ({
   const skillsSectionClasses = useMemo(() => {
     return clsx({
       // "h-screen": true,
-      "h-[calc(100vh-80px)]": true,
+      // "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
       "lg:flex": true,

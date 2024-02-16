@@ -97,6 +97,7 @@ export const ProjectCard = ({
           />
 
           <CustomTooltip
+            arrow
             title={
               <div>
                 <Typography
@@ -105,8 +106,8 @@ export const ProjectCard = ({
                     "mb-2": true,
                     "text-sm": true,
                     "text-ownBlack-100": true,
-                    "dark:text-white": true,
-                    "p-3": true,
+                    "dark:text-ownMint-200": false,
+                    "dark:text-ownBlack-100": true,
                     "text-justify": true,
                     "leading-6": true,
                   }}
@@ -142,9 +143,20 @@ export const ProjectCard = ({
               techs.length > 0 &&
               techs.map((tech, idx) => (
                 <span key={idx}>
-                  <CustomChip label={tech} customStyles={{
-                    fontSize : "11px"
-                  }}/>
+                  <CustomChip
+                    label={tech}
+                    customStyles={{
+                      fontSize: "12px",
+                    }}
+                    customClasses={{
+                      "py-1": true,
+                      "px-2": true,
+                      "my-1": true,
+                      "inline-block": true,
+                      "border-ownMint-100": false,
+                      "border-gray-200": true,
+                    }}
+                  />
                 </span>
               ))}
           </div>

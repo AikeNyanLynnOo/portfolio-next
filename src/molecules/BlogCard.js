@@ -1,50 +1,85 @@
 import Image from "next/image";
 import { CustomChip } from "./CustomChip";
 import { Fragment } from "react";
+import { TextWithIcon } from "./TextWithIcon";
+import { Typography } from "../atoms/Typography";
+import { Icon } from "@mui/material";
+import Link from "next/link";
+import { CustomTooltip } from "./CustomTooltip";
 
 export const BlogCard = ({
   customClasses,
   customStyles,
   title,
+  blogMedia,
   isNew,
   techs,
   introText,
   blogDate,
   link,
+  externalLink,
 }) => {
   return (
-    <a
-      class="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-      href={link || "#"}
-    >
+    <div class="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4">
       <div class="sm:flex">
-        <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+        <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
           <Image
-            height={100}
-            width={100}
+            height={1000}
+            width={1000}
             className="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
-            src="/images/projects/jkt_ss.png"
+            src={blogMedia || "/images/blogs/sm_ss.png"}
             alt="Image Description"
           />
         </div>
 
-        <div class="grow mt-4 sm:mt-0 sm:ms-6 px-4 sm:px-0">
+        <div class="mt-4 sm:mt-0 sm:ms-6 px-0 md:px-4">
           <h3
-            class="text-xl flex items-center font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white"
+            class="text-xl flex font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
           >
-            {title || "Studio by Preline"}
+            <CustomTooltip
+              arrow
+              title={
+                <div>
+                  <Typography
+                    text={title || ""}
+                    customClasses={{
+                      "line-clamp-3": true,
+                      "leading-6": true,
+                      "text-ownBlack-100": true,
+                      "dark:text-ownMint-200": false,
+                      "dark:text-ownBlack-100": true,
+                    }}
+                    customStyles={{
+                      fontFamily: '"Varela Round", sans-serif',
+                    }}
+                  />
+                </div>
+              }
+              placement="top"
+            >
+              <div>
+                <Typography
+                  text={title || ""}
+                  customClasses={{
+                    "line-clamp-3": true,
+                  }}
+                />
+              </div>
+            </CustomTooltip>
             {isNew && (
               <CustomChip
                 label="New"
                 customClasses={{
+                  "h-fit": true,
                   "py-0": true,
                   "px-2": true,
                   "ml-2": true,
+                  "mt-2": true,
                   "text-sm": true,
-                  "bg-teal-950" : false,
+                  "bg-teal-950": false,
                   "bg-red-400": true,
                   "dark:bg-ownMint-200": true,
                   "dark:text-ownBlack-200": true,
@@ -53,7 +88,7 @@ export const BlogCard = ({
             )}
           </h3>
           <p
-            class="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6"
+            class="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6 line-clamp-3"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
@@ -72,7 +107,7 @@ export const BlogCard = ({
                       fontSize: "11px",
                     }}
                     customClasses={{
-                      "py-0": true,
+                      "py-0.5": true,
                       "px-1": true,
                       "my-1": true,
                       "border-ownMint-100": false,
@@ -90,11 +125,13 @@ export const BlogCard = ({
           >
             Posted: {blogDate || "16/02/2024"}
           </p>
-          <p
-            class="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium"
+          <Link
+            class="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium text-sm"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
+            href={externalLink || "#"}
+            target="_blank"
           >
             Read more
             <svg
@@ -111,9 +148,9 @@ export const BlogCard = ({
             >
               <path d="m9 18 6-6-6-6" />
             </svg>
-          </p>
+          </Link>
         </div>
       </div>
-    </a>
+    </div>
   );
 };

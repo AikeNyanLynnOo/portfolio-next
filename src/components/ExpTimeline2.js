@@ -50,8 +50,13 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
             onMouseEnter={() => dispatch(changeHoveredExp(idx))}
             onMouseLeave={() => dispatch(changeHoveredExp(null))}
           >
-            <div className="w-10 md:w-16 text-end mr-4">
-              <span className="text-xs text-ownBlack-200 dark:text-white">
+            <div className="md:w-16 pt-1">
+              <span
+                className="text-sm inline-block p-0 w-16 text-ownBlack-200 dark:text-white"
+                style={{
+                  fontFamily: '"Varela Round", sans-serif',
+                }}
+              >
                 {exp.fromYear}-{exp.toYear}
               </span>
             </div>
@@ -88,7 +93,12 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
 
                 {exp.jobTitle}
               </h3>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              <p
+                className="mt-1 text-sm text-gray-600 dark:text-gray-400"
+                style={{
+                  fontFamily: '"Varela Round", sans-serif',
+                }}
+              >
                 {exp.description}
               </p>
               <div className="my-5 flex flex-wrap">
@@ -99,48 +109,84 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                       <CustomChip
                         label={tech}
                         customStyles={{
-                          fontSize: "5px",
+                          fontSize: "12px",
+                          fontFamily: '"Varela Round", sans-serif',
                         }}
                         customClasses={{
                           "leading-6": true,
                           "py-0": true,
-                          "px-1": true,
+                          "px-2": true,
                           "my-1": true,
                         }}
                       />
                     </Fragment>
                   ))}
               </div>
-              {exp.companyName && (
-                <TextWithIcon href={exp.companyLink || "/"}>
-                  <Icon
-                    sx={
-                      {
-                        // transform: "rotate(135deg)",
-                      }
-                    }
-                    style={{
-                      fontSize: "15px",
+              <div className="flex items-center">
+                {exp.jobType && (
+                  <TextWithIcon
+                    customClasses={{
+                      "mr-2": true,
                     }}
                   >
-                    business
-                  </Icon>
-                  <Typography
-                    text={exp.companyName}
-                    customClasses={{
-                      "text-ownBlack-200": true,
-                      "dark:text-white": true,
-                      "text-sm": true,
-                      "text-center": true,
-                      "ml-1": true,
-                      underline: true,
-                    }}
-                    customStyles={{
-                      fontFamily: '"Varela Round", sans-serif',
-                    }}
-                  />
-                </TextWithIcon>
-              )}
+                    <Icon
+                      sx={
+                        {
+                          // transform: "rotate(135deg)",
+                        }
+                      }
+                      style={{
+                        fontSize: "15px",
+                      }}
+                    >
+                      access_time
+                    </Icon>
+                    <Typography
+                      text={exp.jobType}
+                      customClasses={{
+                        "text-ownBlack-200": true,
+                        "dark:text-white": true,
+                        "text-sm": true,
+                        "text-center": true,
+                        "ml-1": true,
+                      }}
+                      customStyles={{
+                        fontFamily: '"Varela Round", sans-serif',
+                      }}
+                    />
+                  </TextWithIcon>
+                )}
+                {exp.companyName && (
+                  <TextWithIcon href={exp.companyLink || "/"}>
+                    <Icon
+                      sx={
+                        {
+                          // transform: "rotate(135deg)",
+                        }
+                      }
+                      style={{
+                        fontSize: "15px",
+                      }}
+                    >
+                      business
+                    </Icon>
+                    <Typography
+                      text={exp.companyName}
+                      customClasses={{
+                        "text-ownBlack-200": true,
+                        "dark:text-white": true,
+                        "text-sm": true,
+                        "text-center": true,
+                        "ml-1": true,
+                        underline: true,
+                      }}
+                      customStyles={{
+                        fontFamily: '"Varela Round", sans-serif',
+                      }}
+                    />
+                  </TextWithIcon>
+                )}
+              </div>
             </div>
           </div>
         ))}

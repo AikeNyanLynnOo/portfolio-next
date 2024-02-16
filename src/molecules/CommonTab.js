@@ -15,7 +15,6 @@ export const CommonTab = ({
   return (
     <Box
       sx={{
-        
         ...customStyles,
       }}
     >
@@ -38,14 +37,14 @@ export const CommonTab = ({
           //   ".MuiTabs-indicator": {
           //     display: "none",
           //   },
-          // "& .MuiTab-root": {
-          //   textTransform: "capitalize",
-          //   color: "#ffffff",
-          //   borderRadius: "10px",
-          //   backgroundColor: neutral[4],
-          //   color: neutral[10],
-          //   mr: 6,
-          // },
+          "& .MuiTab-root": {
+            textTransform: "capitalize",
+            color: "#ffffff",
+            borderRadius: "10px",
+            // backgroundColor: neutral[4],
+            // color: neutral[10],
+            mr: 6,
+          },
           //   "& .Mui-selected": {
           //     backgroundColor: "#ff9900",
           //     color: "#ffffff",
@@ -62,11 +61,14 @@ export const CommonTab = ({
               label={
                 (renderCustomLabel && renderCustomLabel(tabItem, index)) || (
                   <Typography
-                    variant="yoloText8SemiBold"
                     sx={{
                       color: index === active ? neutral[10] : neutral[7],
-                      textTransform: "capitalize",
+                      // textTransform: "capitalize",
+
                       ...customTabTypoStyles,
+                    }}
+                    style={{
+                      fontFamily: '"Varela Round", sans-serif',
                     }}
                   >
                     {tabItem.title}
