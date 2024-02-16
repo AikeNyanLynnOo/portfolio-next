@@ -60,8 +60,27 @@ export const BlogsSection = ({
     return [
       {
         title:
-          "State Management Journey In React Apps (Redux, Redux Toolkit, Redux Thunk, Redux Sagas)",
+          "Elevating React UIs with Design Tokens and MUI: A Comprehensive Guide",
         isNew: true,
+        techs: [
+          "Design Tokens",
+          "Design System",
+          "Style Dictionary",
+          "React",
+          "Material UI",
+        ],
+        introText:
+          "React နဲ့ develop လုပ်တဲ့အခါ UI components တွေက reusable ဖြစ်ဖို့လိုသလို scalable, maintainable ဖြစ်ဖို့လည်း လိုပါတယ်။ UI/UX ဘက်က Design ‌အပြောင်းအလဲ ဖြစ်နိုင်ချေအတွက်ပါ ကြိုစဉ်းစားပြီး component တွေရေးကြရပါတယ်။",
+        blogDate: "Feb 16, 2024",
+        link: "",
+        blogMedia: "/images/blogs/dt_ss.png",
+        externalLink:
+          "https://medium.com/@aikenyanlynnoo.dev/elevating-react-uis-with-design-tokens-and-mui-a-comprehensive-guide-e8f9ca00e072",
+      },
+      {
+        title:
+          "State Management Journey In React Apps (Redux, Redux Toolkit, Redux Thunk, Redux Sagas)",
+        isNew: false,
         techs: ["Redux", "Redux Toolkit", " Redux Thunk", "Redux Sagas"],
         introText:
           "အရင်ဆုံး Redux ကို ဘာကြောင့်သုံးရတာလဲဆိုတာကို အရင်သိဖို့လိုပါတယ်။ အရင် က React မှာ state management လုပ်မယ်ဆိုရင် useState လို hooks တွေသုံးပြီးလုပ်ကြပါတယ်။ component level မှာ parent-to-child ပုံစံနဲ့ state တွေကိုပို့ပါတယ်။",
@@ -71,9 +90,6 @@ export const BlogsSection = ({
         externalLink:
           "https://medium.com/@aikenyanlynnoo.dev/state-management-journey-in-react-apps-redux-redux-toolkit-redux-thunk-redux-sagas-4d0cb82d8b34",
       },
-      {},
-      {},
-      {},
     ];
   }, []);
 
@@ -99,7 +115,7 @@ export const BlogsSection = ({
       <div className={blogsSectionClasses}>
         <h2 className={blogTitleClasses}>Blogs</h2>
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-          <div class="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
+          <div class="grid xl:grid-cols-2 lg:gap-y-16 gap-10">
             {blogs.map((blog, idx) => (
               <Fragment key={idx}>
                 <BlogCard

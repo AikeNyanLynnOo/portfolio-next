@@ -85,7 +85,7 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
             "sm:hidden": true,
           }}
         ></TextIcon>
-        <div className="flex h-full py-2">
+        <div className="flex h-full w-fit absolute left-1/2 top-0 -translate-x-1/2">
           <NavItem
             link={{
               href: "/",
@@ -93,6 +93,11 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
             customClasses={{
               hidden: true,
               "sm:flex": true,
+              // absolute: true,
+              // "left-1/2": true,
+              // "top-0": true,
+              "py-2": true,
+              // "-translate-x-1/2" : true
             }}
           >
             <DevIcon />
@@ -109,7 +114,7 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
             }}
           /> */}
         </div>
-        <div className="flex gap-x-5 items-center ml-20">
+        <div className="flex gap-x-5 items-center">
           <SwitchBtn />
           <span className="md:hidden  flex items-center">
             <Icon className={menuIconClasses} onClick={handleMenuBar}>

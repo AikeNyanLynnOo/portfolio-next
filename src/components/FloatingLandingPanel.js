@@ -107,7 +107,7 @@ export const FloatingLandingPanel = ({
           fontFamily: '"Varela Round", sans-serif',
         }}
       />
-      <div className="my-5">
+      <div className="my-5  w-fit mx-auto">
         {[
           {
             text: "aikenyanlynnooo.dev@gmail.com",
@@ -188,7 +188,7 @@ export const FloatingLandingPanel = ({
           />
         ))}
       </div> */}
-      <div className="flex items-center gap-x-2">
+      <div className="flex items-center gap-x-2 mx-auto">
         {[
           {
             Icon: ({ classes }) => <FacebookIcon className={classes} />,
