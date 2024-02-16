@@ -183,7 +183,7 @@ export const ProjectsSection = ({
         jobType: "Full-Time",
         jobLocation: "Yangon, Myanmar",
         description:
-          "Developing content management system using NextJS, Material UI & Redux Saga, integration with Rest API, handling handy & various API requests for better UX, User Authentication Management, Developing highly-reusable UI components",
+          "I specialize in developing content management systems using Next.js, Material UI, and Redux Saga, integrating with REST APIs for enhanced user experience. With expertise in design tokens and seamless production application, I collaborate closely with UI/UX engineers and excel in user authentication management, crafting highly reusable UI components.",
         companyName: "ONOW Myanmar",
         companyLink: "https://www.onow.com/",
         techs: [
@@ -202,7 +202,8 @@ export const ProjectsSection = ({
         jobTitle: "Frontend Developer",
         jobType: "Freelance",
         jobLocation: "Yangon, Myanmar",
-        description: "React, Bootstrap, TailwindCSS, Framer Motion, REST API",
+        description:
+          "With extensive professional experience, I specialize in React development, proficiently utilizing Bootstrap, TailwindCSS, Framer Motion, and REST API integration to create dynamic and responsive web applications.",
         techs: [
           "ReactJS",
           "Bootstrap",
@@ -218,7 +219,7 @@ export const ProjectsSection = ({
         jobType: "Freelance",
         jobLocation: "Yangon, Myanmar",
         description:
-          "NodeJS (ExpressJS, MongoDB, JWT Authentication, Account Registeration, Account Authentication)",
+          "Experienced Node.js developer proficient in Express.js and MongoDB. Specializing in JWT authentication, account registration, and authentication for secure and seamless user experiences.",
         techs: ["ExpressJS", "MongoDB", "JWT"],
       },
       {
@@ -228,7 +229,7 @@ export const ProjectsSection = ({
         jobType: "Full-Time",
         jobLocation: "Yangon, Myanmar",
         description:
-          "Take training and responsible for developing the web applications using React, NodeJS, Docker and Google Cloud Platform (Cloud Technologies - Cloud Run, BigQuery, App Engine, etc)",
+          "Professionally trained in React, Node.js, Docker, and Google Cloud Platform, I specialize in web application development. Proficient in web crawlers and heavy JS libraries like Puppeteer and Cheerio, I ensure efficient data retrieval and manipulation. Leveraging technologies such as Cloud Run, BigQuery, and App Engine, I deliver scalable solutions that meet industry standards and client requirements.",
         companyName: "HAJ Co.,Ltd.",
         companyLink: "https://official.haj.co.jp/",
         techs: [
@@ -239,6 +240,8 @@ export const ProjectsSection = ({
           "Big Query",
           "Cloud Run",
           "App Engine",
+          "Puppeteer",
+          "Cheerio",
         ],
       },
       {
@@ -248,7 +251,7 @@ export const ProjectsSection = ({
         jobType: "Full-Time",
         jobLocation: "Yangon, Myanmar",
         description:
-          "Take training and responsible as a junior web developer using PHP and VueJS",
+          "Trained and entrusted with responsibilities as a junior web developer, I excel in utilizing PHP and Vue.js to create dynamic and responsive web applications. My dedication to ongoing learning and development ensures that I contribute effectively to project success while continually enhancing my skills in these technologies.",
         companyName: "Ahtar Oo Co.,Ltd.",
         companyLink: "https://www.ahtaroo.com/",
         techs: ["PHP", "VueJS"],

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { clsx } from "clsx";
 import { Fragment, useCallback, useMemo } from "react";
 import { useSelector } from "react-redux";
@@ -7,7 +8,15 @@ import Image from "next/image";
 import { TextWithIcon } from "../molecules/TextWithIcon";
 import { Chip, Icon } from "@mui/material";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-import { LaptopMac, Link, Place } from "@mui/icons-material";
+import { LaptopMac, Place } from "@mui/icons-material";
+import Icons from "@mui/icons-material";
+
+// Icons
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import { LeetCodeIcon } from "../atoms/LeetCodeIcon";
 
 export const FloatingLandingPanel = ({
   children,
@@ -17,7 +26,7 @@ export const FloatingLandingPanel = ({
   const { isLight } = useSelector((state) => state.theme);
   const floatingPanelClasses = useMemo(() => {
     return clsx({
-      "h-96": true,
+      "h-auto": true,
       flex: true,
       "flex-col": true,
       "justify-between": true,
@@ -116,7 +125,20 @@ export const FloatingLandingPanel = ({
           {
             text: "https://aikenyanlynnoo.github.io/",
             href: `https://aikenyanlynnoo.github.io/`,
-            Icon: <Link sx={{ ...iconStyles, transform: "rotate(135deg)" }} />,
+            Icon: (
+              <Icon
+                style={{
+                  fontSize: "16px",
+                  marginRight: "8px",
+                  transform: "rotate(135deg)",
+                  color: isLight
+                    ? lightTheme.textColor[100]
+                    : darkTheme.textColor[100],
+                }}
+              >
+                link
+              </Icon>
+            ),
           },
         ].map((info, index) => (
           <Fragment key={index}>
@@ -138,7 +160,7 @@ export const FloatingLandingPanel = ({
           </Fragment>
         ))}
       </div>
-      <div className="my-5">
+      {/* <div className="my-5">
         {[
           {
             label: "React",
@@ -164,6 +186,34 @@ export const FloatingLandingPanel = ({
               fontFamily: '"Varela Round", sans-serif',
             }}
           />
+        ))}
+      </div> */}
+      <div className="flex items-center gap-x-2">
+        {[
+          {
+            Icon: ({ classes }) => <FacebookIcon className={classes} />,
+            link: "https://www.facebook.com/aikenyan.lynnoo.1",
+          },
+          {
+            Icon: ({ classes }) => <LinkedInIcon className={classes} />,
+            link: "https://www.linkedin.com/in/aike-nyan-lynn-oo-7b57b1169/",
+          },
+          {
+            Icon: ({ classes }) => <GitHubIcon className={classes} />,
+            link: "https://github.com/AikeNyanLynnOo",
+          },
+          {
+            Icon: ({ classes }) => <LeetCodeIcon />,
+            link: "https://leetcode.com/a1k3/",
+          },
+          {
+            Icon: ({ classes }) => <TelegramIcon className={classes} />,
+            link: "https://t.me/a1k333",
+          },
+        ].map(({ Icon, link }, index) => (
+          <Link href={link || "#"} key={index} target="_blank">
+            <Icon classes="text-ownBlack-200 dark:text-white text-2xl hover:text-ownMint-200 hover:dark:text-ownMint-100 hover:shadow-xl" />
+          </Link>
         ))}
       </div>
     </div>

@@ -143,7 +143,7 @@ export const AboutSection = ({
                 }}
               />
             </CodeText>
-            <CodeText
+            {/* <CodeText
               customClasses={{
                 "mt-5": true,
                 flex: true,
@@ -192,7 +192,7 @@ export const AboutSection = ({
                   <Icon classes="text-ownBlack-200 dark:text-ownMint-200 text-2xl hover:text-ownMint-200 hover:dark:text-violet-300 hover:shadow-xl" />
                 </Link>
               ))}
-            </CodeText>
+            </CodeText> */}
           </div>
         </div>
         <Image

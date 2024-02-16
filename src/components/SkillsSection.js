@@ -169,6 +169,30 @@ export const SkillsSection = ({
               href: "https://git-scm.com/",
               isMaterialIcon: false,
             },
+            {
+              icon: "/images/icons/gcp.svg",
+              text: "Google Cloud",
+              href: "https://cloud.google.com/",
+              isMaterialIcon: false,
+            },
+            {
+              icon: "/images/icons/docker.svg",
+              text: "Docker",
+              href: "https://www.docker.com/",
+              isMaterialIcon: false,
+            },
+            {
+              icon: "/images/icons/puppeteer.png",
+              text: "Puppeteer",
+              href: "https://pptr.dev/",
+              isMaterialIcon: false,
+            },
+            {
+              icon: "/images/icons/cheerio.svg",
+              text: "Cheerio",
+              href: "https://cheerio.js.org/",
+              isMaterialIcon: false,
+            },
           ].map((item, index) => (
             <Fragment key={index}>
               <SkillIconWithText

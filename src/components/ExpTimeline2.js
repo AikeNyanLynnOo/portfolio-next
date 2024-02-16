@@ -32,7 +32,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
         "justify-center": true,
         "bg-gray-100": isLight && idx === hoveredExp,
         "dark:bg-ownBlack-100": !isLight && idx === hoveredExp,
-        "rounded-xl": true,
+        "rounded-2xl": true,
         "px-2": true,
         "md:px-5": true,
         "py-5": true,
@@ -64,7 +64,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
               isExpHovered={hoveredExp !== null && hoveredExp === idx}
             />
             <div className="grow pt-0.5">
-              <h3 className="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white mb-2 items-center">
+              <h3 className="flex gap-x-1.5 font-semibold text-lg text-gray-800 dark:text-white mb-2 items-center">
                 {/* <svg
                   className="flex-shrink-0 size-4 mt-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,9 +94,10 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                 {exp.jobTitle}
               </h3>
               <p
-                className="mt-1 text-sm text-gray-600 dark:text-gray-400"
+                className="mt-1 text-gray-600 dark:text-gray-400 text-justify leading-6"
                 style={{
                   fontFamily: '"Varela Round", sans-serif',
+                  fontSize: "13px",
                 }}
               >
                 {exp.description}

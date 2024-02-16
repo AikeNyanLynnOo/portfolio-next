@@ -8,6 +8,9 @@ import { TextIcon } from "../atoms/TextIcon";
 import { NavItem } from "./NavItemComponent";
 import { Icon } from "@mui/material";
 import { changeDrawerState } from "../store/slices/generalSlice";
+import { DevIcon } from "../atoms/DevIcon";
+import Link from "next/link";
+import { Fragment } from "react";
 
 export const NavBar = ({ children, customMenuIconClasses }) => {
   const dispatch = useDispatch();
@@ -82,18 +85,20 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
             "sm:hidden": true,
           }}
         ></TextIcon>
-        <div className="flex h-full">
+        <div className="flex h-full py-2">
           <NavItem
             link={{
               href: "/",
-              text: "Home",
             }}
             customClasses={{
               hidden: true,
               "sm:flex": true,
             }}
-          />
-          <NavItem
+          >
+            <DevIcon />
+          </NavItem>
+
+          {/* <NavItem
             link={{
               href: "/blogs",
               text: "Blogs",
@@ -102,9 +107,9 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
               hidden: true,
               "sm:flex": true,
             }}
-          />
+          /> */}
         </div>
-        <div className="flex gap-x-5 items-center">
+        <div className="flex gap-x-5 items-center ml-20">
           <SwitchBtn />
           <span className="md:hidden  flex items-center">
             <Icon className={menuIconClasses} onClick={handleMenuBar}>

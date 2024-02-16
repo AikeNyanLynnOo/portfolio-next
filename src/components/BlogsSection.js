@@ -13,6 +13,7 @@ import Image from "next/image";
 import { BlogCard } from "../molecules/BlogCard";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const BlogsSection = ({
   children,
@@ -115,8 +116,9 @@ export const BlogsSection = ({
             ))}
           </div>
         </div>
-        <button
-          onClick={() => router.push("/blogs")}
+        <Link
+          target="_blank"
+          href="https://medium.com/@aikenyanlynnoo.dev"
           type="button"
           style={{
             fontFamily: '"Varela Round", sans-serif',
@@ -132,7 +134,7 @@ export const BlogsSection = ({
           >
             keyboard_arrow_right
           </Icon>
-        </button>
+        </Link>
       </div>
     </ResponsiveContainer>
   );
