@@ -123,8 +123,8 @@ export const FloatingLandingPanel = ({
             Icon: <LaptopMac sx={{ ...iconStyles }} />,
           },
           {
-            text: "https://aikenyanlynnoo.github.io/",
-            href: `https://aikenyanlynnoo.github.io/`,
+            text: "https://portfolio-aike.vercel.app/",
+            href: `https://portfolio-aike.vercel.app/`,
             Icon: (
               <Icon
                 style={{

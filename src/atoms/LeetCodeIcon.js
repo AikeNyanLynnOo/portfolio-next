@@ -9,16 +9,28 @@ export const LeetCodeIcon = ({ customStyles }) => {
   const fillColor = useMemo(() => {
     if (isHovering) {
       if (isLight) {
-        return lightTheme.textColor[200];
+        return (
+          (customStyles && customStyles.hoverLightColor) ||
+          lightTheme.textColor[200]
+        );
       }
-      return darkTheme.textColor[100];
+      return (
+        (customStyles && customStyles.hoverDarkColor) ||
+        darkTheme.textColor[100]
+      );
     } else {
       if (isLight) {
-        return lightTheme.textColor[100];
+        return (
+          (customStyles && customStyles.unHoverLightColor) ||
+          lightTheme.textColor[100]
+        );
       }
-      return darkTheme.textColor[500];
+      return (
+        (customStyles && customStyles.unHoverDarkColor) ||
+        darkTheme.textColor[500]
+      );
     }
-  }, [isLight, isHovering]);
+  }, [isLight, isHovering, customStyles]);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

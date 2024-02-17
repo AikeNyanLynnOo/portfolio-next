@@ -6,10 +6,14 @@ import { wrapper } from "@/src/store/store";
 import PropTypes from "prop-types";
 import Head from "next/head";
 
-import "../public/css/globalStyles.css";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
+
+// CSS
+import "../public/css/globalStyles.css";
+import "../public/css/customLogoStyles.css";
+import "../public/css/achievementStyles.css";
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);

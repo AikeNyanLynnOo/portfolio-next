@@ -1,6 +1,6 @@
 export const lightTheme = {
   textColor: {
-    100: "#292F35", // black
+    100: "#292F35", // mint
     200: "#15F6D6", // dark mint
     300: "#0B73B8", // high dark mint
     400: "#33BBC5", // dark dark mint
@@ -24,6 +24,7 @@ export const darkTheme = {
     300: "#0B73B8", // high dark mint
     400: "#33BBC5", // dark dark mint
     500: "#FFFFFF",
+    600: "#C3B5FD", // tw violet 300 
   },
   borderColor: {
     100: "#15F6D6",

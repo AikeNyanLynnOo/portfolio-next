@@ -60,7 +60,8 @@ module.exports = {
       },
     },
   },
-  plugins: [lineClamp],
+  plugins: [],
+  // plugins: [lineClamp],
   // important: '#root',
   // corePlugins: {
   // preflight: false,

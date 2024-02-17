@@ -5,7 +5,12 @@ import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CircleIcon } from "./CircleIcon";
 
-export const IconWithTimeline = ({ isExpHovered }) => {
+export const IconWithTimeline = ({
+  icon,
+  disableCircleAnimation,
+  customIconStyles,
+  isExpHovered,
+}) => {
   const { isLight } = useSelector((state) => state.theme);
 
   return (
@@ -14,12 +19,15 @@ export const IconWithTimeline = ({ isExpHovered }) => {
         <Icon
           style={{
             fontSize: "10px",
+            ...customIconStyles,
           }}
           className="dark:text-ownMint-200 text-ownBlack-200"
         >
-          work
+          {icon || "work"}
         </Icon>
-        <CircleIcon isExpHovered={isExpHovered} circleSize={30}/>
+        {!disableCircleAnimation && (
+          <CircleIcon isExpHovered={isExpHovered} circleSize={30} />
+        )}
       </div>
     </div>
   );

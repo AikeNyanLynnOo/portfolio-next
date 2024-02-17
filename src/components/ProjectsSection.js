@@ -18,6 +18,7 @@ import { putOffsetTop } from "../store/slices/generalSlice";
 import { useRef } from "react";
 import { ExpTimeline } from "./ExpTimeline";
 import { ExpTimeline2 } from "./ExpTimeline2";
+import { AchievementTimeline } from "./AchievementTimeLine";
 
 const allProjects = [
   {
@@ -259,6 +260,55 @@ export const ProjectsSection = ({
     ];
   }, []);
 
+  const achievements = useMemo(() => {
+    return [
+      {
+        icon: "school",
+        title: "Bachelor of Computer Science",
+        date: "2021",
+        subTitle: "Software Engineering",
+        description:
+          "With a Bachelor of Computer Science degree from the University of Information Technology Myanmar (UIT), I am currently furthering my expertise through a major in Software Engineering at UIT. Passionate about developing and managing software systems, I actively engage in practical projects and competitions to refine my skills. Eager to contribute to innovative software solutions, I'm committed to leveraging my education and experiences for impactful advancements in the field.",
+        org: "University of Information Technology (UIT)",
+        // orgIcon: "school",
+        orgLink: "https://www.uit.edu.mm/",
+      },
+      {
+        icon: "emoji_events",
+        title: "Front End With React",
+        date: "2020",
+        subTitle:
+          "The Hong Kong University of Science and Technology (On Coursera)",
+        description:
+          "This specialization equipped me with essential skills in React, including component-based architecture, state management, and building interactive user interfaces.",
+        org: "Coursera",
+        orgLink: "https://www.coursera.org/",
+      },
+      {
+        icon: "emoji_events",
+        title: "Fundamental of Information Technology Engineer",
+        date: "2019",
+        subTitle:
+          "Information Technology Professionals Examination Council (ITPEC)",
+        description:
+          "The ITPEC FE Exam, based on the Japan IT Fundamental IT Engineers Examination, is available in English, Thai, Vietnamese, Mongolian, and Burmese. It assesses basic IT knowledge and skills, including program design and testing for information systems development projects.",
+        org: "ITPEC",
+        orgLink: "https://itpec.org/",
+      },
+      {
+        icon: "emoji_events",
+        title: "IT Passport",
+        date: "2018",
+        subTitle:
+          "Information Technology Professionals Examination Council (ITPEC)",
+        description:
+          "The ITPEC Information Technology Passport Examination (ITPEC IP Exam) is modeled after the Japan Information Technology Passport Examination and is available in English, Thai, Vietnamese, and Mongolian. It tests individuals on fundamental IT knowledge essential for business tasks and operations.",
+        org: "ITPEC",
+        orgLink: "https://itpec.org/",
+      },
+    ];
+  }, []);
+
   const projectsSectionClasses = useMemo(() => {
     return clsx({
       // "h-screen": true,
@@ -291,19 +341,6 @@ export const ProjectsSection = ({
     });
   }, []);
 
-  // const skillsIconContainerClasses = useMemo(() => {
-  //   return clsx({
-  //     "lg:w-4/6": true,
-  //     "md:w-5/6": true,
-  //     "w-full": true,
-  //     "mx-auto": true,
-  //     "py-4": true,
-  //     flex: true,
-  //     "flex-wrap": true,
-  //     "justify-center": true,
-  //   });
-  // }, []);
-
   const [active, setActive] = useState(0);
 
   const handleChange = useCallback((event, newValue) => {
@@ -314,6 +351,11 @@ export const ProjectsSection = ({
       id: 1,
       title: "Projects",
       renderTabItem: () => <ProjectGrid projects={projects} />,
+    },
+    {
+      id: 2,
+      title: "Certs",
+      renderTabItem: () => <AchievementTimeline achievements={achievements} />,
     },
     {
       id: 2,
@@ -386,6 +428,14 @@ export const ProjectsSection = ({
             },
             "& .MuiTab-root": {
               p: 0,
+              // backgroundColor : "pink",
+              // border : "1px solid red",
+              // minWidth : "180px",
+            },
+            "& .MuiTab-root .MuiBox-root" : {
+              // backgroundColor : "blue",
+              px : 2,
+              mx : 0
             },
             "& .MuiTabs-indicator": {
               display: "flex",

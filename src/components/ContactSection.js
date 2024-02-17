@@ -16,6 +16,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { LeetCodeIcon } from "../atoms/LeetCodeIcon";
+import { darkTheme } from "../Theme/styles";
 
 export const ContactSection = ({
   children,
@@ -98,12 +100,23 @@ export const ContactSection = ({
               link: "https://github.com/AikeNyanLynnOo",
             },
             {
+              Icon: ({ classes }) => (
+                <LeetCodeIcon
+                  customStyles={{
+                    unHoverDarkColor: darkTheme.textColor[200],
+                    hoverDarkColor: darkTheme.textColor[600],
+                  }}
+                />
+              ),
+              link: "https://leetcode.com/a1k3/",
+            },
+            {
               Icon: ({ classes }) => <TelegramIcon className={classes} />,
               link: "https://t.me/a1k333",
             },
           ].map(({ Icon, link }, index) => (
             <Link href={link} key={index}>
-              <Icon classes="text-ownBlack-200 dark:text-ownMint-200 text-xl hover:text-ownMint-200 hover:dark:text-violet-300 hover:shadow-xl mx-1" />
+              <Icon classes="text-ownBlack-200 dark:text-ownMint-200 text-2xl hover:text-ownMint-200 hover:dark:text-violet-300 hover:shadow-xl mx-1" />
             </Link>
           ))}
         </div>

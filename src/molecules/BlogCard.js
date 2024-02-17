@@ -108,7 +108,7 @@ export const BlogCard = ({
                     }}
                     customClasses={{
                       "py-0.5": true,
-                      "px-1": true,
+                      "px-2": true,
                       "my-1": true,
                       "border-ownMint-100": false,
                       "border-gray-200": true,

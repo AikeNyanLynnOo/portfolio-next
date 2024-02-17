@@ -11,6 +11,7 @@ import { changeDrawerState } from "../store/slices/generalSlice";
 import { DevIcon } from "../atoms/DevIcon";
 import Link from "next/link";
 import { Fragment } from "react";
+import { CustomLogo } from "../atoms/CustomLogo";
 
 export const NavBar = ({ children, customMenuIconClasses }) => {
   const dispatch = useDispatch();
@@ -100,7 +101,8 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
               // "-translate-x-1/2" : true
             }}
           >
-            <DevIcon />
+            {/* <DevIcon /> */}
+            <CustomLogo primaryText={"Aike"}/>
           </NavItem>
 
           {/* <NavItem
