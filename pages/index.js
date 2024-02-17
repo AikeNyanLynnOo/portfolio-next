@@ -9,14 +9,17 @@ import { NavBar } from "@/src/components/NavBarComponent";
 import { ProjectsSection } from "@/src/components/ProjectsSection";
 import { SkillsSection } from "@/src/components/SkillsSection";
 import { changeActiveNav } from "@/src/store/slices/generalSlice";
+import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import HashLoader from "react-spinners/HashLoader";
 
 export default function Layout() {
   const dispatch = useDispatch();
   const scrollRef = useRef(null);
+  const [loading, setLoading] = useState(true);
   const {
     activeNav,
     isDrawerOpen,
@@ -92,9 +95,19 @@ export default function Layout() {
     blogsSectionOffsetTop,
     contactSectionOffsetTop,
   ]);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  });
 
   return (
     <Fragment>
+      {loading && (
+        <div className="z-20 absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-slate-50">
+          <HashLoader color="#15F6D6" />
+        </div>
+      )}
       <FloatingNav />
       <DrawerNav />
       <NavBar />
