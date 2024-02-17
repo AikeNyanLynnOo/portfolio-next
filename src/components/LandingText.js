@@ -5,6 +5,7 @@ import { CodeText } from "../atoms/CodeText";
 import { Typography } from "../atoms/Typography";
 import { Button, Chip, Icon } from "@mui/material";
 import { Fragment } from "react";
+import Link from "next/link";
 
 export const LandingText = ({ children, customClasses, customStyles }) => {
   const { isLight } = useSelector((state) => state.theme);
@@ -17,6 +18,21 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
       ...customClasses,
     });
   }, [customClasses]);
+
+  const handleClickDownload = async () => {
+    const response = await fetch("/api/file");
+
+    if (response.status !== 200) {
+      console.error(response.status, response.statusText);
+    }
+
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "AikeNyanLynnOo_Frontend.pdf";
+    link.click();
+  };
 
   return (
     <div
@@ -155,6 +171,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
       </CodeText>
       <div className="pt-12">
         <button
+          onClick={handleClickDownload}
           className="bg-white hidden sm:inline-flex dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 py-1 mr-3 mt-2"
           style={{
             fontFamily: '"Varela Round", sans-serif',
@@ -164,6 +181,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
         </button>
         <button
+          onClick={handleClickDownload}
           className="bg-white inline-flex sm:hidden dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 py-1 mr-3 mt-2"
           style={{
             fontFamily: '"Varela Round", sans-serif',
@@ -172,7 +190,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           CV
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
         </button>
-        <button
+        <a
+          href="mailto:aikenyanlynnooo.dev@gmail.com"
           className="bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 rounded-full text-purple-700 text-base font-semibold hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 py-1 mt-2 inline-flex items-center"
           style={{
             fontFamily: '"Varela Round", sans-serif',
@@ -180,7 +199,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         >
           Let&apos; talk
           <Icon className="text-xl ml-2">forward_to_inbox</Icon>
-        </button>
+        </a>
       </div>
     </div>
   );
