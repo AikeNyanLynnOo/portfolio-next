@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Icon, Stack } from "@mui/material";
 import { NavIcon } from "../atoms/NavIcon";
 import { changeActiveNav, changeScrolling } from "../store/slices/generalSlice";
+import useSound from "use-sound";
 
 export const FloatingNav = ({ children, customClasses, customStyles }) => {
+  const [play] = useSound("/song_effects/glug.wav", 1.5);
   const {
     activeNav,
     landingSectionOffsetTop,
@@ -48,6 +50,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
   }, [customClasses]);
 
   const handleClick = (index) => {
+    play();
     dispatch(changeScrolling({ isScrolling: false }));
     switch (index) {
       case 0:
