@@ -64,7 +64,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
               isExpHovered={hoveredExp !== null && hoveredExp === idx}
             />
             <div className="grow pt-0.5">
-              <h3 className="flex gap-x-1.5 font-semibold text-xl text-gray-800 dark:text-white mb-2 items-center">
+              <h3 className="flex gap-x-1.5 font-semibold text-xl text-gray-800 dark:text-white mb-2 items-start">
                 {/* <svg
                   className="flex-shrink-0 size-4 mt-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +86,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                 <Icon
                   style={{
                     fontSize: "15px",
+                    marginTop : "5px"
                   }}
                 >
                   laptop_mac
