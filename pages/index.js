@@ -104,20 +104,23 @@ export default function Layout() {
   return (
     <Fragment>
       {loading && (
-        <div className="z-20 absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-slate-50">
+        <div className="z-20 fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-slate-50">
           <HashLoader color="#15F6D6" />
         </div>
       )}
       <FloatingNav />
-      <DrawerNav />
-      <NavBar />
-
-      <LandingSection scrollRef={activeNav === 0 ? scrollRef : null} />
-      <AboutSection scrollRef={activeNav === 1 ? scrollRef : null} />
-      <SkillsSection scrollRef={activeNav === 2 ? scrollRef : null} />
-      <ProjectsSection scrollRef={activeNav === 3 ? scrollRef : null} />
-      <BlogsSection scrollRef={activeNav === 4 ? scrollRef : null} />
-      <ContactSection scrollRef={activeNav === 5 ? scrollRef : null} />
+      {!loading && (
+        <Fragment>
+          <DrawerNav />
+          <NavBar />
+          <LandingSection scrollRef={activeNav === 0 ? scrollRef : null} />
+          <AboutSection scrollRef={activeNav === 1 ? scrollRef : null} />
+          <SkillsSection scrollRef={activeNav === 2 ? scrollRef : null} />
+          <ProjectsSection scrollRef={activeNav === 3 ? scrollRef : null} />
+          <BlogsSection scrollRef={activeNav === 4 ? scrollRef : null} />
+          <ContactSection scrollRef={activeNav === 5 ? scrollRef : null} />
+        </Fragment>
+      )}
 
       {/* <ContactForm/> */}
     </Fragment>
