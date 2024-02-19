@@ -5,7 +5,6 @@ import {
   CardMedia,
   Chip,
   Icon,
-  Tooltip,
 } from "@mui/material";
 import { clsx } from "clsx";
 import { useMemo } from "react";
@@ -13,7 +12,6 @@ import { useSelector } from "react-redux";
 import { Typography } from "../atoms/Typography";
 import { TextWithIcon } from "./TextWithIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Fragment } from "react";
 import { CustomChip } from "./CustomChip";
 import { CustomTooltip } from "./CustomTooltip";
 

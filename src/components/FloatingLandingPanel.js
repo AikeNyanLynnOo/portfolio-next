@@ -6,10 +6,9 @@ import { Typography } from "../atoms/Typography";
 import { darkTheme, getFlPanelIconStyles, lightTheme } from "../Theme/styles";
 import Image from "next/image";
 import { TextWithIcon } from "../molecules/TextWithIcon";
-import { Chip, Icon } from "@mui/material";
+import { Icon } from "@mui/material";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import { LaptopMac, Place } from "@mui/icons-material";
-import Icons from "@mui/icons-material";
 
 // Icons
 import GitHubIcon from "@mui/icons-material/GitHub";
