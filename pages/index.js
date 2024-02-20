@@ -13,11 +13,13 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { Fragment } from "react";
+import AnimatedCursor from "react-animated-cursor";
 import { useDispatch, useSelector } from "react-redux";
 import HashLoader from "react-spinners/HashLoader";
 
 export default function Layout() {
   const dispatch = useDispatch();
+  const { isLight } = useSelector((state) => state.theme);
   const scrollRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const {
@@ -123,6 +125,21 @@ export default function Layout() {
       )}
 
       {/* <ContactForm/> */}
+      <AnimatedCursor
+        innerSize={14}
+        outerSize={13}
+        color={isLight ? "51, 187, 197" : "21, 246, 214"}
+        outerAlpha={0.3}
+        innerScale={0.7}
+        outerScale={4}
+        trailingSpeed={12}
+        outerStyle={{
+          // border: "3px solid var(--cursor-color)",
+        }}
+        innerStyle={{
+          // backgroundColor: "var(--cursor-color)",
+        }}
+      />
     </Fragment>
   );
 }

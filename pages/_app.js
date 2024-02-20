@@ -14,6 +14,7 @@ import { createTheme } from "@mui/material";
 import "../public/css/globalStyles.css";
 import "../public/css/customLogoStyles.css";
 import "../public/css/achievementStyles.css";
+import AnimatedCursor from "react-animated-cursor";
 
 function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);
@@ -59,6 +60,7 @@ function MyApp({ Component, ...rest }) {
         <Component {...pageProps} />
       </ThemeProvider>
       {/* </CacheProvider> */}
+      
     </Provider>
   );
 }
