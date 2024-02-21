@@ -195,7 +195,7 @@ export const FloatingLandingPanel = ({
           },
           {
             Icon: ({ classes }) => <LinkedInIcon className={classes} />,
-            link: "https://www.linkedin.com/in/aike-nyan-lynn-oo-7b57b1169/",
+            link: "https://www.linkedin.com/in/aikeoo/",
           },
           {
             Icon: ({ classes }) => <GitHubIcon className={classes} />,
