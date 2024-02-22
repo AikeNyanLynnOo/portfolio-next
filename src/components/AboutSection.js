@@ -34,6 +34,7 @@ export const AboutSection = ({
       "lg:justify-between": true,
       "justify-center": true,
       "items-center": true,
+      // "gap-x-5" : true,
       ...customClasses,
     });
   }, [customClasses]);

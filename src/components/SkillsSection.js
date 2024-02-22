@@ -30,6 +30,7 @@ export const SkillsSection = ({
       "lg:flex": true,
       "flex-col": true,
       "justify-center": true,
+      // "bg-slate-200" : true,
       "items-center": true,
       block: true,
       ...customClasses,

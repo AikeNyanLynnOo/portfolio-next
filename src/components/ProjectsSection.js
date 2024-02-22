@@ -106,6 +106,21 @@ export const ProjectsSection = ({
   const projects = useMemo(() => {
     return [
       {
+        title: "ONOW Enable CMS",
+        introText:
+          "From the frontend perspective, I spearheaded the development of the CMS using Next.js, Material UI, Redux Saga, and Redux Toolkit to manage diverse API requests seamlessly. We refined its interface to ensure user-friendly navigation and efficient content management.",
+        projectMedia: "/images/projects/cms_ss.png",
+        description: "",
+        techs: [
+          "NextJS",
+          "Material UI",
+          "Design Tokens",
+          "Styled Dictionary",
+          "Redux Saga",
+          "Redux Toolkit"
+        ],
+      },
+      {
         title: "Multiple Chioce Quiz App",
         introText:
           "You have full control over customizing quiz parameters like fields, difficulty, and time. Monitor remaining time, end the quiz at any point, and navigate freely through animated quiz panels. View results and score upon completion.",
@@ -129,7 +144,7 @@ export const ProjectsSection = ({
         projectMedia: "/images/projects/discord_ss.png",
         description: "",
         techs: ["NextJS", "Typescript", "TailwindCSS", "Framer Motion"],
-        liveLink: "https://discord-site-clone-a1k3.netlify.app/",
+        liveLink: "https://aike-discordo-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/discord-clone-next",
       },
       {
@@ -161,17 +176,17 @@ export const ProjectsSection = ({
         liveLink: "https://ip-tracker-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/ip-tracker",
       },
-      {
-        title: "Explore Nations",
-        introText:
-          "Effortlessly search by country name, whether full or partial, and filter by continents. Seamlessly toggle between light and dark themes while ensuring a responsive design for optimal user experience across devices.",
-        projectMedia: "/images/projects/countries_ss.png",
-        description: "",
-        techs: ["ReactJS", "Netlify functions", "Geo IPify"],
-        liveLink: "https://main--rest-countries-browser-a1k3.netlify.app/",
-        githubLink:
-          "https://github.com/AikeNyanLynnOo/rest-countries-api-theme-switcher",
-      },
+      // {
+      //   title: "Explore Nations",
+      //   introText:
+      //     "Effortlessly search by country name, whether full or partial, and filter by continents. Seamlessly toggle between light and dark themes while ensuring a responsive design for optimal user experience across devices.",
+      //   projectMedia: "/images/projects/countries_ss.png",
+      //   description: "",
+      //   techs: ["ReactJS", "Netlify functions", "Geo IPify"],
+      //   liveLink: "https://main--rest-countries-browser-a1k3.netlify.app/",
+      //   githubLink:
+      //     "https://github.com/AikeNyanLynnOo/rest-countries-api-theme-switcher",
+      // },
     ];
   }, []);
 
@@ -432,10 +447,10 @@ export const ProjectsSection = ({
               // border : "1px solid red",
               // minWidth : "180px",
             },
-            "& .MuiTab-root .MuiBox-root" : {
+            "& .MuiTab-root .MuiBox-root": {
               // backgroundColor : "blue",
-              px : 2,
-              mx : 0
+              px: 2,
+              mx: 0,
             },
             "& .MuiTabs-indicator": {
               display: "flex",

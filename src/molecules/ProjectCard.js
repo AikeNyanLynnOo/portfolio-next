@@ -160,19 +160,21 @@ export const ProjectCard = ({
           </div>
         </CardContent>
         <CardActions className="px-3 bg-white dark:bg-ownBlack-100 flex justify-between items-center">
-          <TextWithIcon href={liveLink || "/"}>
+          <TextWithIcon href={liveLink}>
             <Icon
               sx={{
+                // transform: (liveLink && "rotate(135deg)") || "",
                 transform: "rotate(135deg)",
               }}
               style={{
                 fontSize: "15px",
               }}
             >
+              {/* {(liveLink && "link") || "lock"} */}
               link
             </Icon>
             <Typography
-              text="Live Preview"
+              text={(liveLink && "Live Preview") || "Private"}
               customClasses={{
                 "text-ownBlack-200": true,
                 "dark:text-white": true,
@@ -185,14 +187,14 @@ export const ProjectCard = ({
               }}
             />
           </TextWithIcon>
-          <TextWithIcon href={githubLink || "/"}>
+          <TextWithIcon href={githubLink}>
             <GitHubIcon
               style={{
                 fontSize: "15px",
               }}
             />
             <Typography
-              text="View Code"
+              text={(githubLink && "View Code") || "Private"}
               customClasses={{
                 "text-ownBlack-200": true,
                 "dark:text-white": true,

@@ -63,7 +63,7 @@ export const LandingSection = ({
             "mb-5": true,
           }}
         />
-        <div className="block items-center justify-between h-5/6 lg:flex">
+        <div className="block w-full items-center justify-between h-5/6 lg:flex">
           <FloatingLandingPanel />
           <LandingText />
           <div className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-8 px-5 rounded-xl w-fit  hidden xl:flex">

@@ -31,14 +31,14 @@ function ProjectGrid({ projects }) {
     //     </div>
     //   </div>
     // </div>
-    <div className="container mx-auto my-10 w-full">
-      <div className="flex flex-wrap justify-center w-full lg:w-10/12 mx-auto">
+    <div className=" mx-auto my-10 w-full">
+      <div className="flex flex-wrap justify-center w-full mx-auto">
         {projects &&
           projects.map((pj, index) => (
             <div
               key={index}
               // className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-4 mb-8"
-              className="w-full sm:w-1/2 md:w-1/2 lg:w-4/12 px-0 sm:px-4 mb-8"
+              className="w-full lg:w-1/2 xl:w-4/12 px-0 sm:px-4 mb-8"
             >
               <ProjectCard
                 title={pj.title}
