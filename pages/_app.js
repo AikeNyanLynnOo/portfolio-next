@@ -49,18 +49,31 @@ function MyApp({ Component, ...rest }) {
     <Provider store={store}>
       {/* <CacheProvider value={emotionCache}> */}
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
         <title>
-          {router.pathname
-            .substring(1)
-            .replace(/\b\w/g, (match) => match.toUpperCase())}
+          Aike Nyan Lynn Oo - Portfolio| React NextJS Frontend Developer
         </title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta
+          name="description"
+          content="I am a over 5 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+        />
+        <meta
+          property="og:title"
+          content="Aike Nyan Lynn Oo - Portfolio| React NextJS Frontend Developer"
+        />
+        <meta
+          property="og:description"
+          content="I am a over 5 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+        />
+        {/* <meta
+          property="og:image"
+          content="https://example.com/images/cool-page.jpg"
+        /> */}
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
       {/* </CacheProvider> */}
-      
     </Provider>
   );
 }
