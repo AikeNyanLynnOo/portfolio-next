@@ -480,7 +480,7 @@ export const ProjectsSection = ({
           }}
         />
       </div>
-      <Bubbles showIndices={dots} />
+      {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
   );
 };

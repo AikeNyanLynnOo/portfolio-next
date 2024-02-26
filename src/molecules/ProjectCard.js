@@ -14,6 +14,7 @@ import { TextWithIcon } from "./TextWithIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { CustomChip } from "./CustomChip";
 import { CustomTooltip } from "./CustomTooltip";
+import { Bubbles } from "../components/Bubbles";
 
 export const ProjectCard = ({
   children,
@@ -43,6 +44,7 @@ export const ProjectCard = ({
       ...customClasses,
     });
   }, [customClasses, href]);
+
   return (
     <div
       className="w-ful rounded-xl"

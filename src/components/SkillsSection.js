@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { putOffsetTop } from "../store/slices/generalSlice";
 import { useRef } from "react";
 import { Bubbles } from "./Bubbles";
+import { CodeText } from "../atoms/CodeText";
 
 export const SkillsSection = ({
   children,
@@ -35,6 +36,8 @@ export const SkillsSection = ({
     return clsx({
       "[&>*]:z-10": true,
       // "h-screen": true,
+      "h-full": true,
+      "w-full": true,
       // "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,
@@ -79,6 +82,44 @@ export const SkillsSection = ({
       "justify-center": true,
     });
   }, []);
+  const aboutMeTitleClasses = useMemo(() => {
+    return clsx({
+      "bg-white": true,
+      "dark:bg-ownBlack-100": true,
+      "rounded-tl-xl": true,
+      "rounded-br-xl": true,
+      border: true,
+      "border-ownMint-200": true,
+      "px-5": true,
+      "py-4": true,
+      "lg:text-2xl": true,
+      "text-xl": true,
+      "font-thin": true,
+      "w-fit": true,
+      "mx-auto": true,
+      "lg:mx-0": true,
+    });
+  }, []);
+  const aboutMeTextClasses = useMemo(() => {
+    return clsx({
+      "rounded-xl": true,
+      "px-5": true,
+      "py-4": true,
+      "mt-5": true,
+      "font-thin": true,
+      "rounded-xl": true,
+      // "bg-ownBlack-100": true,
+      // "dark:bg-white": true,
+      "bg-clip-padding": true,
+      "backdrop-filter": true,
+      "backdrop-blur-3xl": true,
+      // "bg-opacity-40": true,
+      "bg-gray-100": true,
+      "dark:bg-ownBlack-100": true,
+      // border: true,
+      // "border-gray-60": true,
+    });
+  }, []);
 
   useEffect(() => {
     dispatch(
@@ -91,24 +132,24 @@ export const SkillsSection = ({
 
   return (
     <ResponsiveContainer
+      scrollRef={ownRef}
       customClasses={{
         "bg-ownBlack-200": true,
         "dark:bg-ownBlack-100": true,
         "py-16": true,
-        "box-border": true,
+        // "box-border": true,
       }}
-      scrollRef={ownRef}
     >
       <div className={skillsSectionClasses}>
         <h2 className={skillTitleClasses}>Skills</h2>
-        <p
-          className="py-10 dark:text-ownMint-200 text-ownBlack-200 text-3xl text-center"
+        <div
+          className="py-10 block dark:text-ownMint-200 text-ownBlack-200 text-3xl text-center"
           style={{
             fontFamily: '"Varela Round", sans-serif',
           }}
         >
           The skills & tools I&apos;m really good at
-        </p>
+        </div>
         <div className={skillsIconContainerClasses}>
           {[
             {
@@ -219,7 +260,7 @@ export const SkillsSection = ({
           ))}
         </div>
       </div>
-      <Bubbles showIndices={dots} />
+      {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
   );
 };

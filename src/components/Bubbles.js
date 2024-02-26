@@ -4,13 +4,17 @@ import { useMemo } from "react";
 import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 
-export const Bubbles = ({ showIndices, customBubbleDotClasses }) => {
+export const Bubbles = ({
+  showIndices,
+  customBubbleDotClasses,
+  customClasses,
+}) => {
   const { isLight } = useSelector((state) => state.theme);
   const bubbleDotClasses = useMemo(() => {
     return clsx({
       dot: true, // custom class
       "bg-ownMint-200": true,
-      "dark:bg-gray-50": true,
+      "dark:bg-ownMint-200": true,
       ...customBubbleDotClasses,
     });
   }, [customBubbleDotClasses]);
@@ -18,12 +22,12 @@ export const Bubbles = ({ showIndices, customBubbleDotClasses }) => {
     return clsx({
       [`dotdiv-${index}`]: true,
       "bg-ownMint-200": true,
-      "dark:bg-gray-50": true,
+      "dark:bg-ownMint-200": true,
       ...customBubbleDotClasses,
     });
   }, []);
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${customClasses}`}>
       {[
         showIndices &&
           showIndices.map((index, idx) => (

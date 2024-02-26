@@ -109,7 +109,7 @@ export const AboutSection = ({
     >
       <div className={aboutSectionClasses}>
         <div className="w-full h-ful lg:w-4/6 lg:order-first order-last">
-          <p className={aboutMeTitleClasses}>About Me</p>
+          <h2 className={aboutMeTitleClasses}>About Me</h2>
           <div className={aboutMeTextClasses}>
             <CodeText
               codeTag={{

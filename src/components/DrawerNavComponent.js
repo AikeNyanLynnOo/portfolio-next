@@ -27,7 +27,7 @@ export const DrawerNav = ({ children, customClasses, customStyles }) => {
     return clsx({
       "w-full": true,
       "h-full": true,
-      "z-10": true,
+      "z-20": true,
       "bg-white": true,
       "dark:bg-ownBlack-100": true,
       "bg-opacity-100": true,

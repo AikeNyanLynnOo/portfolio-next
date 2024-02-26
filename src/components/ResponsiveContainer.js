@@ -12,6 +12,7 @@ export const ResponsiveContainer = ({
   const containerCLasses = useMemo(() => {
     return clsx({
       relative: true,
+      "z-1": true,
       "dark:bg-ownBlack-100": true,
       "text-ownBlack-100": true,
       "bg-white": true,

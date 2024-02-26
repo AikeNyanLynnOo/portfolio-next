@@ -11,6 +11,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
   const { isLight } = useSelector((state) => state.theme);
   const landingTextClasses = useMemo(() => {
     return clsx({
+      "z-10": true,
       "h-3/4": true,
       "lg:w-4/6": true,
       "xl:w-5/12": true,
