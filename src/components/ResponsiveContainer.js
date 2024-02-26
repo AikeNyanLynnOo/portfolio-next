@@ -11,6 +11,7 @@ export const ResponsiveContainer = ({
   //   const { isLight } = useSelector((state) => state.theme);
   const containerCLasses = useMemo(() => {
     return clsx({
+      relative: true,
       "dark:bg-ownBlack-100": true,
       "text-ownBlack-100": true,
       "bg-white": true,
@@ -23,5 +24,9 @@ export const ResponsiveContainer = ({
       ...customClasses,
     });
   }, [customClasses]);
-  return <div className={`${containerCLasses}`} ref={scrollRef}>{children}</div>;
+  return (
+    <div className={`${containerCLasses}`} ref={scrollRef}>
+      {children}
+    </div>
+  );
 };

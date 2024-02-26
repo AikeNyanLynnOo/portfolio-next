@@ -13,6 +13,7 @@ import Image from "next/image";
 import { putOffsetTop } from "../store/slices/generalSlice";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { Bubbles } from "./Bubbles";
 
 export const AboutSection = ({
   children,
@@ -23,8 +24,18 @@ export const AboutSection = ({
   const dispatch = useDispatch();
   const ownRef = useRef(scrollRef);
   const { isLight } = useSelector((state) => state.theme);
+
+  const dots = useMemo(() => {
+    const randomArray = [];
+    for (let i = 0; i < 5; i++) {
+      randomArray.push(Math.floor(Math.random() * 25) + 1);
+    }
+    return randomArray;
+  }, []);
+
   const aboutSectionClasses = useMemo(() => {
     return clsx({
+      "[&>*]:z-10": true,
       // "h-screen": true,
       // "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
@@ -40,6 +51,8 @@ export const AboutSection = ({
   }, [customClasses]);
   const aboutMeTitleClasses = useMemo(() => {
     return clsx({
+      "bg-white": true,
+      "dark:bg-ownBlack-100": true,
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       border: true,
@@ -200,6 +213,7 @@ export const AboutSection = ({
           className="h-48 w-48 lg:h-64 lg:w-64 rounded-full p-0 mb-10 lg:my-0 ring-1 ring-ownMint-200"
         />
       </div>
+      <Bubbles showIndices={dots} />
     </ResponsiveContainer>
   );
 };

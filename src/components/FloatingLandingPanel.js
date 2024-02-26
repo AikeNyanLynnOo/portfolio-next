@@ -32,9 +32,12 @@ export const FloatingLandingPanel = ({
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       "my-10": true,
+
       "lg:my-0": true,
       // "lg:rounded-tl-[30%]": true,
       // "lg:rounded-br-[30%]": true,
+      "bg-white": true,
+      "dark:bg-ownBlack-100": true,
       "border-r": true,
       "border-b": true,
       "border-ownBlack-100": true,
@@ -44,7 +47,7 @@ export const FloatingLandingPanel = ({
       "px-3": true,
       // hidden: true,
       "lg:block": true,
-      relative: true,
+      // relative: true,
       ...customClasses,
     });
   }, [customClasses]);

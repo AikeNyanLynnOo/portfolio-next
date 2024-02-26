@@ -9,6 +9,7 @@ import { Chip } from "@mui/material";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { putOffsetTop } from "../store/slices/generalSlice";
+import { Bubbles } from "./Bubbles";
 
 export const LandingSection = ({
   children,
@@ -21,8 +22,17 @@ export const LandingSection = ({
 
   const ownRef = useRef(scrollRef);
 
+  const dots = useMemo(() => {
+    const randomArray = [];
+    for (let i = 0; i < 7; i++) {
+      randomArray.push(Math.floor(Math.random() * 25) + 1);
+    }
+    return randomArray;
+  }, []);
+
   const landingSectionClasses = useMemo(() => {
     return clsx({
+      "[&>*]:z-10": true,
       // "h-screen": true,
       "min-h-[calc(100vh-80px)]": true,
       // "mt-20" : true,
@@ -73,7 +83,7 @@ export const LandingSection = ({
                 customClasses={{
                   "text-ownBlack-200": true,
                   "w-3/12": true,
-                  
+
                   "dark:text-ownMint-100": true,
                   "text-4xl": true,
                 }}
@@ -99,6 +109,7 @@ export const LandingSection = ({
           </div>
         </div>
       </div>
+      <Bubbles showIndices={dots} />
     </ResponsiveContainer>
   );
 };

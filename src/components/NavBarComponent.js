@@ -58,7 +58,7 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
         "border-b-ownGray-100": true,
         "dark:border-b-ownGray-200": true,
         "sticky top-0": true,
-        "z-10": true,
+        "z-20": true,
         // "border-none" : true,
       }}
     >

@@ -26,7 +26,7 @@ export const BlogCard = ({
           <Image
             height={1000}
             width={1000}
-            className="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl"
+            className="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl z-10"
             src={blogMedia || "/images/blogs/sm_ss.png"}
             alt="Image Description"
           />
@@ -65,6 +65,7 @@ export const BlogCard = ({
                   text={title || ""}
                   customClasses={{
                     "line-clamp-3": true,
+                    "z-10": true,
                   }}
                 />
               </div>

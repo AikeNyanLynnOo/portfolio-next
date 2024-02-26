@@ -1,5 +1,6 @@
 import { AboutSection } from "@/src/components/AboutSection";
 import { BlogsSection } from "@/src/components/BlogsSection";
+import { Bubbles } from "@/src/components/Bubbles";
 import { ContactForm } from "@/src/components/ContactFormComponent";
 import { ContactSection } from "@/src/components/ContactSection";
 import { DrawerNav } from "@/src/components/DrawerNavComponent";
@@ -11,6 +12,8 @@ import { SkillsSection } from "@/src/components/SkillsSection";
 import { changeActiveNav } from "@/src/store/slices/generalSlice";
 import { useState } from "react";
 import { useRef } from "react";
+import { useMemo } from "react";
+import { useCallback } from "react";
 import { useEffect } from "react";
 import { Fragment } from "react";
 import AnimatedCursor from "react-animated-cursor";
@@ -133,12 +136,16 @@ export default function Layout() {
         innerScale={0.7}
         outerScale={4}
         trailingSpeed={12}
-        outerStyle={{
-          // border: "3px solid var(--cursor-color)",
-        }}
-        innerStyle={{
-          // backgroundColor: "var(--cursor-color)",
-        }}
+        outerStyle={
+          {
+            // border: "3px solid var(--cursor-color)",
+          }
+        }
+        innerStyle={
+          {
+            // backgroundColor: "var(--cursor-color)",
+          }
+        }
       />
     </Fragment>
   );

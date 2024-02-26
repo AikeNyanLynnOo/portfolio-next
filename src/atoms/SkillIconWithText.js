@@ -20,6 +20,7 @@ export const SkillIconWithText = ({
   const { isLight } = useSelector((state) => state.theme);
   const skillIconWithTextClasses = useMemo(() => {
     return clsx({
+      "z-10" : true,
       "cursor-pointer": true,
       "select-none": true,
       "text-center": true,
@@ -45,6 +46,7 @@ export const SkillIconWithText = ({
 
   const skillTextClasses = useMemo(() => {
     return clsx({
+      "z-10" : true,
       "py-5": true,
       "text-base": true,
       "text-ownBlack-200": true,

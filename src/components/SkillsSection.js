@@ -11,6 +11,7 @@ import { Fragment } from "react";
 import { useEffect } from "react";
 import { putOffsetTop } from "../store/slices/generalSlice";
 import { useRef } from "react";
+import { Bubbles } from "./Bubbles";
 
 export const SkillsSection = ({
   children,
@@ -21,8 +22,18 @@ export const SkillsSection = ({
   const dispatch = useDispatch();
   const ownRef = useRef(scrollRef || null);
   const { isLight } = useSelector((state) => state.theme);
+
+  const dots = useMemo(() => {
+    const randomArray = [];
+    for (let i = 0; i < 5; i++) {
+      randomArray.push(Math.floor(Math.random() * 25) + 1);
+    }
+    return randomArray;
+  }, []);
+
   const skillsSectionClasses = useMemo(() => {
     return clsx({
+      "[&>*]:z-10": true,
       // "h-screen": true,
       // "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
@@ -39,6 +50,8 @@ export const SkillsSection = ({
 
   const skillTitleClasses = useMemo(() => {
     return clsx({
+      "bg-white": true,
+      "dark:bg-ownBlack-100": true,
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       border: true,
@@ -206,6 +219,7 @@ export const SkillsSection = ({
           ))}
         </div>
       </div>
+      <Bubbles showIndices={dots} />
     </ResponsiveContainer>
   );
 };

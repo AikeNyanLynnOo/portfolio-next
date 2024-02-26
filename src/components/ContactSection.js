@@ -27,6 +27,7 @@ export const ContactSection = ({
   const { isLight } = useSelector((state) => state.theme);
   const contactSectionClasses = useMemo(() => {
     return clsx({
+      "[&>*]:z-10": true,
       // "h-screen": true,
       "text-ownBlack-100": true,
       "dark:text-white": true,

@@ -19,6 +19,7 @@ import { useRef } from "react";
 import { ExpTimeline } from "./ExpTimeline";
 import { ExpTimeline2 } from "./ExpTimeline2";
 import { AchievementTimeline } from "./AchievementTimeLine";
+import { Bubbles } from "./Bubbles";
 
 const allProjects = [
   {
@@ -103,6 +104,14 @@ export const ProjectsSection = ({
   const md = useMediaQuery(theme.breakpoints.up("md"));
   const sm = useMediaQuery(theme.breakpoints.up("sm"));
 
+  const dots = useMemo(() => {
+    const randomArray = [];
+    for (let i = 0; i < 5; i++) {
+      randomArray.push(Math.floor(Math.random() * 25) + 1);
+    }
+    return randomArray;
+  }, []);
+
   const projects = useMemo(() => {
     return [
       {
@@ -117,7 +126,7 @@ export const ProjectsSection = ({
           "Design Tokens",
           "Styled Dictionary",
           "Redux Saga",
-          "Redux Toolkit"
+          "Redux Toolkit",
         ],
       },
       {
@@ -326,6 +335,7 @@ export const ProjectsSection = ({
 
   const projectsSectionClasses = useMemo(() => {
     return clsx({
+      "[&>*]:z-10": true,
       // "h-screen": true,
       "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
@@ -341,6 +351,8 @@ export const ProjectsSection = ({
 
   const projectTitleClasses = useMemo(() => {
     return clsx({
+      "bg-white": true,
+      "dark:bg-ownBlack-100": true,
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       border: true,
@@ -468,6 +480,7 @@ export const ProjectsSection = ({
           }}
         />
       </div>
+      <Bubbles showIndices={dots} />
     </ResponsiveContainer>
   );
 };

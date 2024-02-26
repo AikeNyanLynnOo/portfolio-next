@@ -14,6 +14,7 @@ import { BlogCard } from "../molecules/BlogCard";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { Bubbles } from "./Bubbles";
 
 export const BlogsSection = ({
   children,
@@ -26,8 +27,18 @@ export const BlogsSection = ({
   const ownRef = useRef(scrollRef || null);
 
   const { isLight } = useSelector((state) => state.theme);
+
+  const dots = useMemo(() => {
+    const randomArray = [];
+    for (let i = 0; i < 4; i++) {
+      randomArray.push(Math.floor(Math.random() * 25) + 1);
+    }
+    return randomArray;
+  }, []);
+
   const blogsSectionClasses = useMemo(() => {
     return clsx({
+      "[&>*]:z-10": true,
       // "h-screen": true,
       "min-h-[calc(100vh-80px)]": true,
       "text-ownBlack-100": true,
@@ -41,6 +52,8 @@ export const BlogsSection = ({
 
   const blogTitleClasses = useMemo(() => {
     return clsx({
+      "bg-white": true,
+      "dark:bg-ownBlack-100": true,
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       border: true,
@@ -114,7 +127,7 @@ export const BlogsSection = ({
     >
       <div className={blogsSectionClasses}>
         <h2 className={blogTitleClasses}>Blogs</h2>
-        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto z-10">
           <div class="grid xl:grid-cols-2 lg:gap-y-16 gap-10">
             {blogs.map((blog, idx) => (
               <Fragment key={idx}>
@@ -152,6 +165,7 @@ export const BlogsSection = ({
           </Icon>
         </Link>
       </div>
+      <Bubbles showIndices={dots} />
     </ResponsiveContainer>
   );
 };

@@ -97,7 +97,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
   const topPercents = ["0.9%", "18%", "34.5%", "51.5%", "68.5%", "85%"];
 
   return (
-    <div className="hidden md:flex">
+    <div className="hidden md:flex z-10 absolute">
       <Stack
         direction="column"
         justifyContent="flex-start"
