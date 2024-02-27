@@ -115,7 +115,8 @@ export const AboutSection = ({
               codeTag={{
                 start: (
                   <Typography
-                    text={"<p>"}
+                    // text={"<p>"}
+                    text={""}
                     customClasses={{
                       "text-ownBlue-100": true,
                       "dark:text-fuchsia-600": true,
@@ -126,7 +127,8 @@ export const AboutSection = ({
                 ),
                 end: (
                   <Typography
-                    text={"</p>"}
+                    // text={"</p>"}
+                    text={""}
                     customClasses={{
                       "text-ownBlue-100": true,
                       "dark:text-fuchsia-600": true,

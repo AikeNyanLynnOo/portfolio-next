@@ -13,16 +13,27 @@ export const Bubbles = ({
   const bubbleDotClasses = useMemo(() => {
     return clsx({
       dot: true, // custom class
-      "bg-ownMint-200": true,
-      "dark:bg-ownMint-200": true,
+      //   "bg-ownMint-200": true,
+      //   "dark:bg-ownMint-200": true,
+      "from-teal-300": true,
+      "dark:from-teal-200": true,
+      "to-cyan-500": true,
+      "dark:to-cyan-500": true,
+    //   "via-purple-500" : true,
       ...customBubbleDotClasses,
     });
   }, [customBubbleDotClasses]);
   const getDotDivClass = useCallback((index) => {
     return clsx({
       [`dotdiv-${index}`]: true,
-      "bg-ownMint-200": true,
-      "dark:bg-ownMint-200": true,
+      "bg-gradient-to-l": true,
+      //   "bg-ownMint-200": true,
+      //   "dark:bg-ownMint-200": true,
+      "from-teal-300": true,
+      "dark:from-teal-200": true,
+      "to-cyan-500": true,
+      "dark:to-cyan-500": true,
+    //   "via-pink-200" : true,
       ...customBubbleDotClasses,
     });
   }, []);

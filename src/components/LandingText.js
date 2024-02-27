@@ -51,7 +51,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         codeTag={{
           start: (
             <Typography
-              text={"<h1>"}
+              // text={"<h1>"}
+              text={""}
               customClasses={{
                 "text-purple-600": true,
                 "dark:text-pink-400": true,
@@ -62,7 +63,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           ),
           end: (
             <Typography
-              text={"</h1>"}
+              // text={"</h1>"}
+              text={""}
               customClasses={{
                 "text-purple-600": true,
                 "dark:text-pink-400": true,
@@ -132,7 +134,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         codeTag={{
           start: (
             <Typography
-              text={"<p>"}
+              // text={"<p>"}
+              text={""}
               customClasses={{
                 "text-ownBlue-100": true,
                 "dark:text-fuchsia-600": true,
@@ -143,7 +146,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           ),
           end: (
             <Typography
-              text={"</p>"}
+              // text={"</p>"}
+              text={""}
               customClasses={{
                 "text-ownBlue-100": true,
                 "dark:text-fuchsia-600": true,
