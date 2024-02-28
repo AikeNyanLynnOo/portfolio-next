@@ -80,8 +80,8 @@ export const FloatingLandingPanel = ({
       /> */}
       <Image
         src={"/images/anlo.jpg"}
-        height={1000}
-        width={1000}
+        height={100}
+        width={100}
         className="outline-ownMint-200 dark:outline-ownMint-100 mx-auto mb-4 h-16 w-16 rounded-full outline outline-2 outline-offset-2"
         alt="floating-img"
       />
