@@ -255,8 +255,9 @@ export const ProjectsSection = ({
         jobLocation: "Yangon, Myanmar",
         description:
           "Professionally trained in React, Node.js, Docker, and Google Cloud Platform, I specialize in web application development. Proficient in web crawlers and heavy JS libraries like Puppeteer and Cheerio, I ensure efficient data retrieval and manipulation. Leveraging technologies such as Cloud Run, BigQuery, and App Engine, I deliver scalable solutions that meet industry standards and client requirements.",
-        companyName: "HAJ Co.,Ltd.",
-        companyLink: "https://official.haj.co.jp/",
+        companyName:
+          "JKT Myanmar International Co.,Ltd.(Partnering with HAJ Co.,Ltd. Japan)",
+        companyLink: "https://jktmyanmarint.com/",
         techs: [
           "ReactJS",
           "NodeJS",
@@ -299,7 +300,7 @@ export const ProjectsSection = ({
       },
       {
         icon: "emoji_events",
-        title: "Front End With React",
+        title: "Frontend With React",
         date: "2020",
         subTitle:
           "The Hong Kong University of Science and Technology (On Coursera)",
@@ -468,13 +469,14 @@ export const ProjectsSection = ({
               display: "flex",
               justifyContent: "center",
               backgroundColor: "transparent",
-              height: "3px",
+              height: "7px",
             },
             "& .MuiTabs-indicatorSpan": {
               maxWidth: 40,
               width: "100%",
+              borderRadius: "5px",
               backgroundColor: isLight
-                ? lightTheme.backgroundColor[400]
+                ? lightTheme.backgroundColor[600]
                 : darkTheme.textColor[200],
             },
           }}

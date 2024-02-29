@@ -38,7 +38,7 @@ export const Bubbles = ({
     });
   }, []);
   return (
-    <div className={`wrapper ${customClasses}`}>
+    <div className={`wrapper overflow-hidden ${customClasses}`}>
       {[
         showIndices &&
           showIndices.map((index, idx) => (

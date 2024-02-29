@@ -126,7 +126,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
               fontFamily: '"Varela Round", sans-serif',
             }}
           >
-            5 years of dev exp
+            4+ years of dev exp
           </span>
         </Typography>
       </CodeText>

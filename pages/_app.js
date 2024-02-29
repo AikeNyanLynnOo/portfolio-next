@@ -57,7 +57,7 @@ function MyApp({ Component, ...rest }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta
           name="description"
-          content="I am a over 5 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+          content="I am a over 4 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
         />
         <meta
           property="og:title"
@@ -65,7 +65,7 @@ function MyApp({ Component, ...rest }) {
         />
         <meta
           property="og:description"
-          content="I am a over 5 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+          content="I am a over 4 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
         />
         {/* <meta
           property="og:image"

@@ -79,11 +79,11 @@ export const LandingSection = ({
           <div className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-8 px-5 rounded-xl w-fit  hidden xl:flex">
             <div className="flex items-center gap-x-1 mb">
               <Typography
-                text={"5"}
+                text={"4+"}
                 customClasses={{
                   "text-ownBlack-200": true,
                   "w-3/12": true,
-
+                  "mr-2" : true,
                   "dark:text-ownMint-100": true,
                   "text-4xl": true,
                 }}

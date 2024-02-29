@@ -86,7 +86,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                 <Icon
                   style={{
                     fontSize: "15px",
-                    marginTop : "5px"
+                    marginTop: "5px",
                   }}
                 >
                   laptop_mac
@@ -157,6 +157,10 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                     />
                   </TextWithIcon>
                 )}
+                {/* {exp.companyName &&
+                  exp.companyLinks &&
+                  exp.companyLinks.length > 0 &&
+                  exp.companyLinks.map((link, idx) => <p key={idx}>{link}{exp.companyName}</p>)} */}
                 {exp.companyName && (
                   <TextWithIcon href={exp.companyLink || "/"}>
                     <Icon
