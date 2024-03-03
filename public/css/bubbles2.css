@@ -32,6 +32,13 @@ div .dot {
   /* background-color: blue; */
   /* z-index: -10; */
 }
+.wrapper .dotdiv-0 {
+  top: 35%;
+  left: 67%;
+  animation:
+    animate 10s linear infinite,
+    sideWays 4s ease-in-out infinite;
+}
 .wrapper .dotdiv-1 {
   top: 20%;
   left: 20%;
