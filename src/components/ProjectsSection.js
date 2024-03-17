@@ -130,23 +130,6 @@ export const ProjectsSection = ({
         ],
       },
       {
-        title: "Multiple Chioce Quiz App",
-        introText:
-          "You have full control over customizing quiz parameters like fields, difficulty, and time. Monitor remaining time, end the quiz at any point, and navigate freely through animated quiz panels. View results and score upon completion.",
-        projectMedia: "/images/projects/quiz_ss.png",
-        description: "",
-        techs: [
-          "ReactJS",
-          "Typescript",
-          "TailwindCSS",
-          "Framer Motion",
-          "Travia Quiz API",
-        ],
-        liveLink: "https://multiple-choice-quiz-game.netlify.app/",
-        githubLink:
-          "https://github.com/AikeNyanLynnOo/multiple-chioce-quizz-react",
-      },
-      {
         title: "Discord Website Clone",
         introText:
           "The project replicated Discord's website frontend, including navigation, animations, and responsive design for all devices, aiming for a seamless user experience akin to the original site.",
@@ -174,6 +157,23 @@ export const ProjectsSection = ({
         techs: ["ReactJS", "TailwindCSS", "Axios", "ShrtCode API"],
         liveLink: "https://url-shortener-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/url-shortener-react-api",
+      },
+      {
+        title: "Multiple Chioce Quiz App",
+        introText:
+          "You have full control over customizing quiz parameters like fields, difficulty, and time. Monitor remaining time, end the quiz at any point, and navigate freely through animated quiz panels. View results and score upon completion.",
+        projectMedia: "/images/projects/quiz_ss.png",
+        description: "",
+        techs: [
+          "ReactJS",
+          "Typescript",
+          "TailwindCSS",
+          "Framer Motion",
+          "Travia Quiz API",
+        ],
+        liveLink: "https://multiple-choice-quiz-game.netlify.app/",
+        githubLink:
+          "https://github.com/AikeNyanLynnOo/multiple-chioce-quizz-react",
       },
       {
         title: "IP Address / Domain Tracker",
