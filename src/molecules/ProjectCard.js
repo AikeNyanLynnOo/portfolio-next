@@ -28,12 +28,12 @@ export const ProjectCard = ({
   customClasses,
   customStyles,
   href,
+  handleClick,
 }) => {
   const { isLight } = useSelector((state) => state.theme);
   const projectCardClasses = useMemo(() => {
     return clsx({
-      "cursor-pointer": href,
-      "hover:underline": href,
+      "cursor-pointer": href || handleClick,
       "select-none": true,
       "text-ownBlack-200": true,
       "dark:text-white": true,
@@ -41,16 +41,19 @@ export const ProjectCard = ({
       //  "flex-wrap" : true,
       "items-center": true,
       "my-2": true,
+      "w-full": true,
+      "rounded-xl": true,
       ...customClasses,
     });
-  }, [customClasses, href]);
+  }, [customClasses, href, handleClick]);
 
   return (
     <div
-      className="w-ful rounded-xl"
+      className={projectCardClasses}
       style={{
         fontFamily: '"Varela Round", sans-serif',
       }}
+      onClick={handleClick}
     >
       <Card
         sx={{

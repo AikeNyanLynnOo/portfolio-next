@@ -1,36 +1,18 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
+import Carousel from "react-material-ui-carousel";
 
-function ProjectGrid({ projects }) {
+// import { Carousel } from "@material-tailwind/react";
+import { Dialog, DialogTitle, DialogContent, Modal } from "@mui/material";
+import { useState } from "react";
+import { ProjectCaroItem, ProjectCarouselItem } from "./ProjectCaroItem";
+
+function ProjectGrid({ projects, handleActivePrj, projectImages }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
   return (
-    // <div className="container mx-auto my-5">
-    //   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-slate-100">
-    //     <div className="bg-white rounded-lg shadow-lg mx-auto">
-    //       <div className="p-4">
-    //         <h2 className="text-xl font-semibold">Card 1</h2>
-    //         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    //       </div>
-    //     </div>
-    //     <div className="bg-white rounded-lg shadow-lg">
-    //       <div className="p-4">
-    //         <h2 className="text-xl font-semibold">Card 2</h2>
-    //         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    //       </div>
-    //     </div>
-    //     <div className="bg-white rounded-lg shadow-lg">
-    //       <div className="p-4">
-    //         <h2 className="text-xl font-semibold">Card 3</h2>
-    //         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    //       </div>
-    //     </div>
-    //     <div className="bg-white rounded-lg shadow-lg">
-    //       <div className="p-4">
-    //         <h2 className="text-xl font-semibold">Card 4</h2>
-    //         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div className=" mx-auto my-10 w-full">
       <div className="flex flex-wrap justify-center w-full mx-auto">
         {projects &&
@@ -47,10 +29,59 @@ function ProjectGrid({ projects }) {
                 techs={pj.techs}
                 liveLink={pj.liveLink}
                 githubLink={pj.githubLink}
+                handleClick={() => {
+                  setIsModalOpen(true);
+                  handleActivePrj(index);
+                }}
               />
             </div>
           ))}
       </div>
+
+
+      <Dialog
+        open={isModalOpen}
+        onClose={handleClose}
+        fullWidth
+        maxWidth="lg"
+        sx={{
+          zIndex: 100,
+          height: "auto",
+        }}
+        transitionDuration={10}
+      >
+        <Carousel
+          sx={{
+            pb: 4,
+            width: "100%",
+            height: "fit-content",
+          }}
+          autoPlay={false}
+          duration={0}
+
+        >
+          {projectImages &&
+            projectImages.length > 0 &&
+            projectImages.map((img, idx) => (
+              <ProjectCaroItem key={idx} img={img} />
+            ))}
+        </Carousel>
+      </Dialog>
+
+      {/* <Carousel
+        sx={{
+          // border : "10px solid blue",
+          width: "100%",
+          height: "fit-content",
+        }}
+        autoPlay={false}
+      >
+        {projectImages &&
+          projectImages.length > 0 &&
+          projectImages.map((img, idx) => (
+            <ProjectCaroItem key={idx} img={img} />
+          ))}
+      </Carousel> */}
     </div>
   );
 }

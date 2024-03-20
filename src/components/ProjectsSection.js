@@ -21,73 +21,6 @@ import { ExpTimeline2 } from "./ExpTimeline2";
 import { AchievementTimeline } from "./AchievementTimeLine";
 import { Bubbles } from "./Bubbles";
 
-const allProjects = [
-  {
-    title: "Project 1",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 2",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 3",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 4",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 5",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 6",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 8",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-  {
-    title: "Project 9",
-    description:
-      "Laboris ex ut veniam officia eiusmod do cupidatat exercitation in.",
-    techs: ["HTML", "CSS"],
-    liveLink: "live.com",
-    githubLink: "github.com",
-  },
-];
-
 export const ProjectsSection = ({
   children,
   scrollRef,
@@ -128,6 +61,52 @@ export const ProjectsSection = ({
           "Redux Saga",
           "Redux Toolkit",
         ],
+        projectImages: [
+          {
+            title: "Login Page",
+            src: "/images/projects/enable_cms/login.png",
+          },
+          {
+            title: "User Profile",
+            src: "/images/projects/enable_cms/user_profile.png",
+          },
+          {
+            title: "Dashboard",
+            src: "/images/projects/enable_cms/dashboard.png",
+          },
+          {
+            title: "Products",
+            src: "/images/projects/enable_cms/products.png",
+          },
+          {
+            title: "Screen Views",
+            src: "/images/projects/enable_cms/screen_view.png",
+          },
+          {
+            title: "Data Attributes",
+            src: "/images/projects/enable_cms/data_attribute.png",
+          },
+          {
+            title: "Media Library",
+            src: "/images/projects/enable_cms/media_library.png",
+          },
+          {
+            title: "Media Browser",
+            src: "/images/projects/enable_cms/media_browser.png",
+          },
+          {
+            title: "Add New Media (Image)",
+            src: "/images/projects/enable_cms/image_media.png",
+          },
+          {
+            title: "Add New Media (Audio) ",
+            src: "/images/projects/enable_cms/audio_media.png",
+          },
+          {
+            title: "Add New Media (Video) ",
+            src: "/images/projects/enable_cms/video_media.png",
+          },
+        ],
       },
       {
         title: "Discord Website Clone",
@@ -138,6 +117,40 @@ export const ProjectsSection = ({
         techs: ["NextJS", "Typescript", "TailwindCSS", "Framer Motion"],
         liveLink: "https://aike-discordo-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/discord-clone-next",
+        projectImages: [
+          {
+            title: "Home Page",
+            src: "/images/projects/discord_clone/home_page.png",
+          },
+          {
+            title: "Nitro Page",
+            src: "/images/projects/discord_clone/nitro.png",
+          },
+          {
+            title: "Discover Page",
+            src: "/images/projects/discord_clone/discover.png",
+          },
+          {
+            title: "Safety Page",
+            src: "/images/projects/discord_clone/safety.png",
+          },
+          {
+            title: "Support Page",
+            src: "/images/projects/discord_clone/support.png",
+          },
+          {
+            title: "Blog Page",
+            src: "/images/projects/discord_clone/blog.png",
+          },
+          {
+            title: "Home Mobile View",
+            src: "/images/projects/discord_clone/home_responsive.png",
+          },
+          {
+            title: "Navigation Mobile View",
+            src: "/images/projects/discord_clone/nav_responsive.png",
+          },
+        ],
       },
       {
         title: "JKT Myanmar International",
@@ -147,6 +160,16 @@ export const ProjectsSection = ({
         description: "",
         techs: ["Bootstrap", "VanillaJS", "JQuery", "PHP"],
         liveLink: "https://jktmyanmarint.com/",
+        projectImages: [
+          {
+            title: "Home Desktop View",
+            src: "/images/projects/jkt/home_desk.png",
+          },
+          {
+            title: "Home Mobile View",
+            src: "/images/projects/jkt/home_mobile.png",
+          },
+        ],
       },
       {
         title: "URL Shortener",
@@ -157,6 +180,16 @@ export const ProjectsSection = ({
         techs: ["ReactJS", "TailwindCSS", "Axios", "ShrtCode API"],
         liveLink: "https://url-shortener-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/url-shortener-react-api",
+        projectImages: [
+          {
+            title: "Home Desktop View",
+            src: "/images/projects/url_short/home_desktop.png",
+          },
+          {
+            title: "Home Mobile View",
+            src: "/images/projects/url_short/home_mobile.png",
+          },
+        ],
       },
       {
         title: "Multiple Chioce Quiz App",
@@ -174,6 +207,32 @@ export const ProjectsSection = ({
         liveLink: "https://multiple-choice-quiz-game.netlify.app/",
         githubLink:
           "https://github.com/AikeNyanLynnOo/multiple-chioce-quizz-react",
+        projectImages: [
+          {
+            title: "Home Desktop",
+            src: "/images/projects/quiz/home.png",
+          },
+          {
+            title: "Taking Quiz",
+            src: "/images/projects/quiz/take_quiz.png",
+          },
+          {
+            title: "Results",
+            src: "/images/projects/quiz/result.png",
+          },
+          {
+            title: "Home Mobile View",
+            src: "/images/projects/quiz/home_mobile.png",
+          },
+          {
+            title: "Taking Quiz Mobile",
+            src: "/images/projects/quiz/take_quiz_mobile.png",
+          },
+          {
+            title: "Results Mobile View",
+            src: "/images/projects/quiz/result_mobile.png",
+          },
+        ],
       },
       {
         title: "IP Address / Domain Tracker",
@@ -184,6 +243,16 @@ export const ProjectsSection = ({
         techs: ["ReactJS", "Netlify functions", "Geo IPify"],
         liveLink: "https://ip-tracker-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/ip-tracker",
+        projectImages: [
+          {
+            title: "Desktop View",
+            src: "/images/projects/ip_tracker/desktop.png",
+          },
+          {
+            title: "Mobile View",
+            src: "/images/projects/ip_tracker/mobile.png",
+          },
+        ],
       },
       // {
       //   title: "Explore Nations",
@@ -370,6 +439,11 @@ export const ProjectsSection = ({
   }, []);
 
   const [active, setActive] = useState(0);
+  const [projectImages, setProjectImages] = useState([]);
+
+  const handleActivePrj = (index) => {
+    setProjectImages(projects[index].projectImages);
+  };
 
   const handleChange = useCallback((event, newValue) => {
     setActive(newValue);
@@ -378,7 +452,13 @@ export const ProjectsSection = ({
     {
       id: 1,
       title: "Projects",
-      renderTabItem: () => <ProjectGrid projects={projects} />,
+      renderTabItem: () => (
+        <ProjectGrid
+          projects={projects}
+          handleActivePrj={handleActivePrj}
+          projectImages={projectImages}
+        />
+      ),
     },
     {
       id: 2,
