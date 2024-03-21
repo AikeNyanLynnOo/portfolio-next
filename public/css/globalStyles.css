@@ -69,3 +69,11 @@ body {
     transform: scale(1.8);
   }
 }
+
+/* .image-gallery-icon {
+  width: 30px;
+} */
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border: 4px solid #33bbc5 !important;
+}

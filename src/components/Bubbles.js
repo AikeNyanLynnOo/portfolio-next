@@ -36,7 +36,7 @@ export const Bubbles = ({
       //   "via-pink-200" : true,
       ...customBubbleDotClasses,
     });
-  }, []);
+  }, [customBubbleDotClasses]);
 
   const [bubbles, setBubbles] = useState([]);
 

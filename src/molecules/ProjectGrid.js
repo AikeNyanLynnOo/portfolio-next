@@ -1,14 +1,27 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
 import Carousel from "react-material-ui-carousel";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 // import { Carousel } from "@material-tailwind/react";
 import { Dialog, DialogTitle, DialogContent, Modal } from "@mui/material";
 import { useState } from "react";
 import { ProjectCaroItem, ProjectCarouselItem } from "./ProjectCaroItem";
+import { Description } from "@mui/icons-material";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 function ProjectGrid({ projects, handleActivePrj, projectImages }) {
+  const theme = useTheme();
+  const xl = useMediaQuery(theme.breakpoints.up("xl"));
+  const lg = useMediaQuery(theme.breakpoints.up("lg"));
+  const md = useMediaQuery(theme.breakpoints.up("md"));
+  const sm = useMediaQuery(theme.breakpoints.up("sm"));
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleClose = () => {
     setIsModalOpen(false);
   };
@@ -38,7 +51,6 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
           ))}
       </div>
 
-
       <Dialog
         open={isModalOpen}
         onClose={handleClose}
@@ -48,9 +60,8 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
           zIndex: 100,
           height: "auto",
         }}
-        transitionDuration={10}
       >
-        <Carousel
+        {/* <Carousel
           sx={{
             pb: 4,
             width: "100%",
@@ -65,23 +76,72 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
             projectImages.map((img, idx) => (
               <ProjectCaroItem key={idx} img={img} />
             ))}
-        </Carousel>
+        </Carousel> */}
+
+        <ImageGallery
+          items={
+            projectImages &&
+            projectImages.length > 0 &&
+            projectImages.map((img, idx) => ({
+              original: img.src,
+              thumbnail: img.src,
+              loading: "eager",
+              description: img.title,
+            }))
+          }
+          slideInterval={30000}
+          showIndex
+          // showBullets
+          autoPlay
+          renderLeftNav={(onClick, disabled) => (
+            <KeyboardArrowLeftIcon
+              onClick={onClick}
+              disabled={disabled}
+              sx={{
+                position: "absolute",
+                zIndex: 10,
+                left: 10,
+                top: "50%",
+                height: "50px",
+                width: "50px",
+                color: "#ffffff",
+                backgroundColor: "rgba(0, 0, 0, 0.1)",
+                borderRadius: "50%",
+                transform: "translateY(-50%)",
+              }}
+            />
+          )}
+          renderRightNav={(onClick, disabled) => (
+            <KeyboardArrowRightIcon
+              onClick={onClick}
+              disabled={disabled}
+              sx={{
+                position: "absolute",
+                zIndex: 10,
+                right: 10,
+                top: "50%",
+                height: "50px",
+                width: "50px",
+                color: "#ffffff",
+                backgroundColor: "rgba(0, 0, 0, 0.1)",
+                borderRadius: "50%",
+                transform: "translateY(-50%)",
+              }}
+            />
+          )}
+        />
       </Dialog>
 
-      {/* <Carousel
-        sx={{
-          // border : "10px solid blue",
-          width: "100%",
-          height: "fit-content",
-        }}
-        autoPlay={false}
-      >
-        {projectImages &&
+      {/* <ImageGallery
+        items={
+          projectImages &&
           projectImages.length > 0 &&
-          projectImages.map((img, idx) => (
-            <ProjectCaroItem key={idx} img={img} />
-          ))}
-      </Carousel> */}
+          projectImages.map((img, idx) => ({
+            original: img.src,
+            thumbnail: img.src,
+          }))
+        }
+      /> */}
     </div>
   );
 }
