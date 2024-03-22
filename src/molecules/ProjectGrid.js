@@ -89,7 +89,7 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
               description: img.title,
             }))
           }
-          slideInterval={30000}
+          slideInterval={4000}
           showIndex
           // showBullets
           autoPlay
