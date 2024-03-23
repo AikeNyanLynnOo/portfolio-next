@@ -7,7 +7,11 @@ import { Icon } from "@mui/material";
 import Link from "next/link";
 import { CustomTooltip } from "./CustomTooltip";
 
+// framer motion
+import { motion } from "framer-motion";
+
 export const BlogCard = ({
+  index,
   customClasses,
   customStyles,
   title,
@@ -20,7 +24,20 @@ export const BlogCard = ({
   externalLink,
 }) => {
   return (
-    <div class="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4">
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        ease: "linear",
+        delay: 0.1 * index,
+        type: "spring",
+        stiffness: 400,
+      }}
+      viewport={{
+        once: true,
+      }}
+      class="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4"
+    >
       <div class="sm:flex">
         <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
           <Image
@@ -152,6 +169,6 @@ export const BlogCard = ({
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

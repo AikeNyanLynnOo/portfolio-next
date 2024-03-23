@@ -17,6 +17,26 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { LeetCodeIcon } from "../atoms/LeetCodeIcon";
 
+// framer motion
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -1000,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "linear",
+      delay: 0.05,
+      type: "spring",
+      stiffness: 20,
+    },
+  }),
+};
+
 export const FloatingLandingPanel = ({
   children,
   customClasses,
@@ -32,7 +52,6 @@ export const FloatingLandingPanel = ({
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       "my-10": true,
-
       "lg:my-0": true,
       // "lg:rounded-tl-[30%]": true,
       // "lg:rounded-br-[30%]": true,
@@ -61,7 +80,13 @@ export const FloatingLandingPanel = ({
   }, [isLight]);
 
   return (
-    <div
+    <motion.div
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      animate="animate"
+      viewport={{
+        once: true,
+      }}
       className={floatingPanelClasses}
       // className={
       //   "bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-100"
@@ -218,6 +243,6 @@ export const FloatingLandingPanel = ({
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

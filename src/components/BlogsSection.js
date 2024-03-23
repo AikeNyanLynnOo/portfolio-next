@@ -16,6 +16,9 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { Bubbles } from "./Bubbles";
 
+// framer-motion
+import { motion } from "framer-motion";
+
 export const BlogsSection = ({
   children,
   scrollRef,
@@ -132,6 +135,7 @@ export const BlogsSection = ({
             {blogs.map((blog, idx) => (
               <Fragment key={idx}>
                 <BlogCard
+                  index={idx}
                   title={blog.title}
                   blogMedia={blog.blogMedia}
                   isNew={blog.isNew}
@@ -155,14 +159,28 @@ export const BlogsSection = ({
           className="dark:text-ownBlack-100 flex items-center bg-gradient-to-r from-ownMint-100 via-ownMint-200 to-ownMint-200 hover:bg-gradient-to-br hover:ring-1 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2"
         >
           See More
-          <Icon
-            style={{
-              fontSize: "18px",
-              marginLeft: "5px",
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.01,
+              type: "spring",
+              stiffness: 500,
             }}
+            viewport={{
+              once: true,
+            }}
+            className="h-fit flex items-center"
           >
-            keyboard_arrow_right
-          </Icon>
+            <Icon
+              style={{
+                fontSize: "18px",
+                marginLeft: "5px",
+              }}
+            >
+              keyboard_arrow_right
+            </Icon>
+          </motion.div>
         </Link>
       </div>
       <Bubbles showIndices={dots} />

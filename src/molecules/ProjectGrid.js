@@ -36,6 +36,7 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
               className="w-full lg:w-1/2 xl:w-4/12 px-0 sm:px-4 mb-8"
             >
               <ProjectCard
+                index={index}
                 title={pj.title}
                 introText={pj.introText}
                 projectMedia={pj.projectMedia}
@@ -59,6 +60,11 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
         sx={{
           zIndex: 100,
           height: "auto",
+        }}
+        TransitionProps={{
+          style: {
+            transitionDelay: 300,
+          },
         }}
       >
         {/* <Carousel

@@ -16,6 +16,23 @@ import { CustomChip } from "./CustomChip";
 import { CustomTooltip } from "./CustomTooltip";
 import { Bubbles } from "../components/Bubbles";
 
+// framer motion
+import { motion } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
 export const ProjectCard = ({
   children,
   title,
@@ -29,6 +46,7 @@ export const ProjectCard = ({
   customStyles,
   href,
   handleClick,
+  index,
 }) => {
   const { isLight } = useSelector((state) => state.theme);
   const projectCardClasses = useMemo(() => {
@@ -48,12 +66,23 @@ export const ProjectCard = ({
   }, [customClasses, href, handleClick]);
 
   return (
-    <div
+    <motion.div
       className={projectCardClasses}
       style={{
         fontFamily: '"Varela Round", sans-serif',
       }}
       onClick={handleClick}
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        ease: "linear",
+        delay: 0.1 * index,
+        type: "spring",
+        stiffness: 400,
+      }}
+      viewport={{
+        once: true,
+      }}
     >
       <Card
         sx={{
@@ -215,6 +244,6 @@ export const ProjectCard = ({
         </CardActions>
       </Card>
       {children}
-    </div>
+    </motion.div>
   );
 };

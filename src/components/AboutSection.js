@@ -15,6 +15,58 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { Bubbles } from "./Bubbles";
 
+// framer motion
+import { motion } from "framer-motion";
+
+const fadeInAnimationRightVariants = {
+  initial: {
+    opacity: 0,
+    x: 1000,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "linear",
+      delay: 0.05,
+      type: "spring",
+      stiffness: 50,
+    },
+  }),
+};
+const fadeInAnimationLeftVariants = {
+  initial: {
+    opacity: 0,
+    x: -1000,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "linear",
+      delay: 1.5,
+      type: "spring",
+      stiffness: 50,
+    },
+  }),
+};
+const fadeInAnimationLeftTitleVariants = {
+  initial: {
+    opacity: 0,
+    x: -1000,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "linear",
+      delay: 1,
+      type: "spring",
+      stiffness: 50,
+    },
+  }),
+};
+
 export const AboutSection = ({
   children,
   scrollRef,
@@ -109,8 +161,26 @@ export const AboutSection = ({
     >
       <div className={aboutSectionClasses}>
         <div className="w-full h-ful lg:w-4/6 lg:order-first order-last">
-          <h2 className={aboutMeTitleClasses}>About Me</h2>
-          <div className={aboutMeTextClasses}>
+          <motion.h2
+            variants={fadeInAnimationLeftTitleVariants}
+            initial="initial"
+            animate="animate"
+            viewport={{
+              once: true,
+            }}
+            className={aboutMeTitleClasses}
+          >
+            About Me
+          </motion.h2>
+          <motion.div
+            className={aboutMeTextClasses}
+            variants={fadeInAnimationLeftVariants}
+            initial="initial"
+            animate="animate"
+            viewport={{
+              once: true,
+            }}
+          >
             <CodeText
               codeTag={{
                 start: (
@@ -205,7 +275,7 @@ export const AboutSection = ({
                 </Link>
               ))}
             </CodeText> */}
-          </div>
+          </motion.div>
         </div>
         <Image
           src="/images/dev.png"

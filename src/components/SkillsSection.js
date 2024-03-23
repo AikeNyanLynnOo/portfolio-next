@@ -249,14 +249,28 @@ export const SkillsSection = ({
               isMaterialIcon: false,
             },
           ].map((item, index) => (
+            // <motion.div
+            //   variants={fadeInAnimationVariants}
+            //   initial="initial"
+            //   animate="animate"
+            //   whileInView="animate"
+            //   // viewport={{
+            //   //   once: true,
+            //   // }}
+            //   key={index}
+            //   custom={index}
+            //   className="p-5"
+            // >
             <Fragment key={index}>
               <SkillIconWithText
                 icon={item.icon}
                 isMaterialIcon={item.isMaterialIcon}
                 text={item.text}
                 href={item.href}
+                index={index}
               />
             </Fragment>
+            // </motion.div>
           ))}
         </div>
       </div>

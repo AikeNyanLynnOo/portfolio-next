@@ -16,6 +16,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { LeetCodeIcon } from "../atoms/LeetCodeIcon";
 import { darkTheme } from "../Theme/styles";
 
+// framer motion
+import { motion } from "framer-motion";
+
 export const ContactSection = ({
   children,
   scrollRef,
@@ -114,7 +117,21 @@ export const ContactSection = ({
             },
           ].map(({ Icon, link }, index) => (
             <Link href={link} key={index}>
-              <Icon classes="text-ownBlack-200 dark:text-ownMint-200 text-2xl hover:text-ownMint-200 hover:dark:text-violet-300 hover:shadow-xl mx-1" />
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  ease: "linear",
+                  delay: 0.05 * index,
+                  type: "spring",
+                  stiffness: 400,
+                }}
+                viewport={{
+                  once: true,
+                }}
+              >
+                <Icon classes="text-ownBlack-200 dark:text-ownMint-200 text-2xl hover:text-ownMint-200 hover:dark:text-violet-300 hover:shadow-xl mx-1" />
+              </motion.div>
             </Link>
           ))}
         </div>
