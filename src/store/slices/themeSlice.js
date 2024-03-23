@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const hours = new Date().getHours();
+
 const initialState = {
-  isLight: true,
+  isLight: (hours > 6 && hours < 20 && true) || false,
   // textColor: {
   //   10: "#98FAEC", // mint
   //   20: "#15F6D6", // dark mint
