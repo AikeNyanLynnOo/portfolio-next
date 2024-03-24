@@ -10,6 +10,7 @@ import { NavBar } from "@/src/components/NavBarComponent";
 import { ProjectsSection } from "@/src/components/ProjectsSection";
 import { SkillsSection } from "@/src/components/SkillsSection";
 import { changeActiveNav } from "@/src/store/slices/generalSlice";
+import { switchThemeRequest } from "@/src/store/slices/themeSlice";
 import { useState } from "react";
 import { useRef } from "react";
 import { useMemo } from "react";
@@ -100,6 +101,17 @@ export default function Layout() {
     blogsSectionOffsetTop,
     contactSectionOffsetTop,
   ]);
+  useEffect(() => {
+    dispatch(
+      switchThemeRequest({
+        theme:
+          (new Date().getHours() > 6 &&
+            new Date().getHours() < 20 &&
+            "light") ||
+          "dark",
+      }),
+    );
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
