@@ -36,10 +36,10 @@ export const BlogCard = ({
       viewport={{
         once: true,
       }}
-      class="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4"
+      className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4"
     >
-      <div class="sm:flex">
-        <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
+      <div className="sm:flex">
+        <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
           <Image
             height={1000}
             width={1000}
@@ -49,9 +49,9 @@ export const BlogCard = ({
           />
         </div>
 
-        <div class="mt-4 sm:mt-0 sm:ms-6 px-0 md:px-4">
+        <div className="mt-4 sm:mt-0 sm:ms-6 px-0 md:px-4">
           <h3
-            class="text-xl flex font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white"
+            className="text-xl flex font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
@@ -106,7 +106,7 @@ export const BlogCard = ({
             )}
           </h3>
           <p
-            class="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6 line-clamp-3"
+            className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6 line-clamp-3"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
@@ -136,7 +136,7 @@ export const BlogCard = ({
               ))}
           </div>
           <p
-            class="mt-2 mb-4 text-gray-600 dark:text-gray-400 text-sm leading-6"
+            className="mt-2 mb-4 text-gray-600 dark:text-gray-400 text-sm leading-6"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
@@ -144,7 +144,7 @@ export const BlogCard = ({
             Posted: {blogDate || "16/02/2024"}
           </p>
           <Link
-            class="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium text-sm"
+            className="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium text-sm"
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
@@ -153,7 +153,7 @@ export const BlogCard = ({
           >
             Read more
             <svg
-              class="flex-shrink-0 size-4"
+              className="flex-shrink-0 size-4"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

@@ -6,8 +6,6 @@ import { useSelector } from "react-redux";
 
 export const NavItem = ({ link, children, customClasses, customStyles }) => {
   const router = useRouter();
-
-  console.log(router.pathname);
   const { isLight } = useSelector((state) => state.theme);
   const navItemClasses = useMemo(() => {
     return clsx({

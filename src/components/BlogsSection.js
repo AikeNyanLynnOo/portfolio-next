@@ -130,8 +130,8 @@ export const BlogsSection = ({
     >
       <div className={blogsSectionClasses}>
         <h2 className={blogTitleClasses}>Blogs</h2>
-        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto z-10">
-          <div class="grid xl:grid-cols-2 lg:gap-y-16 gap-10">
+        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto z-10">
+          <div className="grid xl:grid-cols-2 lg:gap-y-16 gap-10">
             {blogs.map((blog, idx) => (
               <Fragment key={idx}>
                 <BlogCard
