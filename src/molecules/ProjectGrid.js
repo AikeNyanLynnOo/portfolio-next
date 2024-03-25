@@ -63,7 +63,7 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
         }}
         TransitionProps={{
           style: {
-            transitionDelay: 300,
+            transitionDelay: 500,
           },
         }}
       >
