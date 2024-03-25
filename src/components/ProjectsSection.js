@@ -109,6 +109,30 @@ export const ProjectsSection = ({
         ],
       },
       {
+        title: "Design System",
+        introText:
+          "By integrating design tokens and employing design patterns such as ( the HOC and Render props etc.), I created highly reusable and adaptable UI components customizing/extending the MUI components. This project aimed to revolutionize UI development by offering a comprehensive set of guidelines and reusable components, facilitating seamless integration and consistency across all future products.",
+        projectMedia: "/images/projects/design_system/ds.png",
+        description: "",
+        techs: [
+          "React",
+          "Material UI",
+          "Design Tokens",
+          "Styled Dictionary",
+          "React Design Patterns",
+        ],
+        projectImages: [
+          {
+            title: "Design System in Figma",
+            src: "/images/projects/design_system/figma.png",
+          },
+          {
+            title: "Developed Design System in Frontend",
+            src: "/images/projects/design_system/ds.png",
+          },
+        ],
+      },
+      {
         title: "Discord Website Clone",
         introText:
           "The project replicated Discord's website frontend, including navigation, animations, and responsive design for all devices, aiming for a seamless user experience akin to the original site.",
@@ -153,25 +177,6 @@ export const ProjectsSection = ({
         ],
       },
       {
-        title: "JKT Myanmar International",
-        introText:
-          "A professional business website equipped with job application functionality. Utilizing Bootstrap, jQuery, and PHP technologies for seamless operation and user interaction.",
-        projectMedia: "/images/projects/jkt_ss.png",
-        description: "",
-        techs: ["Bootstrap", "VanillaJS", "JQuery", "PHP"],
-        liveLink: "https://jktmyanmarint.com/",
-        projectImages: [
-          {
-            title: "Home Desktop View",
-            src: "/images/projects/jkt/home_desk.png",
-          },
-          {
-            title: "Home Mobile View",
-            src: "/images/projects/jkt/home_mobile.png",
-          },
-        ],
-      },
-      {
         title: "URL Shortener",
         introText:
           "Utilizing React, Tailwind CSS, and the ShrtCo API to shorten URLs efficiently. Additionally, implementing browser storage to retain recent shortened links for enhanced user experience upon returning to the application.",
@@ -191,6 +196,26 @@ export const ProjectsSection = ({
           },
         ],
       },
+      {
+        title: "JKT Myanmar International",
+        introText:
+          "A professional business website equipped with job application functionality. Utilizing Bootstrap, jQuery, and PHP technologies for seamless operation and user interaction.",
+        projectMedia: "/images/projects/jkt_ss.png",
+        description: "",
+        techs: ["Bootstrap", "VanillaJS", "JQuery", "PHP"],
+        liveLink: "https://jktmyanmarint.com/",
+        projectImages: [
+          {
+            title: "Home Desktop View",
+            src: "/images/projects/jkt/home_desk.png",
+          },
+          {
+            title: "Home Mobile View",
+            src: "/images/projects/jkt/home_mobile.png",
+          },
+        ],
+      },
+
       {
         title: "Multiple Chioce Quiz App",
         introText:
@@ -234,26 +259,26 @@ export const ProjectsSection = ({
           },
         ],
       },
-      {
-        title: "IP Address / Domain Tracker",
-        introText:
-          "Implementing advanced server location tracking functionality, seamlessly integrating with map services to pinpoint server locations based on user input of IP or domain addresses.",
-        projectMedia: "/images/projects/tracker_ss.png",
-        description: "",
-        techs: ["ReactJS", "Netlify functions", "Geo IPify"],
-        liveLink: "https://ip-tracker-a1k3.netlify.app/",
-        githubLink: "https://github.com/AikeNyanLynnOo/ip-tracker",
-        projectImages: [
-          {
-            title: "Desktop View",
-            src: "/images/projects/ip_tracker/desktop.png",
-          },
-          {
-            title: "Mobile View",
-            src: "/images/projects/ip_tracker/mobile.png",
-          },
-        ],
-      },
+      // {
+      //   title: "IP Address / Domain Tracker",
+      //   introText:
+      //     "Implementing advanced server location tracking functionality, seamlessly integrating with map services to pinpoint server locations based on user input of IP or domain addresses.",
+      //   projectMedia: "/images/projects/tracker_ss.png",
+      //   description: "",
+      //   techs: ["ReactJS", "Netlify functions", "Geo IPify"],
+      //   liveLink: "https://ip-tracker-a1k3.netlify.app/",
+      //   githubLink: "https://github.com/AikeNyanLynnOo/ip-tracker",
+      //   projectImages: [
+      //     {
+      //       title: "Desktop View",
+      //       src: "/images/projects/ip_tracker/desktop.png",
+      //     },
+      //     {
+      //       title: "Mobile View",
+      //       src: "/images/projects/ip_tracker/mobile.png",
+      //     },
+      //   ],
+      // },
       // {
       //   title: "Explore Nations",
       //   introText:
