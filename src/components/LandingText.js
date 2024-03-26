@@ -196,7 +196,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
         </button>
         <a
-          href="mailto:aikenyanlynnooo.dev@gmail.com"
+          href="mailto:aikenyanlynnoo.dev@gmail.com"
           className="bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 rounded-full text-purple-700 text-base font-semibold hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 py-1 mt-2 inline-flex items-center"
           style={{
             fontFamily: '"Varela Round", sans-serif',

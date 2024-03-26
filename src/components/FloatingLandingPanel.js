@@ -137,8 +137,8 @@ export const FloatingLandingPanel = ({
       <div className="my-5  w-fit mx-auto">
         {[
           {
-            text: "aikenyanlynnooo.dev@gmail.com",
-            href: `mailto:aikenyanlynnooo.dev@gmail.com`,
+            text: "aikenyanlynnoo.dev@gmail.com",
+            href: `mailto:aikenyanlynnoo.dev@gmail.com`,
             Icon: <AttachEmailIcon sx={{ ...iconStyles }} />,
           },
           {
