@@ -278,7 +278,7 @@ export const AboutSection = ({
           </motion.div>
         </div>
         <Image
-          src="/images/dev.png"
+          src="/images/dev.jpg"
           alt="dev_img"
           height={1000}
           width={1000}
