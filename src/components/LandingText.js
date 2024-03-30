@@ -31,7 +31,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "AikeNyanLynnOo_Frontend.pdf";
+    link.download = "Aike-Nyan-Lynn-Oo-Resume.pdf";
     link.click();
   };
 

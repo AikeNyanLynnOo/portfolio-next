@@ -12,7 +12,7 @@ export default async function handler(request, response) {
   );
   response.setHeader("Content-Type", "application/text");
 
-  const filePath = path.join(process.cwd(), "src/assets", "Aike-Nyan-Lynn-Oo-Frontend.pdf");
+  const filePath = path.join(process.cwd(), "src/assets", "Aike-Nyan-Lynn-Oo-Resume.pdf");
   const fileStream = fs.createReadStream(filePath);
 
   fileStream.pipe(response);
