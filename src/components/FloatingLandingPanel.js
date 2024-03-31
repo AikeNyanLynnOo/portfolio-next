@@ -141,10 +141,10 @@ export const FloatingLandingPanel = ({
             href: `mailto:aikenyanlynnoo.dev@gmail.com`,
             Icon: <AttachEmailIcon sx={{ ...iconStyles }} />,
           },
-          {
-            text: "Yangon, Myanmar",
-            Icon: <Place sx={{ ...iconStyles }} />,
-          },
+          // {
+          //   text: "Yangon, Myanmar",
+          //   Icon: <Place sx={{ ...iconStyles }} />,
+          // },
           {
             text: "Full-time | Freelance",
             Icon: <LaptopMac sx={{ ...iconStyles }} />,
