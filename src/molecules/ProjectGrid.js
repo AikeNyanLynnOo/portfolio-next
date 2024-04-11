@@ -12,6 +12,11 @@ import { useState } from "react";
 import { ProjectCaroItem, ProjectCarouselItem } from "./ProjectCaroItem";
 import { Description } from "@mui/icons-material";
 import { useMediaQuery, useTheme } from "@mui/material";
+import { CustomImgGalleryWithDialog } from "./CustomImgGalleryWithDialog";
+import { useSelector } from "react-redux";
+
+import { SlideshowLightbox } from "lightbox.js-react";
+import "lightbox.js-react/dist/index.css";
 
 function ProjectGrid({ projects, handleActivePrj, projectImages }) {
   const theme = useTheme();
@@ -21,6 +26,7 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
   const sm = useMediaQuery(theme.breakpoints.up("sm"));
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isLight } = useSelector((state) => state.theme);
 
   const handleClose = () => {
     setIsModalOpen(false);
@@ -52,102 +58,24 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
           ))}
       </div>
 
-      <Dialog
+      <CustomImgGalleryWithDialog
+        projectImages={projectImages}
+        isModalOpen={isModalOpen}
+        handleClose={handleClose}
+      />
+      {/* <SlideshowLightbox
+        backgroundColor={"rgba(0,0,0,0.8)"}
+        images={projectImages.map((img, index) => ({
+          src: img.src,
+          alt: `slide_img${index}`,
+        }))}
+        showThumbnails={true}
         open={isModalOpen}
-        onClose={handleClose}
-        fullWidth
-        maxWidth="lg"
-        sx={{
-          zIndex: 100,
-          height: "auto",
+        lightboxIdentifier="lbox1"
+        onClose={() => {
+          setIsModalOpen(false);
         }}
-        TransitionProps={{
-          style: {
-            transitionDelay: 500,
-          },
-        }}
-      >
-        {/* <Carousel
-          sx={{
-            pb: 4,
-            width: "100%",
-            height: "fit-content",
-          }}
-          autoPlay={false}
-          duration={0}
-
-        >
-          {projectImages &&
-            projectImages.length > 0 &&
-            projectImages.map((img, idx) => (
-              <ProjectCaroItem key={idx} img={img} />
-            ))}
-        </Carousel> */}
-
-        <ImageGallery
-          items={
-            projectImages &&
-            projectImages.length > 0 &&
-            projectImages.map((img, idx) => ({
-              original: img.src,
-              thumbnail: img.src,
-              loading: "eager",
-              description: img.title,
-            }))
-          }
-          slideInterval={4000}
-          showIndex
-          // showBullets
-          autoPlay
-          renderLeftNav={(onClick, disabled) => (
-            <KeyboardArrowLeftIcon
-              onClick={onClick}
-              disabled={disabled}
-              sx={{
-                position: "absolute",
-                zIndex: 10,
-                left: 10,
-                top: "50%",
-                height: "50px",
-                width: "50px",
-                color: "#ffffff",
-                backgroundColor: "rgba(0, 0, 0, 0.1)",
-                borderRadius: "50%",
-                transform: "translateY(-50%)",
-              }}
-            />
-          )}
-          renderRightNav={(onClick, disabled) => (
-            <KeyboardArrowRightIcon
-              onClick={onClick}
-              disabled={disabled}
-              sx={{
-                position: "absolute",
-                zIndex: 10,
-                right: 10,
-                top: "50%",
-                height: "50px",
-                width: "50px",
-                color: "#ffffff",
-                backgroundColor: "rgba(0, 0, 0, 0.1)",
-                borderRadius: "50%",
-                transform: "translateY(-50%)",
-              }}
-            />
-          )}
-        />
-      </Dialog>
-
-      {/* <ImageGallery
-        items={
-          projectImages &&
-          projectImages.length > 0 &&
-          projectImages.map((img, idx) => ({
-            original: img.src,
-            thumbnail: img.src,
-          }))
-        }
-      /> */}
+      ></SlideshowLightbox> */}
     </div>
   );
 }
