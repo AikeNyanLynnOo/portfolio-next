@@ -133,10 +133,62 @@ export const ProjectsSection = ({
         ],
       },
       {
+        title: "Responsive Gallery",
+        introText:
+          "A responsive image gallery with transitions and animations showing a lightbox with gallery view. It is based on Unsplash API",
+        projectMedia: "/images/projects/res_gallery_design.jpg",
+        description: "",
+        techs: [
+          "NextJS 14",
+          "SSR",
+          "CSR",
+          "Custom Hooks",
+          "Redux-toolkit",
+          "Redux-saga",
+          "React Context",
+          "TailwindCSS",
+          "Material UI",
+          "CSS animations",
+        ],
+        liveLink: "https://responsive-img-gallery-site.vercel.app/",
+        githubLink:
+          "https://github.com/AikeNyanLynnOo/image-gallery-search-website",
+        projectImages: [
+          {
+            title: "Home Desktop View",
+            src: "/images/projects/responsive_gallery/home_desktop.png",
+          },
+          {
+            title: "Collections Grid View",
+            src: "/images/projects/responsive_gallery/home_collections.png",
+          },
+          {
+            title: "Home Mobile View",
+            src: "/images/projects/responsive_gallery/home_mobile.png",
+          },
+          {
+            title: "Search Results Desktop View",
+            src: "/images/projects/responsive_gallery/search_results_desktop.png",
+          },
+          {
+            title: "Search Results Mobile View",
+            src: "/images/projects/responsive_gallery/search_results_mobile.png",
+          },
+          {
+            title: "Light Box Desktop View",
+            src: "/images/projects/responsive_gallery/lightbox_desktop.png",
+          },
+          {
+            title: "Light Box Mobile View",
+            src: "/images/projects/responsive_gallery/lightbox_mobile.png",
+          },
+        ],
+      },
+      {
         title: "Discord Website Clone",
         introText:
           "The project replicated Discord's website frontend, including navigation, animations, and responsive design for all devices, aiming for a seamless user experience akin to the original site.",
-        projectMedia: "/images/projects/discord_ss.png",
+        projectMedia: "/images/projects/discord_design.jpg",
         description: "",
         techs: ["NextJS", "Typescript", "TailwindCSS", "Framer Motion"],
         liveLink: "https://aike-discordo-a1k3.netlify.app/",
@@ -180,7 +232,7 @@ export const ProjectsSection = ({
         title: "URL Shortener",
         introText:
           "Utilizing React, Tailwind CSS, and the ShrtCo API to shorten URLs efficiently. Additionally, implementing browser storage to retain recent shortened links for enhanced user experience upon returning to the application.",
-        projectMedia: "/images/projects/shortener_ss.png",
+        projectMedia: "/images/projects/urlshort_design.jpg",
         description: "",
         techs: ["ReactJS", "TailwindCSS", "Axios", "ShrtCode API"],
         liveLink: "https://url-shortener-a1k3.netlify.app/",
@@ -200,7 +252,7 @@ export const ProjectsSection = ({
         title: "JKT Myanmar International",
         introText:
           "A professional business website equipped with job application functionality. Utilizing Bootstrap, jQuery, and PHP technologies for seamless operation and user interaction.",
-        projectMedia: "/images/projects/jkt_ss.png",
+        projectMedia: "/images/projects/jkt_design.jpg",
         description: "",
         techs: ["Bootstrap", "VanillaJS", "JQuery", "PHP"],
         liveLink: "https://jktmyanmarint.com/",
@@ -216,49 +268,49 @@ export const ProjectsSection = ({
         ],
       },
 
-      {
-        title: "Multiple Chioce Quiz App",
-        introText:
-          "You have full control over customizing quiz parameters like fields, difficulty, and time. Monitor remaining time, end the quiz at any point, and navigate freely through animated quiz panels. View results and score upon completion.",
-        projectMedia: "/images/projects/quiz_ss.png",
-        description: "",
-        techs: [
-          "ReactJS",
-          "Typescript",
-          "TailwindCSS",
-          "Framer Motion",
-          "Travia Quiz API",
-        ],
-        liveLink: "https://multiple-choice-quiz-game.netlify.app/",
-        githubLink:
-          "https://github.com/AikeNyanLynnOo/multiple-chioce-quizz-react",
-        projectImages: [
-          {
-            title: "Home Desktop",
-            src: "/images/projects/quiz/home.png",
-          },
-          {
-            title: "Taking Quiz",
-            src: "/images/projects/quiz/take_quiz.png",
-          },
-          {
-            title: "Results",
-            src: "/images/projects/quiz/result.png",
-          },
-          {
-            title: "Home Mobile View",
-            src: "/images/projects/quiz/home_mobile.png",
-          },
-          {
-            title: "Taking Quiz Mobile",
-            src: "/images/projects/quiz/take_quiz_mobile.png",
-          },
-          {
-            title: "Results Mobile View",
-            src: "/images/projects/quiz/result_mobile.png",
-          },
-        ],
-      },
+      // {
+      //   title: "Multiple Chioce Quiz App",
+      //   introText:
+      //     "You have full control over customizing quiz parameters like fields, difficulty, and time. Monitor remaining time, end the quiz at any point, and navigate freely through animated quiz panels. View results and score upon completion.",
+      //   projectMedia: "/images/projects/quiz_ss.png",
+      //   description: "",
+      //   techs: [
+      //     "ReactJS",
+      //     "Typescript",
+      //     "TailwindCSS",
+      //     "Framer Motion",
+      //     "Travia Quiz API",
+      //   ],
+      //   liveLink: "https://multiple-choice-quiz-game.netlify.app/",
+      //   githubLink:
+      //     "https://github.com/AikeNyanLynnOo/multiple-chioce-quizz-react",
+      //   projectImages: [
+      //     {
+      //       title: "Home Desktop",
+      //       src: "/images/projects/quiz/home.png",
+      //     },
+      //     {
+      //       title: "Taking Quiz",
+      //       src: "/images/projects/quiz/take_quiz.png",
+      //     },
+      //     {
+      //       title: "Results",
+      //       src: "/images/projects/quiz/result.png",
+      //     },
+      //     {
+      //       title: "Home Mobile View",
+      //       src: "/images/projects/quiz/home_mobile.png",
+      //     },
+      //     {
+      //       title: "Taking Quiz Mobile",
+      //       src: "/images/projects/quiz/take_quiz_mobile.png",
+      //     },
+      //     {
+      //       title: "Results Mobile View",
+      //       src: "/images/projects/quiz/result_mobile.png",
+      //     },
+      //   ],
+      // },
       // {
       //   title: "IP Address / Domain Tracker",
       //   introText:
