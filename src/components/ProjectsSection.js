@@ -150,7 +150,7 @@ export const ProjectsSection = ({
           "Material UI",
           "CSS animations",
         ],
-        liveLink: "https://responsive-img-gallery-site.vercel.app/",
+        liveLink: "https://responsive-img-gallery-site.netlify.app/",
         githubLink:
           "https://github.com/AikeNyanLynnOo/image-gallery-search-website",
         projectImages: [
