@@ -72,8 +72,8 @@ export const SkillsSection = ({
 
   const skillsIconContainerClasses = useMemo(() => {
     return clsx({
-      "lg:w-4/6": true,
-      "md:w-5/6": true,
+      // "lg:w-4/6": true,
+      // "md:w-5/6": true,
       "w-full": true,
       "mx-auto": true,
       "py-4": true,
@@ -174,6 +174,12 @@ export const SkillsSection = ({
               icon: "/images/icons/react.svg",
               text: "ReactJS",
               href: "https://react.dev/",
+              isMaterialIcon: false,
+            },
+            {
+              icon: "/images/icons/react-native.svg",
+              text: "React Native",
+              href: "https://reactnative.dev/",
               isMaterialIcon: false,
             },
             {

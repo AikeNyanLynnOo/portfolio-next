@@ -600,9 +600,6 @@ export const ProjectsSection = ({
                 customClasses={{
                   "mb-2": true,
                 }}
-                customStyles={{
-                  fontFamily: '"Varela Round", sans-serif',
-                }}
               />
             </Box>
           )}
