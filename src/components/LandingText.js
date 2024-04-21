@@ -175,7 +175,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         />
       </CodeText>
       <div className="pt-12">
-        <button
+        {/* <button
           onClick={handleClickDownload}
           className="bg-white hidden sm:inline-flex dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 py-1 mr-3 mt-2"
           style={{
@@ -184,8 +184,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         >
           Download CV
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
-        </button>
-        <button
+        </button> */}
+        {/* <button
           onClick={handleClickDownload}
           className="bg-white inline-flex sm:hidden dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 border border-ownBlack-100 dark:border-ownMint-200 rounded-full text-ownBlack-100 text-base font-semibold hover:border-ownMint-100 hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 py-1 mr-3 mt-2"
           style={{
@@ -194,7 +194,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         >
           CV
           <Icon className="text-xl ml-2">vertical_align_bottom</Icon>
-        </button>
+        </button> */}
         <a
           href="mailto:aikenyanlynnoo.dev@gmail.com"
           className="bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 rounded-full text-purple-700 text-base font-semibold hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 py-1 mt-2 inline-flex items-center"
