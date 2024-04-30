@@ -31,6 +31,7 @@ export const SkillIconWithText = ({
       "py-5": true,
       "md:min-w-28": true,
       "min-w-20": true,
+      "rounded-lg": true,
       "hover:shadow-lg": true,
       ...customClasses,
     });
