@@ -25,6 +25,7 @@ export const CustomChip = ({
       "text-sm": true,
       "px-1": true,
       "mr-1": true,
+      "hover:shadow-2xl": true,
       ...customClasses,
     });
   }, [customClasses, href]);

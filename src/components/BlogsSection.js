@@ -55,8 +55,9 @@ export const BlogsSection = ({
 
   const blogTitleClasses = useMemo(() => {
     return clsx({
-      "bg-white": true,
-      "dark:bg-ownBlack-100": true,
+      "backdrop-blur-sm": true,
+      "bg-white/20": true,
+      "dark:bg-ownBlack-100/20": true,
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       border: true,

@@ -36,7 +36,7 @@ export const BlogCard = ({
       viewport={{
         once: true,
       }}
-      className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4"
+      className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4 bg-white/20 backdrop-blur-sm dark:bg-ownBlack-100/20 p-5 shadow-xl"
     >
       <div className="sm:flex">
         <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
@@ -144,14 +144,16 @@ export const BlogCard = ({
             Posted: {blogDate || "16/02/2024"}
           </p>
           <Link
-            className="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium text-sm"
+            // className="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium text-sm"
+            className="font-medium text-sm absolute left-5 bottom-5"
+
             style={{
               fontFamily: '"Varela Round", sans-serif',
             }}
             href={externalLink || "#"}
             target="_blank"
           >
-            Read more
+            {/* Read more
             <svg
               className="flex-shrink-0 size-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +167,13 @@ export const BlogCard = ({
               strokeLinejoin="round"
             >
               <path d="m9 18 6-6-6-6" />
-            </svg>
+            </svg> */}
+            <button class="custom-button learn-more">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Read More</span>
+            </button>
           </Link>
         </div>
       </div>

@@ -63,19 +63,6 @@ function ProjectGrid({ projects, handleActivePrj, projectImages }) {
         isModalOpen={isModalOpen}
         handleClose={handleClose}
       />
-      {/* <SlideshowLightbox
-        backgroundColor={"rgba(0,0,0,0.8)"}
-        images={projectImages.map((img, index) => ({
-          src: img.src,
-          alt: `slide_img${index}`,
-        }))}
-        showThumbnails={true}
-        open={isModalOpen}
-        lightboxIdentifier="lbox1"
-        onClose={() => {
-          setIsModalOpen(false);
-        }}
-      ></SlideshowLightbox> */}
     </div>
   );
 }

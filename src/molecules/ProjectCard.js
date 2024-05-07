@@ -18,6 +18,7 @@ import { Bubbles } from "../components/Bubbles";
 
 // framer motion
 import { motion } from "framer-motion";
+import CustomIconButtonLink from "./CustomIconButtonLink";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -61,6 +62,7 @@ export const ProjectCard = ({
       "my-2": true,
       "w-full": true,
       "rounded-xl": true,
+      "shadow-xl": true,
       ...customClasses,
     });
   }, [customClasses, href, handleClick]);
@@ -86,11 +88,8 @@ export const ProjectCard = ({
     >
       <Card
         sx={{
-          // "&.MuiCard-root": {
-          //   background: "pink",
-          //   border : "2px solid red"
-          // },
           width: "100%",
+          boxShadow: 0,
         }}
         className="rounded-xl"
       >
@@ -213,6 +212,7 @@ export const ProjectCard = ({
                 "text-ownBlack-200": true,
                 "dark:text-white": true,
                 "text-sm": true,
+                "font-medium": true,
                 "text-center": true,
                 "ml-1": true,
               }}
@@ -221,6 +221,7 @@ export const ProjectCard = ({
               }}
             />
           </TextWithIcon>
+
           <TextWithIcon href={githubLink}>
             <GitHubIcon
               style={{
@@ -233,6 +234,7 @@ export const ProjectCard = ({
                 "text-ownBlack-200": true,
                 "dark:text-white": true,
                 "text-sm": true,
+                "font-medium": true,
                 "text-center": true,
                 "ml-1": true,
               }}

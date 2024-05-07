@@ -16,6 +16,7 @@ import "../public/css/customLogoStyles.css";
 import "../public/css/achievementStyles.css";
 // import "../public/css/bubbles.css";
 import "../public/css/bubbles2.css";
+import "../public/css/customButton.css";
 import AnimatedCursor from "react-animated-cursor";
 
 function MyApp({ Component, ...rest }) {

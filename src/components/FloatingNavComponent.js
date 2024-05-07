@@ -124,6 +124,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
             backgroundColor: isLight ? "#1A1E23" : "#FFFFFF",
             // backgroundColor: "red",
             transition: "top 0.1s linear",
+            boxShadow: "0px 2px 6px 0px rgba(22, 50, 79, 0.20)"
           },
         }}
       >

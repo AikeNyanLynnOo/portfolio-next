@@ -234,7 +234,14 @@ export const ProjectsSection = ({
           "Utilizing React, Tailwind CSS, and the own REST API to shorten URLs efficiently. Additionally, implementing browser storage to retain recent shortened links for enhanced user experience upon returning to the application.",
         projectMedia: "/images/projects/urlshort_design.jpg",
         description: "",
-        techs: ["ReactJS", "TailwindCSS", "Axios", "NodeJS", "REST API", "MongoDB"],
+        techs: [
+          "ReactJS",
+          "TailwindCSS",
+          "Axios",
+          "NodeJS",
+          "REST API",
+          "MongoDB",
+        ],
         liveLink: "https://url-shortener-a1k3.netlify.app/",
         githubLink: "https://github.com/AikeNyanLynnOo/url-shortener-react-api",
         projectImages: [
@@ -635,6 +642,7 @@ export const ProjectsSection = ({
             },
           }}
         />
+        
       </div>
       {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
