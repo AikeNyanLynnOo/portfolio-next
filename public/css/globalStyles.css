@@ -11,10 +11,12 @@ body {
   /* font-family: 'Source Code Pro', monospace; */
   /* font-family: "Ubuntu", sans-serif; */
   /* font-family: "Roboto", sans-serif; */
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Inter", sans-serif;
 }
 * {
-  font-family: "Open Sans", sans-serif; 
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Inter", sans-serif;
 }
 
 @keyframes float {

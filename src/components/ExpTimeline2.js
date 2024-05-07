@@ -53,9 +53,9 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
             <div className="md:w-16 pt-1">
               <span
                 className="text-sm inline-block p-0 w-16 text-ownBlack-200 dark:text-white"
-                style={{
-                  fontFamily: '"Varela Round", sans-serif',
-                }}
+                // style={{
+                //   fontFamily: '"Varela Round", sans-serif',
+                // }}
               >
                 {exp.fromYear}-{exp.toYear}
               </span>
@@ -97,7 +97,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
               <p
                 className="mt-1 text-gray-600 dark:text-gray-400 text-justify leading-6"
                 style={{
-                  fontFamily: '"Varela Round", sans-serif',
+                  // fontFamily: '"Varela Round", sans-serif',
                   fontSize: "13px",
                 }}
               >
@@ -112,7 +112,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                         label={tech}
                         customStyles={{
                           fontSize: "12px",
-                          fontFamily: '"Varela Round", sans-serif',
+                          // fontFamily: '"Varela Round", sans-serif',
                         }}
                         customClasses={{
                           "leading-6": true,
@@ -152,7 +152,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                         "ml-1": true,
                       }}
                       customStyles={{
-                        fontFamily: '"Varela Round", sans-serif',
+                        // fontFamily: '"Varela Round", sans-serif',
                       }}
                     />
                   </TextWithIcon>

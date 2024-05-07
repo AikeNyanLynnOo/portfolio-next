@@ -515,7 +515,7 @@ export const ProjectsSection = ({
       "py-4": true,
       "lg:text-2xl": true,
       "text-xl": true,
-      "font-thin": true,
+      // "font-thin": true,
       "w-fit": true,
       "mx-auto": true,
       "lg:mx-0": true,

@@ -111,6 +111,7 @@ export const LandingSection = ({
               // "md:text-3xl": true,
               "lg:text-4xl": true,
               "xl:text-5xl": true,
+              "font-bold": true,
               "text-left": true,
               "w-full": true,
               "h-fit": true,
@@ -124,7 +125,7 @@ export const LandingSection = ({
           <FloatingLandingPanel />
           <LandingText />
           <motion.div
-            className=" dark:text-ownMint-100 bg-ownMint-100/20 shadow-xl backdrop-blur-sm text-ownBlack-200 dark:bg-ownBlack-200/20 py-8 px-5 rounded-xl w-fit  hidden xl:flex"
+            className="dark:text-ownMint-100 bg-ownMint-100/20 shadow-2xl backdrop-blur-sm text-ownBlack-200 dark:bg-ownBlack-200/50 py-8 px-5 rounded-xl w-fit  hidden xl:flex"
             variants={fadeInAnimationVariants}
             initial="initial"
             animate="animate"
@@ -143,7 +144,7 @@ export const LandingSection = ({
                   "text-4xl": true,
                 }}
                 customStyles={{
-                  fontFamily: '"Varela Round", sans-serif',
+                  // fontFamily: '"Varela Round", sans-serif',
                 }}
               />
               <Typography
@@ -157,7 +158,7 @@ export const LandingSection = ({
                   "text-sm": true,
                 }}
                 customStyles={{
-                  fontFamily: '"Varela Round", sans-serif',
+                  // fontFamily: '"Varela Round", sans-serif',
                 }}
               />
             </div>

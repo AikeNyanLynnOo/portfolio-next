@@ -126,7 +126,7 @@ export const FloatingLandingPanel = ({
           "text-center": true,
         }}
         customStyles={{
-          fontFamily: '"Varela Round", sans-serif',
+          // fontFamily: '"Varela Round", sans-serif',
         }}
       />
       <Typography
@@ -138,7 +138,7 @@ export const FloatingLandingPanel = ({
           "text-center": true,
         }}
         customStyles={{
-          fontFamily: '"Varela Round", sans-serif',
+          // fontFamily: '"Varela Round", sans-serif',
         }}
       />
       <div className="my-5  w-fit mx-auto">
@@ -187,7 +187,7 @@ export const FloatingLandingPanel = ({
                   "text-center": true,
                 }}
                 customStyles={{
-                  fontFamily: '"Varela Round", sans-serif',
+                  // fontFamily: '"Varela Round", sans-serif',
                 }}
               />
             </TextWithIcon>
@@ -217,7 +217,7 @@ export const FloatingLandingPanel = ({
               color: lightTheme.textColor[100],
               mr: 1,
               textTransform: "uppercase",
-              fontFamily: '"Varela Round", sans-serif',
+              // fontFamily: '"Varela Round", sans-serif',
             }}
           />
         ))}

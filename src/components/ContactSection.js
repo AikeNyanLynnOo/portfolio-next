@@ -76,12 +76,12 @@ export const ContactSection = ({
           </span>
         </TextIcon>
         <Typography
-          customStyles={{
-            fontFamily: '"Varela Round", sans-serif',
-          }}
+          // customStyles={{
+          //   fontFamily: '"Varela Round", sans-serif',
+          // }}
           customClasses={{
             "text-sm": true,
-            "font-thin": true,
+            // "font-thin": true,
           }}
         >
           Implemented by Aike @2024

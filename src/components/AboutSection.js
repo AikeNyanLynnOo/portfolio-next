@@ -115,7 +115,7 @@ export const AboutSection = ({
       "py-4": true,
       "lg:text-2xl": true,
       "text-xl": true,
-      "font-thin": true,
+      // "font-thin": true,
       "w-fit": true,
       "mx-auto": true,
       "lg:mx-0": true,
@@ -127,14 +127,14 @@ export const AboutSection = ({
       "px-5": true,
       "py-4": true,
       "mt-5": true,
-      "font-thin": true,
+      // "font-thin": true,
       "rounded-xl": true,
       // "bg-ownBlack-100": true,
       // "dark:bg-white": true,
       "bg-clip-padding": true,
       "backdrop-filter": true,
       "backdrop-blur-3xl": true,
-      // "bg-opacity-40": true,
+      "shadow-xl": true,
       "backdrop-blur-sm": true,
       "bg-gray-100/30": true,
       "dark:bg-ownBlack-100/30": true,
@@ -217,12 +217,12 @@ export const AboutSection = ({
                 customClasses={{
                   "text-ownBlack-200": true,
                   "dark:text-white": true,
-                  "text-md": true,
+                  // "text-md": true,
                   "leading-7": true,
                   "text-justify": true,
                 }}
                 customStyles={{
-                  fontFamily: '"Varela Round", sans-serif',
+                  // fontFamily: '"Varela Round", sans-serif',
                 }}
               />
             </CodeText>

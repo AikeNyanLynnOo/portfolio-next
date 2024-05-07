@@ -68,7 +68,7 @@ export const CommonTab = ({
                       ...customTabTypoStyles,
                     }}
                     style={{
-                      fontFamily: '"Varela Round", sans-serif',
+                      // fontFamily: '"Varela Round", sans-serif',
                     }}
                   >
                     {tabItem.title}

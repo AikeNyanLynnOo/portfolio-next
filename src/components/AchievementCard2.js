@@ -41,9 +41,9 @@ export const AchievementCard2 = ({
       <div className="w-fit pt-1">
         <span
           className="text-sm block p-0 w-fit text-ownBlack-200 dark:text-white text-right"
-          style={{
-            fontFamily: '"Varela Round", sans-serif',
-          }}
+          // style={{
+          //   fontFamily: '"Varela Round", sans-serif',
+          // }}
         >
           {date}
         </span>
@@ -70,17 +70,17 @@ export const AchievementCard2 = ({
         </h3>
         <p
           className="my-3 text-gray-600 text-lg dark:text-gray-400 leading-6"
-          style={{
-            fontFamily: '"Varela Round", sans-serif',
-            // fontSize: "15px",
-          }}
+          // style={{
+          //   fontFamily: '"Varela Round", sans-serif',
+          //   // fontSize: "15px",
+          // }}
         >
           {subTitle || ""}
         </p>
         <p
           className="mt-1 text-gray-600 dark:text-gray-400 text-justify leading-6"
           style={{
-            fontFamily: '"Varela Round", sans-serif',
+            // fontFamily: '"Varela Round", sans-serif',
             fontSize: "13px",
           }}
         >
@@ -115,9 +115,9 @@ export const AchievementCard2 = ({
                 "ml-1": true,
                 underline: true,
               }}
-              customStyles={{
-                fontFamily: '"Varela Round", sans-serif',
-              }}
+              // customStyles={{
+              //   fontFamily: '"Varela Round", sans-serif',
+              // }}
             />
           </TextWithIcon>
         )}

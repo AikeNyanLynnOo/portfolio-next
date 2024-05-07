@@ -63,7 +63,7 @@ export const SkillsSection = ({
       "py-4": true,
       "lg:text-2xl": true,
       "text-xl": true,
-      "font-thin": true,
+      // "font-thin": true,
       "w-fit": true,
       "mx-auto": true,
       "lg:mx-0": true,
@@ -94,7 +94,7 @@ export const SkillsSection = ({
       "py-4": true,
       "lg:text-2xl": true,
       "text-xl": true,
-      "font-thin": true,
+      // "font-thin": true,
       "w-fit": true,
       "mx-auto": true,
       "lg:mx-0": true,
@@ -106,7 +106,7 @@ export const SkillsSection = ({
       "px-5": true,
       "py-4": true,
       "mt-5": true,
-      "font-thin": true,
+      // "font-thin": true,
       "rounded-xl": true,
       // "bg-ownBlack-100": true,
       // "dark:bg-white": true,
@@ -145,7 +145,7 @@ export const SkillsSection = ({
         <div
           className="py-10 block dark:text-ownMint-200 text-ownBlack-200 text-3xl text-center"
           style={{
-            fontFamily: '"Varela Round", sans-serif',
+            // fontFamily: '"Varela Round", sans-serif',
           }}
         >
           The skills & tools I&apos;m really good at

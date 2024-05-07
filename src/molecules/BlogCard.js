@@ -53,7 +53,7 @@ export const BlogCard = ({
           <h3
             className="text-xl flex font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white"
             style={{
-              fontFamily: '"Varela Round", sans-serif',
+              // fontFamily: '"Varela Round", sans-serif',
             }}
           >
             <CustomTooltip
@@ -70,7 +70,7 @@ export const BlogCard = ({
                       "dark:text-ownBlack-100": true,
                     }}
                     customStyles={{
-                      fontFamily: '"Varela Round", sans-serif',
+                      // fontFamily: '"Varela Round", sans-serif',
                     }}
                   />
                 </div>
@@ -108,7 +108,7 @@ export const BlogCard = ({
           <p
             className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6 line-clamp-3"
             style={{
-              fontFamily: '"Varela Round", sans-serif',
+              // fontFamily: '"Varela Round", sans-serif',
             }}
           >
             {introText ||
@@ -136,9 +136,9 @@ export const BlogCard = ({
               ))}
           </div>
           <p
-            className="mt-2 mb-4 text-gray-600 dark:text-gray-400 text-sm leading-6"
+            className="mt-2 mb-12 sm:mb-5 text-gray-600 dark:text-gray-400 text-sm leading-6"
             style={{
-              fontFamily: '"Varela Round", sans-serif',
+              // fontFamily: '"Varela Round", sans-serif',
             }}
           >
             Posted: {blogDate || "16/02/2024"}
@@ -148,7 +148,7 @@ export const BlogCard = ({
             className="font-medium text-sm absolute left-5 bottom-5"
 
             style={{
-              fontFamily: '"Varela Round", sans-serif',
+              // fontFamily: '"Varela Round", sans-serif',
             }}
             href={externalLink || "#"}
             target="_blank"

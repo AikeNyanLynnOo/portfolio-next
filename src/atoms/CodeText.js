@@ -29,18 +29,18 @@ export const CodeText = ({
       }}
     >
       <code
-        style={{
-          fontFamily: '"Source Code Pro", monospace',
-        }}
+        // style={{
+        //   fontFamily: '"Source Code Pro", monospace',
+        // }}
       >
         {codeTag.start}
       </code>
       {text}
       {children}
       <code
-        style={{
-          fontFamily: '"Source Code Pro", monospace',
-        }}
+        // style={{
+        //   fontFamily: '"Source Code Pro", monospace',
+        // }}
       >
         {codeTag.end}
       </code>

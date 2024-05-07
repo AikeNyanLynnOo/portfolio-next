@@ -71,7 +71,7 @@ export const ProjectCard = ({
     <motion.div
       className={projectCardClasses}
       style={{
-        fontFamily: '"Varela Round", sans-serif',
+        // fontFamily: '"Varela Round", sans-serif',
       }}
       onClick={handleClick}
       initial={{ y: 30, opacity: 0 }}
@@ -143,7 +143,7 @@ export const ProjectCard = ({
                     "leading-6": true,
                   }}
                   customStyles={{
-                    fontFamily: '"Varela Round", sans-serif',
+                    // fontFamily: '"Varela Round", sans-serif',
                   }}
                 />
               </div>
@@ -217,7 +217,7 @@ export const ProjectCard = ({
                 "ml-1": true,
               }}
               customStyles={{
-                fontFamily: '"Varela Round", sans-serif',
+                // fontFamily: '"Varela Round", sans-serif',
               }}
             />
           </TextWithIcon>
@@ -239,7 +239,7 @@ export const ProjectCard = ({
                 "ml-1": true,
               }}
               customStyles={{
-                fontFamily: '"Varela Round", sans-serif',
+                // fontFamily: '"Varela Round", sans-serif',
               }}
             />
           </TextWithIcon>
