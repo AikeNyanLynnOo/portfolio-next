@@ -285,7 +285,7 @@ export const AboutSection = ({
           width={1000}
           className="h-36 w-36 lg:h-48 lg:w-48 rounded-full p-0 mb-10 lg:my-0 ring-1 ring-ownMint-200"
         /> */}
-        <div className="w-64 w-full h-96 mb-10">
+        <div className="flex-1 min-w-64 w-full h-96 mb-10">
           <Spline scene="https://prod.spline.design/9KMXbCByY9N3utjc/scene.splinecode" />
         </div>
       </div>
