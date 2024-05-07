@@ -49,24 +49,29 @@ export const FloatingLandingPanel = ({
       flex: true,
       "flex-col": true,
       "justify-between": true,
-      "rounded-tl-xl": true,
-      "rounded-br-xl": true,
+      // "rounded-tl-xl": true,
+      // "rounded-br-xl": true,
+      "rounded-xl": true,
       "my-10": true,
       "lg:my-0": true,
       // "lg:rounded-tl-[30%]": true,
       // "lg:rounded-br-[30%]": true,
       "bg-white": true,
-      "dark:bg-ownBlack-100": true,
-      "border-r": true,
-      "border-b": true,
-      "border-ownBlack-100": true,
-      "dark:border-white": true,
+      "dark:bg-ownBlack-200": true,
+      // "border-r": true,
+      // "border-b": true,
+      // "border-ownBlack-100": true,
+      // "dark:border-white": true,
       "min-w-60": true,
-      "py-6": true,
-      "px-3": true,
+      "py-10": true,
+      "px-7": true,
       // hidden: true,
       "lg:block": true,
       // relative: true,
+      "backdrop-blur-sm": true,
+      "bg-white/20": true,
+      "dark:bg-ownBlack-200/20": true,
+      "shadow-xl": true,
       ...customClasses,
     });
   }, [customClasses]);
@@ -91,10 +96,12 @@ export const FloatingLandingPanel = ({
       // className={
       //   "bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-100"
       // }
-      style={{
-        boxShadow: `-5px -5px ${isLight ? lightTheme.borderColor[100] : darkTheme.borderColor[100]}`,
-        // animation: "float 10s ease-in-out infinite",
-      }}
+      style={
+        {
+          // boxShadow: `-5px -5px ${isLight ? lightTheme.borderColor[100] : darkTheme.borderColor[100]}`,
+          // animation: "float 10s ease-in-out infinite",
+        }
+      }
     >
       {/* <Image
         src={"/images/icons/pin2.png"}
@@ -104,10 +111,10 @@ export const FloatingLandingPanel = ({
         alt="pin-icon"
       /> */}
       <Image
-        src={"/images/anlo.jpg"}
-        height={100}
-        width={100}
-        className="outline-ownMint-200 dark:outline-ownMint-100 mx-auto mb-4 h-16 w-16 rounded-full outline outline-2 outline-offset-2"
+        src={"/images/dev.jpg"}
+        height={150}
+        width={150}
+        className="outline-ownMint-200 dark:outline-ownMint-100 mx-auto mb-4 h-20 w-20 rounded-full outline outline-2 outline-offset-2"
         alt="floating-img"
       />
       <Typography

@@ -124,7 +124,7 @@ export const LandingSection = ({
           <FloatingLandingPanel />
           <LandingText />
           <motion.div
-            className=" dark:text-ownMint-100 bg-ownMint-100 text-ownBlack-200 dark:bg-ownBlack-200 py-8 px-5 rounded-xl w-fit  hidden xl:flex"
+            className=" dark:text-ownMint-100 bg-ownMint-100/20 shadow-xl backdrop-blur-sm text-ownBlack-200 dark:bg-ownBlack-200/20 py-8 px-5 rounded-xl w-fit  hidden xl:flex"
             variants={fadeInAnimationVariants}
             initial="initial"
             animate="animate"

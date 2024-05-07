@@ -62,7 +62,7 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
         // "border-none" : true,
       }}
     >
-      <nav className="dark:bg-ownBlack-100 dark:text-ownMint-100 text-ownBlack-100 flex h-20 items-center justify-between bg-white">
+      <nav className="dark:bg-ownBlack-100 dark:text-ownMint-100 text-ownBlack-100 flex h-20 items-center justify-between ">
         <TextIcon
           text={`</>`}
           customClasses={{
@@ -102,7 +102,7 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
             }}
           >
             {/* <DevIcon /> */}
-            <CustomLogo primaryText={"Aike"}/>
+            <CustomLogo primaryText={"Aike"} />
           </NavItem>
 
           {/* <NavItem

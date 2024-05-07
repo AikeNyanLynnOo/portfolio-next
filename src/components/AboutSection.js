@@ -17,6 +17,7 @@ import { Bubbles } from "./Bubbles";
 
 // framer motion
 import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 
 const fadeInAnimationRightVariants = {
   initial: {
@@ -103,8 +104,9 @@ export const AboutSection = ({
   }, [customClasses]);
   const aboutMeTitleClasses = useMemo(() => {
     return clsx({
-      "bg-white": true,
-      "dark:bg-ownBlack-100": true,
+      "backdrop-blur-sm": true,
+      "bg-white/20": true,
+      "dark:bg-ownBlack-200/20": true,
       "rounded-tl-xl": true,
       "rounded-br-xl": true,
       border: true,
@@ -133,10 +135,9 @@ export const AboutSection = ({
       "backdrop-filter": true,
       "backdrop-blur-3xl": true,
       // "bg-opacity-40": true,
-      "bg-gray-100": true,
-      "dark:bg-ownBlack-100": true,
-      // border: true,
-      // "border-gray-60": true,
+      "backdrop-blur-sm": true,
+      "bg-gray-100/30": true,
+      "dark:bg-ownBlack-100/30": true,
     });
   }, []);
 
@@ -160,7 +161,7 @@ export const AboutSection = ({
       }}
     >
       <div className={aboutSectionClasses}>
-        <div className="w-full h-ful lg:w-4/6 lg:order-first order-last">
+        <div className="w-full h-full lg:w-4/6 lg:order-first order-last">
           <motion.h2
             variants={fadeInAnimationLeftTitleVariants}
             initial="initial"
@@ -277,13 +278,16 @@ export const AboutSection = ({
             </CodeText> */}
           </motion.div>
         </div>
-        <Image
+        {/* <Image
           src="/images/dev.jpg"
           alt="dev_img"
           height={1000}
           width={1000}
           className="h-36 w-36 lg:h-48 lg:w-48 rounded-full p-0 mb-10 lg:my-0 ring-1 ring-ownMint-200"
-        />
+        /> */}
+        <div className="w-64 w-full h-96 mb-10">
+          <Spline scene="https://prod.spline.design/9KMXbCByY9N3utjc/scene.splinecode" />
+        </div>
       </div>
       <Bubbles showIndices={dots} />
     </ResponsiveContainer>
