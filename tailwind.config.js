@@ -19,6 +19,21 @@ module.exports = {
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.9)",
       },
+
+      animation: {
+        "scroll-loop-to-l": "infinite-scroll-to-l 25s linear infinite",
+        "scroll-loop-to-r": "infinite-scroll-to-r 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll-to-l": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "infinite-scroll-to-r": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(100%)" },
+        },
+      },
     },
     fontSize: {
       sm: "0.8rem",

@@ -20,6 +20,7 @@ import { ExpTimeline } from "./ExpTimeline";
 import { ExpTimeline2 } from "./ExpTimeline2";
 import { AchievementTimeline } from "./AchievementTimeLine";
 import { Bubbles } from "./Bubbles";
+import ProjectsContainer from "../molecules/ProjectsContainer";
 
 export const ProjectsSection = ({
   children,
@@ -537,7 +538,12 @@ export const ProjectsSection = ({
       id: 1,
       title: "Projects",
       renderTabItem: () => (
-        <ProjectGrid
+        // <ProjectGrid
+        //   projects={projects}
+        //   handleActivePrj={handleActivePrj}
+        //   projectImages={projectImages}
+        // />
+        <ProjectsContainer
           projects={projects}
           handleActivePrj={handleActivePrj}
           projectImages={projectImages}

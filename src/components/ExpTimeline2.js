@@ -63,8 +63,8 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
             <IconWithTimeline
               isExpHovered={hoveredExp !== null && hoveredExp === idx}
             />
-            <div className="grow pt-0.5">
-              <h3 className="flex gap-x-1.5 font-semibold text-xl text-gray-800 dark:text-white mb-2 items-start">
+            <div className="grow">
+              <h3 className="flex gap-x-1.5 font-semibold text-2xl text-gray-800 dark:text-white mb-2 items-start">
                 {/* <svg
                   className="flex-shrink-0 size-4 mt-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +85,8 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                 </svg> */}
                 <Icon
                   style={{
-                    fontSize: "15px",
-                    marginTop: "5px",
+                    fontSize: "20px",
+                    marginTop: "7px",
                   }}
                 >
                   laptop_mac
@@ -95,11 +95,13 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                 {exp.jobTitle}
               </h3>
               <p
-                className="mt-1 text-gray-600 dark:text-gray-400 text-justify leading-6"
-                style={{
-                  // fontFamily: '"Varela Round", sans-serif',
-                  fontSize: "13px",
-                }}
+                className="mt-1 text-gray-600 dark:text-gray-400 text-lg text-justify leading-8"
+                style={
+                  {
+                    // fontFamily: '"Varela Round", sans-serif',
+                    // fontSize: "13px",
+                  }
+                }
               >
                 {exp.description}
               </p>
@@ -148,12 +150,14 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                       customClasses={{
                         "text-ownBlack-200": true,
                         "dark:text-white": true,
-                        "text-sm": true,
+                        "text-md": true,
                         "ml-1": true,
                       }}
-                      customStyles={{
-                        // fontFamily: '"Varela Round", sans-serif',
-                      }}
+                      customStyles={
+                        {
+                          // fontFamily: '"Varela Round", sans-serif',
+                        }
+                      }
                     />
                   </TextWithIcon>
                 )}

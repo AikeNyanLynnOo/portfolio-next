@@ -56,8 +56,8 @@ export const AchievementCard2 = ({
           fontSize: "20px",
         }}
       />
-      <div className="grow pt-0.5">
-        <h3 className="flex gap-x-1.5 font-semibold text-xl text-gray-800 dark:text-white mb-2 items-center">
+      <div className="grow">
+        <h3 className="flex gap-x-1.5 font-semibold text-2xl text-gray-800 dark:text-white mb-2 items-center">
           {/* <Icon
             style={{
               fontSize: "15px",
@@ -69,7 +69,7 @@ export const AchievementCard2 = ({
           {title || "Bachelor of Computer Science"}
         </h3>
         <p
-          className="my-3 text-gray-600 text-lg dark:text-gray-400 leading-6"
+          className="my-3 text-gray-600 text-xl dark:text-gray-400 leading-6"
           // style={{
           //   fontFamily: '"Varela Round", sans-serif',
           //   // fontSize: "15px",
@@ -78,10 +78,10 @@ export const AchievementCard2 = ({
           {subTitle || ""}
         </p>
         <p
-          className="mt-1 text-gray-600 dark:text-gray-400 text-justify leading-6"
+          className="mt-1 text-gray-600 dark:text-gray-400 text-lg text-justify leading-8"
           style={{
             // fontFamily: '"Varela Round", sans-serif',
-            fontSize: "13px",
+            // fontSize: "14px",
           }}
         >
           {description || ""}
@@ -111,7 +111,7 @@ export const AchievementCard2 = ({
               customClasses={{
                 "text-ownBlack-200": true,
                 "dark:text-white": true,
-                "text-sm": true,
+                "text-md": true,
                 "ml-1": true,
                 underline: true,
               }}
