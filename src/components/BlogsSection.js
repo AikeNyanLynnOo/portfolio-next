@@ -131,8 +131,8 @@ export const BlogsSection = ({
     >
       <div className={blogsSectionClasses}>
         <h2 className={blogTitleClasses}>Blogs</h2>
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto z-10">
-          <div className="grid xl:grid-cols-2 lg:gap-y-16 gap-10">
+        <div className="max-w-[85rem] py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto z-10">
+          <div className="grid grid-cols-1 2xl:grid-cols-2 lg:gap-y-16 gap-10">
             {blogs.map((blog, idx) => (
               <Fragment key={idx}>
                 <BlogCard
@@ -154,9 +154,11 @@ export const BlogsSection = ({
           target="_blank"
           href="https://medium.com/@aikenyanlynnoo.dev"
           type="button"
-          style={{
-            // fontFamily: '"Varela Round", sans-serif',
-          }}
+          style={
+            {
+              // fontFamily: '"Varela Round", sans-serif',
+            }
+          }
           className="dark:text-ownBlack-100 flex items-center bg-gradient-to-r from-ownMint-100 via-ownMint-200 to-ownMint-200 hover:bg-gradient-to-br hover:ring-1 focus:outline-none rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2"
         >
           See More

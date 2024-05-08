@@ -43,6 +43,9 @@ export const SkillIconWithText = ({
       "w-12": true,
       "mb-3": true,
       "mx-auto": true,
+      "object-contain": true,
+      // filter: true,
+      // grayscale: true,
       ...customSkillIconClasses,
     });
   }, [customSkillIconClasses]);
@@ -82,6 +85,9 @@ export const SkillIconWithText = ({
               height={1000}
               width={1000}
               className={skillIconClasses}
+              style={{
+                filter: "grayscale(10%)",
+              }}
             />
           )}
           <span className={skillTextClasses}>{text}</span>

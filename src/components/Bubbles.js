@@ -4,26 +4,20 @@ import { useMemo } from "react";
 import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
 
-export const Bubbles = ({
-  showIndices,
-  customBubbleDotClasses,
-  customClasses,
-}) => {
-  const { isLight } = useSelector((state) => state.theme);
-  const bubbleDotClasses = useMemo(() => {
-    return clsx({
-      dot: true, // custom class
-      //   "bg-ownMint-200": true,
-      //   "dark:bg-ownMint-200": true,
-      "from-teal-300": true,
-      "dark:from-teal-200": true,
-      "to-cyan-500": true,
-      "dark:to-cyan-500": true,
-      //   "via-purple-500" : true,
-      ...customBubbleDotClasses,
-    });
-  }, [customBubbleDotClasses]);
-  const getDotDivClass = useCallback((index) => {
+const shapes = [
+  "triangle",
+  "octagon",
+  "nonagon",
+  "rabbet",
+  "frame",
+  "pentagon",
+  "hexagon",
+  "star",
+  "message",
+];
+
+const Bubble = ({ index, customBubbleDotClasses }) => {
+  const dotClasses = useMemo(() => {
     return clsx({
       [`dotdiv-${index}`]: true,
       "bg-gradient-to-l": true,
@@ -34,9 +28,41 @@ export const Bubbles = ({
       "to-cyan-500": true,
       "dark:to-cyan-500": true,
       //   "via-pink-200" : true,
+      [`${shapes[Math.floor(Math.random() * 9) + 1]}`]: true,
+      ...customBubbleDotClasses,
+    });
+  }, [customBubbleDotClasses, index]);
+  const bubbleDotClasses = useMemo(() => {
+    return clsx({
+      dot: true, // custom class
+      //   "bg-ownMint-200": true,
+      //   "dark:bg-ownMint-200": true,
+      "from-teal-300": true,
+      "dark:from-teal-200": true,
+      "to-cyan-500": true,
+      "dark:to-cyan-500": true,
       ...customBubbleDotClasses,
     });
   }, [customBubbleDotClasses]);
+
+  return (
+    <div
+      className={dotClasses}
+      style={{
+        animationDuration: Math.floor(Math.random() * (15 - 1 + 1) + 1),
+      }}
+    >
+      <span className={bubbleDotClasses}></span>
+    </div>
+  );
+};
+
+export const Bubbles = ({
+  showIndices,
+  customBubbleDotClasses,
+  customClasses,
+}) => {
+  const { isLight } = useSelector((state) => state.theme);
 
   const [bubbles, setBubbles] = useState([]);
 
@@ -66,15 +92,12 @@ export const Bubbles = ({
       {[
         bubbles &&
           bubbles.map((index, idx) => (
-            <div
+            <Bubble
+              idx={idx}
+              index={index}
               key={idx}
-              className={getDotDivClass(index)}
-              style={{
-                animationDuration: Math.floor(Math.random() * (15 - 1 + 1) + 1),
-              }}
-            >
-              <span className={bubbleDotClasses}></span>
-            </div>
+              customBubbleDotClasses={customBubbleDotClasses}
+            />
           )),
       ]}
       {/* <div className="bubble x1"></div> */}

@@ -144,9 +144,11 @@ export const SkillsSection = ({
         <h2 className={skillTitleClasses}>Skills</h2>
         <div
           className="py-10 block dark:text-ownMint-200 text-ownBlack-200 text-3xl text-center"
-          style={{
-            // fontFamily: '"Varela Round", sans-serif',
-          }}
+          style={
+            {
+              // fontFamily: '"Varela Round", sans-serif',
+            }
+          }
         >
           The skills & tools I&apos;m really good at
         </div>
@@ -162,6 +164,12 @@ export const SkillsSection = ({
               icon: "/images/icons/typescript.svg",
               text: "Typescript",
               href: "https://www.typescriptlang.org/",
+              isMaterialIcon: false,
+            },
+            {
+              icon: "/images/icons/nodejs.svg",
+              text: "NodeJS",
+              href: "https://nodejs.org/en",
               isMaterialIcon: false,
             },
             {

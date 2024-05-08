@@ -12,6 +12,7 @@ import { DevIcon } from "../atoms/DevIcon";
 import Link from "next/link";
 import { Fragment } from "react";
 import { CustomLogo } from "../atoms/CustomLogo";
+import Example from "./ToggleThemeButton";
 
 export const NavBar = ({ children, customMenuIconClasses }) => {
   const dispatch = useDispatch();
@@ -64,7 +65,7 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
     >
       <nav className="dark:bg-ownBlack-100 dark:text-ownMint-100 text-ownBlack-100 flex h-20 items-center justify-between ">
         <TextIcon
-          text={`</>`}
+          // text={`</>`}
           customClasses={{
             "text-ownMint-200": true,
             "text-xl": true,
@@ -73,8 +74,8 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
             hidden: true,
           }}
         >
-          <span className="text-ownBlack-100 ml-3 text-xl dark:text-white md:text-2xl lg:text-3xl">
-            Aike
+          <span className="text-ownBlack-100 ml-3 text-xl dark:text-white md:text-2xl lg:text-3xl font-semibold">
+            Aike.
           </span>
         </TextIcon>
         <TextIcon
@@ -117,7 +118,8 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
           /> */}
         </div>
         <div className="flex gap-x-5 items-center">
-          <SwitchBtn />
+          {/* <SwitchBtn /> */}
+          <Example/>
           <span className="md:hidden  flex items-center">
             <Icon className={menuIconClasses} onClick={handleMenuBar}>
               {isDrawerOpen ? "close" : "menu"}

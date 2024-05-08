@@ -36,7 +36,7 @@ export const BlogCard = ({
       viewport={{
         once: true,
       }}
-      className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4 bg-white/20 backdrop-blur-sm dark:bg-ownBlack-100/20 p-5 shadow-xl"
+      className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4 bg-white/20 backdrop-blur-sm dark:bg-ownBlack-100/20 py-5 px-0 sm:px-5 shadow-xl"
     >
       <div className="sm:flex">
         <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
@@ -49,14 +49,16 @@ export const BlogCard = ({
           />
         </div>
 
-        <div className="mt-4 sm:mt-0 sm:ms-6 px-0 md:px-4">
+        <div className="mt-4 sm:mt-0 sm:ms-6 px-4">
           <h3
             className="text-xl flex font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white"
-            style={{
-              // fontFamily: '"Varela Round", sans-serif',
-            }}
+            style={
+              {
+                // fontFamily: '"Varela Round", sans-serif',
+              }
+            }
           >
-            <CustomTooltip
+            {/* <CustomTooltip
               arrow
               title={
                 <div>
@@ -86,7 +88,14 @@ export const BlogCard = ({
                   }}
                 />
               </div>
-            </CustomTooltip>
+            </CustomTooltip> */}
+            <Typography
+              text={title || ""}
+              customClasses={{
+                "line-clamp-3": true,
+                "z-10": true,
+              }}
+            />
             {isNew && (
               <CustomChip
                 label="New"
@@ -107,9 +116,11 @@ export const BlogCard = ({
           </h3>
           <p
             className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6 line-clamp-3"
-            style={{
-              // fontFamily: '"Varela Round", sans-serif',
-            }}
+            style={
+              {
+                // fontFamily: '"Varela Round", sans-serif',
+              }
+            }
           >
             {introText ||
               "Produce professional, reliable streams easily leveraging Preline innovative broadcast studio"}
@@ -136,20 +147,23 @@ export const BlogCard = ({
               ))}
           </div>
           <p
-            className="mt-2 mb-12 sm:mb-5 text-gray-600 dark:text-gray-400 text-sm leading-6"
-            style={{
-              // fontFamily: '"Varela Round", sans-serif',
-            }}
+            className="mt-2 sm:mb-10 text-gray-600 dark:text-gray-400 text-sm leading-6"
+            style={
+              {
+                // fontFamily: '"Varela Round", sans-serif',
+              }
+            }
           >
             Posted: {blogDate || "16/02/2024"}
           </p>
           <Link
             // className="inline-flex items-center gap-x-1 text-purple-700 dark:text-ownMint-200 decoration-2 hover:underline font-medium text-sm"
             className="font-medium text-sm absolute left-5 bottom-5"
-
-            style={{
-              // fontFamily: '"Varela Round", sans-serif',
-            }}
+            style={
+              {
+                // fontFamily: '"Varela Round", sans-serif',
+              }
+            }
             href={externalLink || "#"}
             target="_blank"
           >

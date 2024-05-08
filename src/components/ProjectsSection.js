@@ -636,13 +636,13 @@ export const ProjectsSection = ({
               maxWidth: 40,
               width: "100%",
               borderRadius: "5px",
-              backgroundColor: isLight
-                ? lightTheme.backgroundColor[600]
-                : darkTheme.textColor[200],
+              // backgroundColor: isLight
+              //   ? lightTheme.backgroundColor[600]
+              //   : darkTheme.textColor[200],
+              backgroundColor: darkTheme.textColor[200],
             },
           }}
         />
-        
       </div>
       {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
