@@ -221,9 +221,11 @@ export const AboutSection = ({
                   "leading-7": true,
                   "text-justify": true,
                 }}
-                customStyles={{
-                  // fontFamily: '"Varela Round", sans-serif',
-                }}
+                customStyles={
+                  {
+                    // fontFamily: '"Varela Round", sans-serif',
+                  }
+                }
               />
             </CodeText>
             {/* <CodeText
