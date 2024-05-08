@@ -202,7 +202,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
         </button> */}
         <a
           href="mailto:aikenyanlynnoo.dev@gmail.com"
-          className="border border-ownMint-200 border-2 bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 rounded-full text-ownBlack-200 text-base font-semibold hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 py-1 mt-2 inline-flex items-center"
+          className="border border-ownMint-200 border-2 bg-white dark:bg-ownBlack-200 capitalize dark:text-ownMint-200 rounded-full text-ownBlack-200 text-base hover:bg-ownMint-100 hover:text-ownBlack-100 px-4 sm:px-5 py-1 mt-2 inline-flex items-center"
           // style={{
           //   fontFamily: '"Varela Round", sans-serif',
           // }}
