@@ -127,9 +127,9 @@ export const LandingSection = ({
             }}
           >
             {/* <span className="inline-block rounded-full bg-green-500 h-3 w-3"></span> */}
-            <span class="relative flex h-2 w-2">
+            <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
           </Typography>
         </motion.div>
