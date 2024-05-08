@@ -105,20 +105,33 @@ export const LandingSection = ({
           }}
         >
           <Typography
-            text={"Welcome!"}
+            text={"Open to work"}
             customClasses={{
-              "text-3xl": true,
-              // "md:text-3xl": true,
-              "lg:text-4xl": true,
-              "xl:text-5xl": true,
-              "font-bold": true,
+              "text-xl": true,
               "text-left": true,
               "w-full": true,
               "h-fit": true,
               "sm:text-center": true,
               "mb-5": true,
+              border: true,
+              "rounded-full": true,
+              "backdrop-blur-sm": true,
+              "bg-white/20": true,
+              "dark:bg-ownBlack-200/20": true,
+              flex: true,
+              "items-center": true,
+              "flex-row-reverse": true,
+              "gap-x-3": true,
+              "px-4": true,
+              "py-2": true,
             }}
-          />
+          >
+            {/* <span className="inline-block rounded-full bg-green-500 h-3 w-3"></span> */}
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+          </Typography>
         </motion.div>
 
         <div className="block w-full items-center justify-between h-5/6 lg:flex">
@@ -143,9 +156,11 @@ export const LandingSection = ({
                   "dark:text-ownMint-100": true,
                   "text-4xl": true,
                 }}
-                customStyles={{
-                  // fontFamily: '"Varela Round", sans-serif',
-                }}
+                customStyles={
+                  {
+                    // fontFamily: '"Varela Round", sans-serif',
+                  }
+                }
               />
               <Typography
                 text={"Years of Dev Exp"}
@@ -157,9 +172,11 @@ export const LandingSection = ({
                   "w-fit": true,
                   "text-sm": true,
                 }}
-                customStyles={{
-                  // fontFamily: '"Varela Round", sans-serif',
-                }}
+                customStyles={
+                  {
+                    // fontFamily: '"Varela Round", sans-serif',
+                  }
+                }
               />
             </div>
           </motion.div>

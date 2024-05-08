@@ -16,6 +16,12 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
       "lg:w-4/6": true,
       "xl:w-5/12": true,
       "w-full": true,
+      "backdrop-blur-sm": true,
+      "bg-white/20": true,
+      "dark:bg-ownBlack-200/20": true,
+      "py-3": true,
+      "px-4": true,
+      "rounded-xl": true,
       ...customClasses,
     });
   }, [customClasses]);
@@ -75,17 +81,14 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           ),
         }}
       >
-        <Typography
+        {/* <Typography
           text={"Hey"}
           customClasses={{
             "text-ownBlack-200": true,
             "dark:text-white": true,
             "text-3xl": true,
           }}
-          // customStyles={{
-          //   fontFamily: '"Source Code Pro", monospace',
-          // }}
-        />
+        /> */}
         <Typography
           text={"I'm "}
           customClasses={{
@@ -169,9 +172,11 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
             "leading-7": true,
             "text-justify": true,
           }}
-          customStyles={{
-            // fontFamily: '"Varela Round", sans-serif',
-          }}
+          customStyles={
+            {
+              // fontFamily: '"Varela Round", sans-serif',
+            }
+          }
         />
       </CodeText>
       <div className="pt-12">

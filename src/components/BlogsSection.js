@@ -157,7 +157,7 @@ export const BlogsSection = ({
           style={{
             // fontFamily: '"Varela Round", sans-serif',
           }}
-          className="dark:text-ownBlack-100 flex items-center bg-gradient-to-r from-ownMint-100 via-ownMint-200 to-ownMint-200 hover:bg-gradient-to-br hover:ring-1 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2"
+          className="dark:text-ownBlack-100 flex items-center bg-gradient-to-r from-ownMint-100 via-ownMint-200 to-ownMint-200 hover:bg-gradient-to-br hover:ring-1 focus:outline-none font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2"
         >
           See More
           <motion.div
