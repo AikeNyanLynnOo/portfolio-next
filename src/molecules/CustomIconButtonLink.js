@@ -5,8 +5,8 @@ function CustomIconButtonLink({ children, href }) {
   return (
     <Link href={href} target="_blank">
       <button class="Btn">
-        <span class="svgContainer p-1.5">{children}</span>
-        <span class="BG"></span>
+        <div class="svgContainer p-1.5">{children}</div>
+        <div class="BG"></div>
       </button>
     </Link>
   );

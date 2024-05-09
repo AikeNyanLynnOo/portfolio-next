@@ -95,7 +95,7 @@ export const ExpTimeline2 = ({ customStyles, customClasses, experiences }) => {
                 {exp.jobTitle}
               </h3>
               <p
-                className="mt-1 text-gray-600 dark:text-gray-400 text-lg text-justify leading-8"
+                className="mt-1 text-gray-600 dark:text-gray-400 text-lg text-justify leading-7"
                 style={
                   {
                     // fontFamily: '"Varela Round", sans-serif',

@@ -138,6 +138,7 @@ export const AboutSection = ({
       "backdrop-blur-sm": true,
       "bg-gray-100/30": true,
       "dark:bg-ownBlack-100/30": true,
+      "leading-7": true,
     });
   }, []);
 

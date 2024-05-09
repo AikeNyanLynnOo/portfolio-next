@@ -78,7 +78,7 @@ export const AchievementCard2 = ({
           {subTitle || ""}
         </p>
         <p
-          className="mt-1 text-gray-600 dark:text-gray-400 text-lg text-justify leading-8"
+          className="mt-1 text-gray-600 dark:text-gray-400 text-lg text-justify leading-7"
           style={{
             // fontFamily: '"Varela Round", sans-serif',
             // fontSize: "14px",
