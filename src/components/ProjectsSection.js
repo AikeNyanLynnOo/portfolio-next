@@ -121,6 +121,8 @@ export const ProjectsSection = ({
           "Design Tokens",
           "Styled Dictionary",
           "React Design Patterns",
+          "StoryBook",
+          "TypeScript"
         ],
         projectImages: [
           {
@@ -150,6 +152,7 @@ export const ProjectsSection = ({
           "TailwindCSS",
           "Material UI",
           "CSS animations",
+          "Unsplash API"
         ],
         liveLink: "https://responsive-img-gallery-site.netlify.app/",
         githubLink:

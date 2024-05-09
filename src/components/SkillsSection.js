@@ -191,6 +191,18 @@ export const SkillsSection = ({
               isMaterialIcon: false,
             },
             {
+              icon: "/images/icons/storybook.svg",
+              text: "StoryBook",
+              href: "https://storybook.js.org/",
+              isMaterialIcon: false,
+            },
+            {
+              icon: "/images/icons/styled-components.svg",
+              text: "Styled Components",
+              href: "https://www.styled-components.com/",
+              isMaterialIcon: false,
+            },
+            {
               icon: "/images/icons/jquery.svg",
               text: "JQuery",
               href: "https://jquery.com/",
