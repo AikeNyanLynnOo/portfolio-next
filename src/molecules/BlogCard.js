@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { CustomChip } from "./CustomChip";
 import { Fragment } from "react";
@@ -115,7 +116,7 @@ export const BlogCard = ({
             )}
           </h3>
           <p
-            className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-6 line-clamp-3"
+            className="mt-3 text-gray-600 dark:text-gray-400 text-md leading-7 line-clamp-3"
             style={
               {
                 // fontFamily: '"Varela Round", sans-serif',
@@ -147,7 +148,7 @@ export const BlogCard = ({
               ))}
           </div>
           <p
-            className="mt-2 sm:mb-10 text-gray-600 dark:text-gray-400 text-sm leading-6"
+            className="mt-2 mb-14 sm:mb-10 text-gray-600 dark:text-gray-400 text-sm leading-6"
             style={
               {
                 // fontFamily: '"Varela Round", sans-serif',
