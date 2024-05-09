@@ -113,11 +113,11 @@ function ProjectsContainer({ projects, projectImages }) {
                   <CustomChip
                     label={tech}
                     customStyles={{
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                     customClasses={{
-                      "py-1": true,
-                      "px-2": true,
+                      "py-2": true,
+                      "px-3": true,
                       "my-1": true,
                       "inline-block": true,
                       "border-ownMint-100": false,
