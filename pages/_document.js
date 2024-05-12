@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="theme-color" content="" />
-          <link rel="shortcut icon" href="/images/logo.jpg" />
+          <link rel="shortcut icon" href="/images/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
           <meta
             name="description"

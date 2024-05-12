@@ -19,8 +19,8 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
       "backdrop-blur-sm": true,
       "bg-white/20": true,
       "dark:bg-ownBlack-200/20": true,
-      "py-3": true,
-      "px-4": true,
+      "py-4": true,
+      "px-5": true,
       "rounded-xl": true,
       ...customClasses,
     });

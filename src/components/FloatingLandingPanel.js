@@ -112,6 +112,7 @@ export const FloatingLandingPanel = ({
       /> */}
       <Image
         src={"/images/dev.jpg"}
+        // src={"/images/border_rounded_logo.png"}
         height={150}
         width={150}
         className="outline-ownMint-200 dark:outline-ownMint-100 mx-auto mb-4 h-20 w-20 rounded-full outline outline-2 outline-offset-2"

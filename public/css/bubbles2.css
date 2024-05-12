@@ -117,7 +117,7 @@ div .dot {
     sideWays 6s ease-in-out infinite;
 }
 .wrapper .dotdiv-12 {
-  top: 20%;
+  top: 15%;
   left: 70%;
   animation:
     animate 7s linear infinite,
@@ -139,7 +139,7 @@ div .dot {
 }
 .wrapper .dotdiv-15 {
   top: 90%;
-  left: 80%;
+  left: 58%;
   animation:
     animate 9s linear infinite,
     sideWays 5s ease-in-out infinite;
@@ -152,15 +152,15 @@ div .dot {
     sideWays 5s ease-in-out infinite;
 }
 .wrapper .dotdiv-17 {
-  top: 10%;
-  left: 10%;
+  top: 13%;
+  left: 26%;
   animation:
     animate 9s linear infinite,
     sideWays 5s ease-in-out infinite;
 }
 .wrapper .dotdiv-18 {
-  top: 90%;
-  left: 10%;
+  top: 78%;
+  left: 23%;
   animation:
     animate 9s linear infinite,
     sideWays 5s ease-in-out infinite;
@@ -208,7 +208,7 @@ div .dot {
     sideWays 5s ease-in-out infinite;
 }
 .wrapper .dotdiv-25 {
-  top: 3%;
+  top: 30%;
   left: 20%;
   animation:
     animate 9s linear infinite,
