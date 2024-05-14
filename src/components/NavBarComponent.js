@@ -79,14 +79,14 @@ export const NavBar = ({ children, customMenuIconClasses }) => {
           </span>
         </TextIcon>
         <TextIcon
-          text={`<A/>`}
+          // text={`<A/>`}
           customClasses={{
             "text-ownMint-200": true,
             "text-2xl": true,
             block: true,
             "sm:hidden": true,
           }}
-        ></TextIcon>
+        >Aike.</TextIcon>
         <div className="flex h-full w-fit absolute left-1/2 top-0 -translate-x-1/2">
           <NavItem
             link={{
