@@ -124,7 +124,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
             backgroundColor: isLight ? "#1A1E23" : "#FFFFFF",
             // backgroundColor: "red",
             transition: "top 0.1s linear",
-            boxShadow: "0px 2px 6px 0px rgba(22, 50, 79, 0.20)"
+            boxShadow: "0px 2px 6px 0px rgba(22, 50, 79, 0.20)",
           },
         }}
       >
@@ -132,21 +132,27 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
         {[
           {
             icon: "home_max",
+            text: "Home",
           },
           {
             icon: "perm_identity",
+            text: "Skills",
           },
           {
             icon: "code",
+            text: "About Me",
           },
           {
             icon: "dvr",
+            text: "Projects/Exps",
           },
           {
             icon: "edit_note",
+            text: "Blogs",
           },
           {
             icon: "mail_outline",
+            text: "Contact",
           },
         ].map((item, key) => (
           <NavIcon
@@ -154,6 +160,7 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
             isActive={key === activeNav ? true : false}
             index={key}
             icon={item && item.icon}
+            text={item.text}
             handleClick={handleClick}
           />
         ))}

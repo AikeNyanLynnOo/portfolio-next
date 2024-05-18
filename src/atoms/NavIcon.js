@@ -3,12 +3,16 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
+import { CustomTooltip } from "../molecules/CustomTooltip";
+import { Typography } from "./Typography";
+import { useState } from "react";
 
 export const NavIcon = ({
   index,
   isActive,
   children,
   icon,
+  text,
   handleClick,
   customClasses,
   customStyles,
@@ -37,29 +41,67 @@ export const NavIcon = ({
     });
   }, [isLight, customClasses, isActive]);
 
+  const [open, setOpen] = useState(false);
+
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
   return (
-    <Icon
-      className={textIconClasses}
-      onClick={() => {
-        handleClick(index);
-      }}
-      sx={{
-        width: "fit-content",
-        height: "fit-content",
-      }}
-      // style={{
-      //   "&::before": {
-      //     content: "a",
-      //     display: "block",
-      //     height: "100%",
-      //     width: "100%",
-      //     backgroundColor: "red",
-      //     border : '1px solid red'
-      //   },
-      //   ...customStyles,
-      // }}
+    <CustomTooltip
+      // arrow
+      onClose={handleTooltipClose}
+      open={open}
+      title={
+        <div>
+          <Typography
+            text={text || ""}
+            customClasses={{
+              "line-clamp-3": true,
+              "leading-6": true,
+              "text-ownBlack-100": true,
+              "dark:text-ownMint-200": false,
+              "dark:text-ownBlack-100": true,
+              "text-md": true,
+            }}
+            customStyles={
+              {
+                // fontFamily: '"Varela Round", sans-serif',
+              }
+            }
+          />
+        </div>
+      }
+      placement="right"
     >
-      {icon}
-    </Icon>
+      <Icon
+        className={textIconClasses}
+        onClick={() => {
+          handleClick(index);
+          handleTooltipClose();
+        }}
+        onMouseOver={handleTooltipOpen}
+        sx={{
+          width: "fit-content",
+          height: "fit-content",
+        }}
+        // style={{
+        //   "&::before": {
+        //     content: "a",
+        //     display: "block",
+        //     height: "100%",
+        //     width: "100%",
+        //     backgroundColor: "red",
+        //     border : '1px solid red'
+        //   },
+        //   ...customStyles,
+        // }}
+      >
+        {icon}
+      </Icon>
+    </CustomTooltip>
   );
 };

@@ -9,14 +9,14 @@ export const CustomTooltip = styled(({ className, ...props }) => (
 
   return {
     [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: isLight ? "#DFCCFB" : "#DFCCFB",
+      backgroundColor: isLight ? "#15F6D6" : "#98FAEC",
       // boxShadow: theme.shadows[1],
       padding: 16,
       fontSize: 12,
-      borderRadius : "20px"
+      borderRadius : "10px"
     },
     "& .MuiTooltip-arrow": {
-      color: isLight ? "#DFCCFB" : "#DFCCFB",
+      color: isLight ? "#15F6D6" : "#98FAEC",
     },
   };
 });
