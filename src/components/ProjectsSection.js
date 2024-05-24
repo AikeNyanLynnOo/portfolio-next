@@ -578,8 +578,9 @@ export const ProjectsSection = ({
     return clsx({
       "bg-white": true,
       "dark:bg-ownBlack-100": true,
-      "rounded-tl-xl": true,
-      "rounded-br-xl": true,
+      // "rounded-tl-xl": true,
+      // "rounded-br-xl": true,
+      "rounded-xl": true,
       border: true,
       "border-ownMint-200": true,
       "px-5": true,
