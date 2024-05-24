@@ -7,29 +7,44 @@ import { useState } from "react";
 import { Typography } from "../atoms/Typography";
 import { CustomChip } from "./CustomChip";
 import CustomIconButtonLink from "./CustomIconButtonLink";
-import { Icon } from "@mui/material";
+import { Divider, Icon } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { darkTheme } from "../Theme/styles";
+import { useSelector } from "react-redux";
 
 function ProjectsContainer({ projects, projectImages }) {
+  const { isLight } = useSelector((state) => state.theme);
   const [active, setActive] = useState(0);
 
   const [project, setProject] = useState(projects[0]);
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 py-10">
-      <div className="h-auto w-full px-0 xl:px-5 py-5 xl:py-0">
+      <div className="h-auto w-full xl:w-11/12 px-0 py-5 xl:py-0 border border-t border-l-0 border-b-0 border-r-0 border-gray-300 dark:border-ownMint-100">
         {projects &&
           projects.length > 0 &&
           projects.map((project, index) => (
-            <div
-              key={index}
-              onClick={() => {
-                setActive(index);
-                setProject(project);
-              }}
-              className={`font-semibold text-ownGray-300 dark:text-ownGray-100 text-2xl xl:text-3xl 2xl:text-4xl my-5 py-2 hover:text-ownBlack-100 hover:drop-shadow-xl hover:font-bold border-r-0 border-t-0 border-b-0 p-5 ${active === index ? "border border-l-8 border-ownMint-200" : "border-0"}`}
-            >
-              {project.title}
+            <div key={index}>
+              <div
+                onClick={() => {
+                  setActive(index);
+                  setProject(project);
+                }}
+                className={`flex justify-between items-center font-semibold text-ownGray-300 dark:text-ownGray-100 text-2xl xl:text-3xl 2xl:text-4xl my-5 py-2 hover:text-ownBlack-100 hover:drop-shadow-xl hover:font-bold border-r-0 border-t-0 border-b-0 p-5 ${active === index ? "border border-l-8 border-ownMint-200" : "border-0"}`}
+              >
+                <span>{project.title}</span>
+                {active === index && (
+                  <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-ownMint-100 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-ownMint-200"></span>
+                  </span>
+                )}
+              </div>
+              <Divider
+                sx={{
+                  backgroundColor: isLight ? "#E5E7EB" : "#98FAEC",
+                }}
+              />
             </div>
           ))}
       </div>

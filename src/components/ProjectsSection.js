@@ -49,6 +49,73 @@ export const ProjectsSection = ({
   const projects = useMemo(() => {
     return [
       {
+        title: "CRM Web App",
+        introText:
+          "Collaborating with UI/UX & backends, I made the CRM Web App in 3 weeks. It is a working version of a Entrepreneur-facing Web App where Users (Entrepreneurs) can view programs, coaching sessions, receive and complete surveys from CRM platform.",
+        projectMedia: "/images/projects/webapp_ss.png",
+        description: "",
+        techs: ["NextJS", "Material UI", "Redux Saga", "Redux Toolkit"],
+        projectImages: [
+          {
+            title: "Login Page",
+            src: "/images/projects/webapp/login.png",
+          },
+          {
+            title: "Sign Up",
+            src: "/images/projects/webapp/signup.png",
+          },
+          {
+            title: "Register",
+            src: "/images/projects/webapp/register.png",
+          },
+          {
+            title: "Register Accept",
+            src: "/images/projects/webapp/register_accept.png",
+          },
+          {
+            title: "Side Drawer - Nav Bar",
+            src: "/images/projects/webapp/navbar.png",
+          },
+          {
+            title: "Programs View",
+            src: "/images/projects/webapp/programs.png",
+          },
+          {
+            title: "Mentorship View",
+            src: "/images/projects/webapp/mentorship.png",
+          },
+          {
+            title: "Pending Mentorship Sessions",
+            src: "/images/projects/webapp/mentorship_pending.png",
+          },
+          {
+            title: "Mentorship History",
+            src: "/images/projects/webapp/mentorship_history.png",
+          },
+          {
+            title: "Mentors",
+            src: "/images/projects/webapp/mentors.png",
+          },
+          {
+            title: "User Profile",
+            src: "/images/projects/webapp/profile.png",
+          },
+          {
+            title: "Profile Information",
+            src: "/images/projects/webapp/profile_info.png",
+          },
+          {
+            title: "Business Details",
+            src: "/images/projects/webapp/business_details.png",
+          },
+          {
+            title: "Change Password",
+            src: "/images/projects/webapp/change_pwd.png",
+          },
+        ],
+      },
+
+      {
         title: "ONOW Enable CMS",
         introText:
           "From the frontend perspective, I spearheaded the development of the CMS using Next.js, Material UI, Redux Saga, and Redux Toolkit to manage diverse API requests seamlessly. We refined its interface to ensure user-friendly navigation and efficient content management.",
@@ -122,7 +189,7 @@ export const ProjectsSection = ({
           "Styled Dictionary",
           "React Design Patterns",
           "StoryBook",
-          "TypeScript"
+          "TypeScript",
         ],
         projectImages: [
           {
@@ -152,7 +219,7 @@ export const ProjectsSection = ({
           "TailwindCSS",
           "Material UI",
           "CSS animations",
-          "Unsplash API"
+          "Unsplash API",
         ],
         liveLink: "https://responsive-img-gallery-site.netlify.app/",
         githubLink:
