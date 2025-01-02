@@ -49,6 +49,31 @@ export const ProjectsSection = ({
   const projects = useMemo(() => {
     return [
       {
+        title: "Venuerific",
+        introText:
+          "I developed the whole Venuerific website to become a newer UI & seamless UX. Originally it was built with Rails and got a lot of issues for SEO, UX and UI inconsistencies. I could deliver my skills to x these things & the revamped website is now live. We as a company got a lot of new users & enquiries after we launched the new website.",
+        projectMedia: "/images/projects/vnf_ss.png",
+        description: "",
+        liveLink: "https://www.venuerific.com/",
+        techs: [
+          "NextJS 14",
+          "Next UI",
+          "Zustand",
+          "Tailwind CSS",
+          "SEO Optimization",
+        ],
+        projectImages: [
+          {
+            title: "Home Page Desktop",
+            src: "/images/projects/vnf/home_desktop.png",
+          },
+          {
+            title: "Home Page Mobile",
+            src: "/images/projects/vnf/home_mobile.png",
+          },
+        ],
+      },
+      {
         title: "CRM Web App",
         introText:
           "Collaborating with UI/UX & backends, I made the CRM Web App in 3 weeks. It is a working version of a Entrepreneur-facing Web App where Users (Entrepreneurs) can view programs, coaching sessions, receive and complete surveys from CRM platform.",
@@ -425,6 +450,26 @@ export const ProjectsSection = ({
 
   const experiences = useMemo(() => {
     return [
+      {
+        fromYear: "08/2024",
+        toYear: "Present",
+        jobTitle: "Senior Frontend Developer",
+        jobType: "Full-Time (Remote)",
+        jobLocation: "Bangkok, Thailand",
+        description:
+          "As a Senior Frontend Developer, I took full responsibility for revamping the Venueric website, transforming it into a modern, visually appealing site with a smooth UI/UX. I developed the entire website using NextJS 14, TypeScript, NextUI, Zustand, and TailwindCSS, ensuring all functionalities were seamlessly integrated. Additionally, I managed and mentored the Frontend team, improving workflow and maintaining high coding standards. This project contributed to the successful launch of a large-scale website with active users across Singapore, Indonesia, Malaysia, Hong Kong, and the Philippines.",
+        companyName: "Venuerific",
+        companyLink: "https://www.venuerific.com/",
+        techs: [
+          "NextJS",
+          "Next UI",
+          "Tailwind CSS",
+          "SEO Optimization",
+          "Revamp",
+          "Zustand",
+          "REST API",
+        ],
+      },
       {
         fromYear: "02/2023",
         toYear: "Present",
