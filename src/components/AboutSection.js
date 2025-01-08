@@ -109,7 +109,7 @@ export const AboutSection = ({
       "dark:bg-ownBlack-200/20": true,
       // "rounded-tl-xl": true,
       // "rounded-br-xl": true,
-      "rounded-xl" : true,
+      "rounded-xl": true,
       border: true,
       "border-ownMint-200": true,
       "px-5": true,
@@ -164,26 +164,8 @@ export const AboutSection = ({
     >
       <div className={aboutSectionClasses}>
         <div className="w-full h-full lg:w-4/6 lg:order-first order-last">
-          <motion.h2
-            variants={fadeInAnimationLeftTitleVariants}
-            initial="initial"
-            animate="animate"
-            viewport={{
-              once: true,
-            }}
-            className={aboutMeTitleClasses}
-          >
-            About Me
-          </motion.h2>
-          <motion.div
-            className={aboutMeTextClasses}
-            variants={fadeInAnimationLeftVariants}
-            initial="initial"
-            animate="animate"
-            viewport={{
-              once: true,
-            }}
-          >
+          <h2 className={aboutMeTitleClasses}>About Me</h2>
+          <div className={aboutMeTextClasses}>
             <CodeText
               codeTag={{
                 start: (
@@ -280,7 +262,7 @@ export const AboutSection = ({
                 </Link>
               ))}
             </CodeText> */}
-          </motion.div>
+          </div>
         </div>
         {/* <Image
           src="/images/dev.jpg"
@@ -293,7 +275,7 @@ export const AboutSection = ({
           <Spline scene="https://prod.spline.design/9KMXbCByY9N3utjc/scene.splinecode" />
         </div>
       </div>
-      <Bubbles showIndices={dots} />
+      {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
   );
 };

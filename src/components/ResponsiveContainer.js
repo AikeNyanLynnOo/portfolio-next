@@ -27,7 +27,7 @@ export const ResponsiveContainer = ({
   }, [customClasses]);
   return (
     <div className={`${containerCLasses}`} ref={scrollRef}>
-      {children}
+      <div className="max-w-screen-2xl mx-auto">{children}</div>
     </div>
   );
 };

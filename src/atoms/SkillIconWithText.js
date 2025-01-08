@@ -63,19 +63,19 @@ export const SkillIconWithText = ({
 
   if (href) {
     return (
-      <motion.div
+      <div
         className={skillIconWithTextClasses}
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{
-          ease: "linear",
-          delay: 0.05 * index,
-          type: "spring",
-          stiffness: 400,
-        }}
-        viewport={{
-          once: true,
-        }}
+        // initial={{ y: 20, opacity: 0 }}
+        // whileInView={{ y: 0, opacity: 1 }}
+        // transition={{
+        //   ease: "linear",
+        //   delay: 0.05 * index,
+        //   type: "spring",
+        //   stiffness: 400,
+        // }}
+        // viewport={{
+        //   once: true,
+        // }}
       >
         <Link href={href}>
           {(isMaterialIcon && <Icon>{icon}</Icon>) || (
@@ -93,7 +93,7 @@ export const SkillIconWithText = ({
           <span className={skillTextClasses}>{text}</span>
           {children}
         </Link>
-      </motion.div>
+      </div>
     );
   }
   return (
@@ -103,17 +103,17 @@ export const SkillIconWithText = ({
       style={{
         ...customStyles,
       }}
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{
-        ease: "linear",
-        delay: 0.05 * index,
-        type: "spring",
-        stiffness: 400,
-      }}
-      viewport={{
-        once: true,
-      }}
+      // initial={{ y: 20, opacity: 0 }}
+      // whileInView={{ y: 0, opacity: 1 }}
+      // transition={{
+      //   ease: "linear",
+      //   delay: 0.05 * index,
+      //   type: "spring",
+      //   stiffness: 400,
+      // }}
+      // viewport={{
+      //   once: true,
+      // }}
     >
       {(isMaterialIcon && <Icon>{icon}</Icon>) || (
         <Image

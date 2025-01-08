@@ -20,22 +20,22 @@ import { LeetCodeIcon } from "../atoms/LeetCodeIcon";
 // framer motion
 import { motion } from "framer-motion";
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    x: -1000,
-  },
-  animate: (index) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      ease: "linear",
-      delay: 0.05,
-      type: "spring",
-      stiffness: 20,
-    },
-  }),
-};
+// const fadeInAnimationVariants = {
+//   initial: {
+//     opacity: 0,
+//     x: -1000,
+//   },
+//   animate: (index) => ({
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       ease: "linear",
+//       delay: 0.05,
+//       type: "spring",
+//       stiffness: 20,
+//     },
+//   }),
+// };
 
 export const FloatingLandingPanel = ({
   children,
@@ -76,43 +76,22 @@ export const FloatingLandingPanel = ({
     });
   }, [customClasses]);
 
-  const globeIcon = useMemo(() => {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`;
-  }, []);
-
   const iconStyles = useMemo(() => {
     return getFlPanelIconStyles(isLight);
   }, [isLight]);
 
   return (
-    <motion.div
-      variants={fadeInAnimationVariants}
-      initial="initial"
-      animate="animate"
-      viewport={{
-        once: true,
-      }}
+    <div
+      // variants={fadeInAnimationVariants}
+      // initial="initial"
+      // animate="animate"
+      // viewport={{
+      //   once: true,
+      // }}
       className={floatingPanelClasses}
-      // className={
-      //   "bg-white-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border border-gray-100"
-      // }
-      style={
-        {
-          // boxShadow: `-5px -5px ${isLight ? lightTheme.borderColor[100] : darkTheme.borderColor[100]}`,
-          // animation: "float 10s ease-in-out infinite",
-        }
-      }
     >
-      {/* <Image
-        src={"/images/icons/pin2.png"}
-        height={1000}
-        width={1000}
-        className="absolute -right-5 -top-10 h-14 w-14"
-        alt="pin-icon"
-      /> */}
       <Image
         src={"/images/dev.jpg"}
-        // src={"/images/border_rounded_logo.png"}
         height={150}
         width={150}
         className="outline-ownMint-200 dark:outline-ownMint-100 mx-auto mb-4 h-20 w-20 rounded-full outline outline-2 outline-offset-2"
@@ -126,9 +105,6 @@ export const FloatingLandingPanel = ({
           "text-2xl": true,
           "text-center": true,
         }}
-        customStyles={{
-          // fontFamily: '"Varela Round", sans-serif',
-        }}
       />
       <Typography
         text={"Frontend Developer"}
@@ -137,9 +113,6 @@ export const FloatingLandingPanel = ({
           "dark:text-white": true,
           "text-sm": true,
           "text-center": true,
-        }}
-        customStyles={{
-          // fontFamily: '"Varela Round", sans-serif',
         }}
       />
       <div className="my-5  w-fit mx-auto">
@@ -187,42 +160,12 @@ export const FloatingLandingPanel = ({
                   "text-sm": true,
                   "text-center": true,
                 }}
-                customStyles={{
-                  // fontFamily: '"Varela Round", sans-serif',
-                }}
               />
             </TextWithIcon>
           </Fragment>
         ))}
       </div>
-      {/* <div className="my-5">
-        {[
-          {
-            label: "React",
-          },
-          {
-            label: "NextJS",
-          },
-          {
-            label: "VueJs",
-          },
-        ].map((chip, index) => (
-          <Chip
-            key={index}
-            label={chip.label}
-            size="small"
-            sx={{
-              backgroundColor: isLight
-                ? lightTheme.backgroundColor[200]
-                : darkTheme.textColor[100],
-              color: lightTheme.textColor[100],
-              mr: 1,
-              textTransform: "uppercase",
-              // fontFamily: '"Varela Round", sans-serif',
-            }}
-          />
-        ))}
-      </div> */}
+      
       <div className="flex items-center gap-x-2 mx-auto">
         {[
           {
@@ -251,6 +194,6 @@ export const FloatingLandingPanel = ({
           </Link>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };

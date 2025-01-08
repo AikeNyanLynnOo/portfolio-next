@@ -163,19 +163,7 @@ export const BlogsSection = ({
           className="dark:text-ownBlack-100 flex items-center bg-gradient-to-r from-ownMint-100 via-ownMint-200 to-ownMint-200 hover:bg-gradient-to-br hover:ring-1 focus:outline-none rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2"
         >
           See More
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{
-              delay: 0.01,
-              type: "spring",
-              stiffness: 500,
-            }}
-            viewport={{
-              once: true,
-            }}
-            className="h-fit flex items-center"
-          >
+          <div className="h-fit flex items-center">
             <Icon
               style={{
                 fontSize: "18px",
@@ -184,10 +172,10 @@ export const BlogsSection = ({
             >
               keyboard_arrow_right
             </Icon>
-          </motion.div>
+          </div>
         </Link>
       </div>
-      <Bubbles showIndices={dots} />
+      {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
   );
 };

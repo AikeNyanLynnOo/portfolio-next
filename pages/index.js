@@ -140,7 +140,7 @@ export default function Layout() {
       )}
 
       {/* <ContactForm/> */}
-      <AnimatedCursor
+      {/* <AnimatedCursor
         innerSize={14}
         outerSize={13}
         color={isLight ? "51, 187, 197" : "21, 246, 214"}
@@ -158,7 +158,7 @@ export default function Layout() {
             // backgroundColor: "var(--cursor-color)",
           }
         }
-      />
+      /> */}
     </Fragment>
   );
 }

@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { CustomChip } from "./CustomChip";
 import { Fragment } from "react";
@@ -25,20 +24,7 @@ export const BlogCard = ({
   externalLink,
 }) => {
   return (
-    <motion.div
-      initial={{ y: 30, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{
-        ease: "linear",
-        delay: 0.1 * index,
-        type: "spring",
-        stiffness: 400,
-      }}
-      viewport={{
-        once: true,
-      }}
-      className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4 bg-white/20 backdrop-blur-sm dark:bg-ownBlack-100/20 py-5 px-0 sm:px-5 shadow-xl"
-    >
+    <div className="group rounded-xl overflow-hidden dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 my-4 bg-white/20 backdrop-blur-sm dark:bg-ownBlack-100/20 py-5 px-0 sm:px-5 shadow-xl">
       <div className="sm:flex">
         <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 border">
           <Image
@@ -192,6 +178,6 @@ export const BlogCard = ({
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };

@@ -71,9 +71,9 @@ export const LandingSection = ({
     return clsx({
       "[&>*]:z-10": true,
       // "h-screen": true,
-      "min-h-[calc(100vh-80px)]": true,
+      // "lg:min-h-[calc(100vh-80px)]": true,
       // "mt-20" : true,
-      "py-16": true,
+      "py-20": true,
       //   "bg-white": true,
       //   "dark:bg-ownBlack-200": true,
       flex: true,
@@ -182,7 +182,7 @@ export const LandingSection = ({
           </motion.div>
         </div>
       </div>
-      <Bubbles showIndices={dots} />
+      {/* <Bubbles showIndices={dots} /> */}
     </ResponsiveContainer>
   );
 };
