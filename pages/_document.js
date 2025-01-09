@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
           <meta name="emotion-insertion-point" content="" />
           <meta
             name="description"
-            content="I am a over 5 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+            content="I am a over 5 years experienced Senior Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link

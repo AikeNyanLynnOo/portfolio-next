@@ -53,20 +53,20 @@ function MyApp({ Component, ...rest }) {
       {/* <CacheProvider value={emotionCache}> */}
       <Head>
         <title>
-          Aike Nyan Lynn Oo - Portfolio| React NextJS Frontend Developer
+          Aike Nyan Lynn Oo - Portfolio| React NextJS Senior Frontend Developer
         </title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta
           name="description"
-          content="I am a over 4 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+          content="I am a over 4 years experienced Senior Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
         />
         <meta
           property="og:title"
-          content="Aike Nyan Lynn Oo - Portfolio| React NextJS Frontend Developer"
+          content="Aike Nyan Lynn Oo - Portfolio| React NextJS Senior Frontend Developer"
         />
         <meta
           property="og:description"
-          content="I am a over 4 years experienced Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
+          content="I am a over 4 years experienced Senior Frontend Developer specializing in React, NextJS, MUI, Tailwind, Bootstrap, Typescript, GCP"
         />
         {/* <meta
           property="og:image"

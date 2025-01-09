@@ -111,7 +111,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
           </span>
         </Typography>
         <Typography
-          text={"Frontend Developer "}
+          text={"Senior Frontend Developer "}
           customClasses={{
             "text-ownBlack-200": true,
             "dark:text-white": true,
