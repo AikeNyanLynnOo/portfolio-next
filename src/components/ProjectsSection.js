@@ -450,26 +450,26 @@ export const ProjectsSection = ({
 
   const experiences = useMemo(() => {
     return [
-      {
-        fromYear: "08/2024",
-        toYear: "Present",
-        jobTitle: "Senior Frontend Developer",
-        jobType: "Full-Time (Remote)",
-        jobLocation: "Bangkok, Thailand",
-        description:
-          "As a Senior Frontend Developer, I took full responsibility for revamping the Venueric website, transforming it into a modern, visually appealing site with a smooth UI/UX. I developed the entire website using NextJS 14, TypeScript, NextUI, Zustand, and TailwindCSS, ensuring all functionalities were seamlessly integrated. Additionally, I managed and mentored the Frontend team, improving workflow and maintaining high coding standards. This project contributed to the successful launch of a large-scale website with active users across Singapore, Indonesia, Malaysia, Hong Kong, and the Philippines.",
-        companyName: "Venuerific",
-        companyLink: "https://www.venuerific.com/",
-        techs: [
-          "NextJS",
-          "Next UI",
-          "Tailwind CSS",
-          "SEO Optimization",
-          "Revamp",
-          "Zustand",
-          "REST API",
-        ],
-      },
+      // {
+      //   fromYear: "08/2024",
+      //   toYear: "Present",
+      //   jobTitle: "Senior Frontend Developer",
+      //   jobType: "Full-Time (Remote)",
+      //   jobLocation: "Bangkok, Thailand",
+      //   description:
+      //     "As a Senior Frontend Developer, I took full responsibility for revamping the Venueric website, transforming it into a modern, visually appealing site with a smooth UI/UX. I developed the entire website using NextJS 14, TypeScript, NextUI, Zustand, and TailwindCSS, ensuring all functionalities were seamlessly integrated. Additionally, I managed and mentored the Frontend team, improving workflow and maintaining high coding standards. This project contributed to the successful launch of a large-scale website with active users across Singapore, Indonesia, Malaysia, Hong Kong, and the Philippines.",
+      //   companyName: "Venuerific",
+      //   companyLink: "https://www.venuerific.com/",
+      //   techs: [
+      //     "NextJS",
+      //     "Next UI",
+      //     "Tailwind CSS",
+      //     "SEO Optimization",
+      //     "Revamp",
+      //     "Zustand",
+      //     "REST API",
+      //   ],
+      // },
       {
         fromYear: "02/2023",
         toYear: "Present",
