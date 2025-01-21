@@ -472,8 +472,8 @@ export const ProjectsSection = ({
       // },
       {
         fromYear: "02/2023",
-        toYear: "Present",
-        jobTitle: "Frontend Web Developer",
+        toYear: "06/2023",
+        jobTitle: "Senior Frontend Web Developer",
         jobType: "Full-Time",
         jobLocation: "Yangon, Myanmar",
         description:
