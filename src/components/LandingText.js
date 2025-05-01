@@ -163,7 +163,7 @@ export const LandingText = ({ children, customClasses, customStyles }) => {
       >
         <Typography
           text={
-            "Ready to help with your business, specializing in the creation of robust and dynamic React and Next.js applications."
+            "I craft scalable and high-performance web applications using React and Next.js, helping businesses grow through seamless and modern digital experiences."
           }
           customClasses={{
             "text-ownBlack-200": true,

@@ -30,7 +30,7 @@ function ProjectsContainer({ projects, projectImages }) {
                   setActive(index);
                   setProject(project);
                 }}
-                className={`flex justify-between items-center font-semibold text-ownGray-300 dark:text-ownGray-100 text-2xl xl:text-3xl 2xl:text-4xl py-7 hover:text-ownBlack-100 hover:drop-shadow-xl hover:font-bold border-r-0 border-t-0 border-b-0 p-5 ${active === index ? "border border-l-8 border-ownMint-200" : "border-0"}`}
+                className={`flex justify-between items-center font-semibold text-ownGray-300 dark:text-ownGray-100 text-2xl xl:text-3xl 2xl:text-4xl py-7 hover:text-ownBlack-100 hover:drop-shadow-xl hover:font-bold border-r-0 border-t-0 border-b-0 p-5 cursor-pointer ${active === index ? "border border-l-8 border-ownMint-200" : "border-0"}`}
               >
                 <span>{project.title}</span>
                 {active === index && (

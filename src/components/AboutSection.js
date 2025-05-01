@@ -196,7 +196,7 @@ export const AboutSection = ({
             >
               <Typography
                 text={
-                  "Armed with a distinguished Bachelor's degree from the University of Information Technology (UIT) Yangon and backed by over five years of professional experience, I am a seasoned frontend developer. Proficient in leveraging Material-UI, React, Next.js, Tailwind, and REST API integration, I am committed to crafting cutting-edge web applications that seamlessly blend functionality with exceptional user experience. My track record speaks volumes, setting me apart as a driving force in the dynamic realm of web development."
+                  "I'm a frontend developer with over 5 years of experience, holding a Bachelor's degree from the University of Information Technology (UIT) Yangon. I specialize in building fast, user-friendly web applications using React, Next.js, TypeScript, TailwindCSS, and Material-UI. I care deeply about writing clean, reusable code and creating smooth user experiences. Over the years, I've worked on various projects—from redesigning full websites to developing reusable component libraries—always focused on performance, consistency, and user satisfaction."
                 }
                 customClasses={{
                   "text-ownBlack-200": true,

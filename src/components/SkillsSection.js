@@ -216,6 +216,12 @@ export const SkillsSection = ({
               isMaterialIcon: false,
             },
             {
+              icon: "/images/icons/heroui.png",
+              text: "Hero UI",
+              href: "https://www.heroui.com/",
+              isMaterialIcon: false,
+            },
+            {
               icon: "/images/icons/tailwind.svg",
               text: "Tailwind",
               href: "https://tailwindcss.com/",
