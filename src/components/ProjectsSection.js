@@ -50,6 +50,7 @@ export const ProjectsSection = ({
     return [
       {
         title: "Venuerific",
+        tag: "venuerific",
         introText:
           "I developed the whole Venuerific website to become a newer UI & seamless UX. Originally it was built with Rails and got a lot of issues for SEO, UX and UI inconsistencies. I could deliver my skills to x these things & the revamped website is now live. We as a company got a lot of new users & enquiries after we launched the new website.",
         projectMedia: "/images/projects/vnf_ss.png",
@@ -57,7 +58,7 @@ export const ProjectsSection = ({
         liveLink: "https://www.venuerific.com/",
         techs: [
           "NextJS 14",
-          "Hero UI",
+          "Hero UI", 
           "Zustand",
           "Tailwind CSS",
           "SEO Optimization",
@@ -68,13 +69,14 @@ export const ProjectsSection = ({
             src: "/images/projects/vnf/home_desktop.png",
           },
           {
-            title: "Home Page Mobile",
+            title: "Home Page Mobile", 
             src: "/images/projects/vnf/home_mobile.png",
           },
         ],
       },
       {
         title: "CRM Web App",
+        tag: "crm-web-app",
         introText:
           "Collaborating with UI/UX & backends, I made the CRM Web App in 3 weeks. It is a working version of a Entrepreneur-facing Web App where Users (Entrepreneurs) can view programs, coaching sessions, receive and complete surveys from CRM platform.",
         projectMedia: "/images/projects/webapp_ss.png",
@@ -87,7 +89,7 @@ export const ProjectsSection = ({
           },
           {
             title: "Sign Up",
-            src: "/images/projects/webapp/signup.png",
+            src: "/images/projects/webapp/signup.png", 
           },
           {
             title: "Register",
@@ -139,9 +141,9 @@ export const ProjectsSection = ({
           },
         ],
       },
-
       {
         title: "ONOW Enable CMS",
+        tag: "onow-enable-cms",
         introText:
           "From the frontend perspective, I spearheaded the development of the CMS using Next.js, Material UI, Redux Saga, and Redux Toolkit to manage diverse API requests seamlessly. We refined its interface to ensure user-friendly navigation and efficient content management.",
         projectMedia: "/images/projects/cms_ss.png",
@@ -203,6 +205,7 @@ export const ProjectsSection = ({
       },
       {
         title: "Design System",
+        tag: "design-system",
         introText:
           "By integrating design tokens and employing design patterns such as ( the HOC and Render props etc.), I created highly reusable and adaptable UI components customizing/extending the MUI components. This project aimed to revolutionize UI development by offering a comprehensive set of guidelines and reusable components, facilitating seamless integration and consistency across all future products.",
         projectMedia: "/images/projects/design_system/ds.png",
@@ -229,6 +232,7 @@ export const ProjectsSection = ({
       },
       {
         title: "Responsive Gallery",
+        tag: "responsive-gallery",
         introText:
           "A responsive image gallery with transitions and animations showing a lightbox with gallery view. It is based on Unsplash API",
         projectMedia: "/images/projects/res_gallery_design.jpg",
@@ -236,7 +240,7 @@ export const ProjectsSection = ({
         techs: [
           "NextJS 14",
           "SSR",
-          "CSR",
+          "CSR", 
           "Custom Hooks",
           "Redux-toolkit",
           "Redux-saga",
@@ -282,6 +286,7 @@ export const ProjectsSection = ({
       },
       {
         title: "Discord Website Clone",
+        tag: "discord-website-clone",
         introText:
           "The project replicated Discord's website frontend, including navigation, animations, and responsive design for all devices, aiming for a seamless user experience akin to the original site.",
         projectMedia: "/images/projects/discord_design.jpg",
@@ -326,6 +331,7 @@ export const ProjectsSection = ({
       },
       {
         title: "URL Shortener",
+        tag: "url-shortener",
         introText:
           "Utilizing React, Tailwind CSS, and the own REST API to shorten URLs efficiently. Additionally, implementing browser storage to retain recent shortened links for enhanced user experience upon returning to the application.",
         projectMedia: "/images/projects/urlshort_design.jpg",
@@ -353,6 +359,7 @@ export const ProjectsSection = ({
       },
       {
         title: "JKT Myanmar International",
+        tag: "jkt-myanmar-international",
         introText:
           "A professional business website equipped with job application functionality. Utilizing Bootstrap, jQuery, and PHP technologies for seamless operation and user interaction.",
         projectMedia: "/images/projects/jkt_design.jpg",
@@ -370,81 +377,6 @@ export const ProjectsSection = ({
           },
         ],
       },
-
-      // {
-      //   title: "Multiple Chioce Quiz App",
-      //   introText:
-      //     "You have full control over customizing quiz parameters like fields, difficulty, and time. Monitor remaining time, end the quiz at any point, and navigate freely through animated quiz panels. View results and score upon completion.",
-      //   projectMedia: "/images/projects/quiz_ss.png",
-      //   description: "",
-      //   techs: [
-      //     "ReactJS",
-      //     "Typescript",
-      //     "TailwindCSS",
-      //     "Framer Motion",
-      //     "Travia Quiz API",
-      //   ],
-      //   liveLink: "https://multiple-choice-quiz-game.netlify.app/",
-      //   githubLink:
-      //     "https://github.com/AikeNyanLynnOo/multiple-chioce-quizz-react",
-      //   projectImages: [
-      //     {
-      //       title: "Home Desktop",
-      //       src: "/images/projects/quiz/home.png",
-      //     },
-      //     {
-      //       title: "Taking Quiz",
-      //       src: "/images/projects/quiz/take_quiz.png",
-      //     },
-      //     {
-      //       title: "Results",
-      //       src: "/images/projects/quiz/result.png",
-      //     },
-      //     {
-      //       title: "Home Mobile View",
-      //       src: "/images/projects/quiz/home_mobile.png",
-      //     },
-      //     {
-      //       title: "Taking Quiz Mobile",
-      //       src: "/images/projects/quiz/take_quiz_mobile.png",
-      //     },
-      //     {
-      //       title: "Results Mobile View",
-      //       src: "/images/projects/quiz/result_mobile.png",
-      //     },
-      //   ],
-      // },
-      // {
-      //   title: "IP Address / Domain Tracker",
-      //   introText:
-      //     "Implementing advanced server location tracking functionality, seamlessly integrating with map services to pinpoint server locations based on user input of IP or domain addresses.",
-      //   projectMedia: "/images/projects/tracker_ss.png",
-      //   description: "",
-      //   techs: ["ReactJS", "Netlify functions", "Geo IPify"],
-      //   liveLink: "https://ip-tracker-a1k3.netlify.app/",
-      //   githubLink: "https://github.com/AikeNyanLynnOo/ip-tracker",
-      //   projectImages: [
-      //     {
-      //       title: "Desktop View",
-      //       src: "/images/projects/ip_tracker/desktop.png",
-      //     },
-      //     {
-      //       title: "Mobile View",
-      //       src: "/images/projects/ip_tracker/mobile.png",
-      //     },
-      //   ],
-      // },
-      // {
-      //   title: "Explore Nations",
-      //   introText:
-      //     "Effortlessly search by country name, whether full or partial, and filter by continents. Seamlessly toggle between light and dark themes while ensuring a responsive design for optimal user experience across devices.",
-      //   projectMedia: "/images/projects/countries_ss.png",
-      //   description: "",
-      //   techs: ["ReactJS", "Netlify functions", "Geo IPify"],
-      //   liveLink: "https://main--rest-countries-browser-a1k3.netlify.app/",
-      //   githubLink:
-      //     "https://github.com/AikeNyanLynnOo/rest-countries-api-theme-switcher",
-      // },
     ];
   }, []);
 
@@ -640,12 +572,7 @@ export const ProjectsSection = ({
   }, []);
 
   const [active, setActive] = useState(0);
-  const [projectImages, setProjectImages] = useState([]);
-
-  const handleActivePrj = (index) => {
-    setProjectImages(projects[index].projectImages);
-  };
-
+  
   const handleChange = useCallback((event, newValue) => {
     setActive(newValue);
   }, []);
@@ -654,15 +581,8 @@ export const ProjectsSection = ({
       id: 1,
       title: "Projects",
       renderTabItem: () => (
-        // <ProjectGrid
-        //   projects={projects}
-        //   handleActivePrj={handleActivePrj}
-        //   projectImages={projectImages}
-        // />
         <ProjectsContainer
           projects={projects}
-          handleActivePrj={handleActivePrj}
-          projectImages={projectImages}
         />
       ),
     },
