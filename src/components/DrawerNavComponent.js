@@ -48,8 +48,6 @@ export const DrawerNav = ({ children, customClasses, customStyles }) => {
   }, [customClasses, isDrawerOpen]);
 
   const handleClick = (index) => {
-    // console.log("Index is>>", index);
-    // setActiveLink(index);
     dispatch(changeActiveNav(index));
     dispatch(changeDrawerState());
 

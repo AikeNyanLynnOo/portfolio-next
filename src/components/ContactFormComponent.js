@@ -14,13 +14,6 @@ export const ContactForm = ({ customStyles, customClasses, children }) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log({
-      serviceId,
-      templateId,
-      form: form.current,
-      // privateKey, // userId
-      publicKey, // userId
-    });
     emailjs
       .sendForm(
         serviceId,

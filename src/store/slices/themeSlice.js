@@ -24,7 +24,6 @@ export const themeSlice = createSlice({
   initialState,
   reducers: {
     switchThemeRequest(state, action) {
-      console.log("change theme request received");
       return {
         ...state,
         isLight: action.payload.theme === "light" ? true : false,

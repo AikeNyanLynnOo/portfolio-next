@@ -16,6 +16,5 @@ export const themeSagas = [
 ];
 
 function* watchSwitchThemeRequest({ payload }) {
-  console.log("Reach middleware");
-  //
+  // console.log("Reach middleware");
 }

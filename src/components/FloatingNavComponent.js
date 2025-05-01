@@ -18,16 +18,6 @@ export const FloatingNav = ({ children, customClasses, customStyles }) => {
     contactSectionOffsetTop,
   } = useSelector((state) => state.general);
 
-  // console.log(
-  //   "offsettop>>",
-  //   landingSectionOffsetTop,
-  //   aboutSectionOffsetTop,
-  //   skillSectionOffsetTop,
-  //   projectsSectionOffsetTop,
-  //   blogsSectionOffsetTop,
-  //   contactSectionOffsetTop,
-  // );
-
   const dispatch = useDispatch();
   const { isLight } = useSelector((state) => state.theme);
   const floatingNavClasses = useMemo(() => {

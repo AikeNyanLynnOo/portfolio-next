@@ -18,7 +18,6 @@ export const generalSlice = createSlice({
   initialState,
   reducers: {
     changeActiveNav(state, action) {
-      console.log("change active nav request received");
       return {
         ...state,
         activeNav: action.payload,
@@ -31,21 +30,12 @@ export const generalSlice = createSlice({
       };
     },
     changeDrawerState(state, action) {
-      //  const { isDrawerOpen } = current(state);
-      // console.log(
-      //   "change drawer state request received>>",
-      //   current(state).isDrawerOpen,
-      // );
       return {
         ...state,
         isDrawerOpen: !current(state).isDrawerOpen,
       };
     },
     putOffsetTop(state, action) {
-      // console.log("putting offset top request received>>", {
-      //   ...state,
-      //   [action.payload.property]: action.payload.value,
-      // });
       return {
         ...state,
         [action.payload.property]: action.payload.value,

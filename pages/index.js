@@ -70,21 +70,17 @@ export default function Layout() {
           break;
         case aboutSectionOffsetTop < scrolled &&
           scrolled < skillSectionOffsetTop + 100:
-          console.log("skill section");
           dispatch(changeActiveNav(2));
           break;
         case skillSectionOffsetTop < scrolled &&
           scrolled < projectsSectionOffsetTop + 100:
-          console.log("projects section");
           dispatch(changeActiveNav(3));
           break;
         case projectsSectionOffsetTop < scrolled &&
           scrolled < blogsSectionOffsetTop + 100:
-          console.log("blogs section");
           dispatch(changeActiveNav(4));
           break;
         case scrolled > contactSectionOffsetTop + 100:
-          console.log("contact section");
           dispatch(changeActiveNav(5));
           break;
         default:

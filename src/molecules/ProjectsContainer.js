@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import ImageGallery from "react-image-gallery";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { useState } from "react";
+import { LuRocket } from "react-icons/lu";
+import { LuFolderLock } from "react-icons/lu";
 import { Typography } from "../atoms/Typography";
 import { CustomChip } from "./CustomChip";
 import CustomIconButtonLink from "./CustomIconButtonLink";
@@ -10,17 +11,20 @@ import { Divider, Icon } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
+import { MuiSelect } from "./MuiSelect";
 
-function ProjectsContainer({ projects, projectImages }) {
+function ProjectsContainer({
+  projects,
+  currentProject,
+  active,
+  setCurrentProject,
+  setActive,
+}) {
   const projectsRef = useRef(null);
   const searchParams = useSearchParams();
   const project = searchParams.get("project");
 
-  console.log("Project>>", project);
   const { isLight } = useSelector((state) => state.theme);
-  const [active, setActive] = useState(0);
-
-  const [currentProject, setCurrentProject] = useState(projects[0]);
 
   useEffect(() => {
     const foundProject = projects.find((pj) => pj.tag === project);
@@ -30,8 +34,6 @@ function ProjectsContainer({ projects, projectImages }) {
         block: "start",
         inline: "nearest",
       });
-      setActive(projects.findIndex((pj) => pj.tag === project));
-      setCurrentProject(foundProject);
     }
   }, [project]);
 
@@ -43,19 +45,31 @@ function ProjectsContainer({ projects, projectImages }) {
     window.history.pushState({}, "", url);
   };
 
+  const handleChangeSelect = (e) => {
+    if (e && e.target.value) {
+      const foundProject = projects.find((pj) => pj.tag === e.target.value);
+      setActive(projects.findIndex((pj) => pj.tag === e.target.value));
+      setCurrentProject(foundProject);
+
+      const url = new URL(window.location.href);
+      url.searchParams.set("project", e.target.value);
+      window.history.pushState({}, "", url);
+    }
+  };
+
   return (
     <div
       className="grid grid-cols-1 xl:grid-cols-2 py-10 scroll-mt-16"
       ref={projectsRef}
     >
-      <div className="h-auto w-full xl:w-11/12 px-0 xl:py-0 border border-t border-l-0 border-b-0 border-r-0 border-gray-300 dark:border-ownMint-100">
+      <div className="h-auto hidden xl:block w-full xl:w-11/12 px-0 xl:py-0 border border-t border-l-0 border-b-0 border-r-0 border-gray-300 dark:border-ownMint-100">
         {projects &&
           projects.length > 0 &&
           projects.map((pj, index) => (
             <div key={index}>
               <div
                 onClick={() => handleChange(index, pj)}
-                className={`flex justify-between items-center font-semibold text-ownGray-300 dark:text-ownGray-100 text-2xl xl:text-3xl 2xl:text-4xl py-7 hover:text-ownBlack-100 hover:drop-shadow-xl hover:font-bold border-r-0 border-t-0 border-b-0 p-5 cursor-pointer ${active === index ? "border border-l-8 border-ownMint-200" : "border-0"}`}
+                className={`flex justify-between items-center font-semibold text-ownGray-300 dark:text-ownGray-100 text-xl py-7 hover:text-ownBlack-100 hover:drop-shadow-xl hover:font-bold border-r-0 border-t-0 border-b-0 p-5 cursor-pointer ${active === index ? "border border-l-8 border-ownMint-200" : "border-0"}`}
               >
                 <span>{pj.title}</span>
                 {active === index && (
@@ -73,7 +87,25 @@ function ProjectsContainer({ projects, projectImages }) {
             </div>
           ))}
       </div>
-      <div className="h-auto w-full rounded-2xl overflow-hidden relative">
+      <div className="block xl:hidden mb-6">
+        <MuiSelect
+          handleChange={handleChangeSelect}
+          items={projects.map((pj) => ({
+            ...pj,
+            name: pj.title,
+            value: pj.tag,
+          }))}
+          label="Projects"
+          value={{
+            ...currentProject,
+            name: currentProject.title,
+            value: currentProject.tag,
+          }}
+          size="md"
+          startAdornment={<LuRocket size={25} className="-mt-1 text-ownGray-300 dark:text-ownGray-100"/>}
+        />
+      </div>
+      <div className="h-auto w-full rounded-2xl overflow-hidden">
         <ImageGallery
           items={
             currentProject &&
@@ -128,7 +160,7 @@ function ProjectsContainer({ projects, projectImages }) {
           )}
         />
 
-        <div className="py-10">
+        <div className="py-5">
           <Typography
             text={(currentProject && currentProject.introText) || ""}
             customClasses={{
@@ -153,11 +185,11 @@ function ProjectsContainer({ projects, projectImages }) {
                   <CustomChip
                     label={tech}
                     customStyles={{
-                      fontSize: "14px",
+                      fontSize: "13px",
                     }}
                     customClasses={{
-                      "py-2": true,
-                      "px-3": true,
+                      "py-1": true,
+                      "px-2.5": true,
                       "my-1": true,
                       "inline-block": true,
                       "border-ownMint-100": false,
@@ -168,7 +200,15 @@ function ProjectsContainer({ projects, projectImages }) {
               ))}
           </div>
         </div>
-        <div className="w-full flex justify-center gap-x-10 py-8 static xl:absolute bottom-0">
+        <div className="w-full flex justify-center gap-x-7">
+          {currentProject &&
+            !currentProject.githubLink &&
+            !currentProject.liveLink && (
+              <div className="flex gap-x-3">
+                <LuFolderLock size={20} />
+                Confidential Repository
+              </div>
+            )}
           {currentProject && currentProject.githubLink && (
             <CustomIconButtonLink href={currentProject.githubLink}>
               {/* <svg

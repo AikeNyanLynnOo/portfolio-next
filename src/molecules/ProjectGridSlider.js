@@ -35,11 +35,6 @@ export const ProjectGridSlider = ({
 
       <Carousel
         {...settings}
-        // onChange={(now, previous) => {
-        //   console.log("Now>>", now);
-        //   setActiveIndex(now);
-        //   console.log("Previous>>", previous);
-        // }}
         sx={{
           height: "100%",
           border : "1px solid red",

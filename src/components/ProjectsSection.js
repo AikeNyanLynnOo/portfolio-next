@@ -21,6 +21,7 @@ import { ExpTimeline2 } from "./ExpTimeline2";
 import { AchievementTimeline } from "./AchievementTimeLine";
 import { Bubbles } from "./Bubbles";
 import ProjectsContainer from "../molecules/ProjectsContainer";
+import { useSearchParams } from "next/navigation";
 
 export const ProjectsSection = ({
   children,
@@ -58,7 +59,7 @@ export const ProjectsSection = ({
         liveLink: "https://www.venuerific.com/",
         techs: [
           "NextJS 14",
-          "Hero UI", 
+          "Hero UI",
           "Zustand",
           "Tailwind CSS",
           "SEO Optimization",
@@ -69,7 +70,7 @@ export const ProjectsSection = ({
             src: "/images/projects/vnf/home_desktop.png",
           },
           {
-            title: "Home Page Mobile", 
+            title: "Home Page Mobile",
             src: "/images/projects/vnf/home_mobile.png",
           },
         ],
@@ -89,7 +90,7 @@ export const ProjectsSection = ({
           },
           {
             title: "Sign Up",
-            src: "/images/projects/webapp/signup.png", 
+            src: "/images/projects/webapp/signup.png",
           },
           {
             title: "Register",
@@ -240,7 +241,7 @@ export const ProjectsSection = ({
         techs: [
           "NextJS 14",
           "SSR",
-          "CSR", 
+          "CSR",
           "Custom Hooks",
           "Redux-toolkit",
           "Redux-saga",
@@ -571,11 +572,35 @@ export const ProjectsSection = ({
     });
   }, []);
 
-  const [active, setActive] = useState(0);
-  
+  const [tab, setTab] = useState(0);
   const handleChange = useCallback((event, newValue) => {
-    setActive(newValue);
+    setTab(newValue);
   }, []);
+
+  const [active, setActive] = useState(0);
+
+  const [currentProject, setCurrentProject] = useState(projects[0]);
+
+  const searchParams = useSearchParams();
+  const project = searchParams.get("project");
+
+  useEffect(() => {
+    const foundProject = projects.find((pj) => pj.tag === project);
+    if (foundProject) {
+      setActive(projects.findIndex((pj) => pj.tag === project));
+      setCurrentProject(foundProject);
+    }
+  }, [project]);
+
+  useEffect(() => {
+    dispatch(
+      putOffsetTop({
+        property: "projectsSectionOffsetTop",
+        value: ownRef.current.offsetTop,
+      }),
+    );
+  }, [dispatch]);
+
   const tabItems = [
     {
       id: 1,
@@ -583,6 +608,10 @@ export const ProjectsSection = ({
       renderTabItem: () => (
         <ProjectsContainer
           projects={projects}
+          currentProject={currentProject}
+          active={active}
+          setCurrentProject={setCurrentProject}
+          setActive={setActive}
         />
       ),
     },
@@ -598,15 +627,6 @@ export const ProjectsSection = ({
     },
   ];
 
-  useEffect(() => {
-    dispatch(
-      putOffsetTop({
-        property: "projectsSectionOffsetTop",
-        value: ownRef.current.offsetTop,
-      }),
-    );
-  }, [dispatch]);
-
   return (
     <ResponsiveContainer
       customClasses={{
@@ -620,7 +640,7 @@ export const ProjectsSection = ({
       <div className={projectsSectionClasses}>
         <h2 className={projectTitleClasses}>Projects & Experience</h2>
         <CommonTab
-          active={active}
+          active={tab}
           handleChange={handleChange}
           tabItems={tabItems}
           customStyles={{
